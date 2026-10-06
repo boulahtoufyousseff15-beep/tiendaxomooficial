@@ -913,6 +913,12 @@ header::before{
                 ● Selecciona color y iPhone
             </div>
 
+            <div class="stock-detalle">
+                ⚪ Blanco · iPhone 13 Pro: 1
+                <br>
+                ⚫ Negro · iPhone 14 Pro: 1
+            </div>
+
             <div id="stockSeleccion6" class="stock-seleccion">
                 Selecciona una combinación
             </div>
@@ -1286,16 +1292,33 @@ const stockInicial = {
             "M":1,
             "L":0
         }
+    },
+
+    "FUNDA BAYB GANG":{
+        "Blanco":{
+            "iPhone 13 Pro":1,
+            "iPhone 14 Pro":0
+        },
+        "Negro":{
+            "iPhone 13 Pro":0,
+            "iPhone 14 Pro":1
+        }
+    },
+
+    "BOTAS FC 50":{
+        "ROSA":{
+            "43":0
+        }
     }
 
 };
 
 
 /* ==============================
-   CARGAR STOCK GUARDADO
+   CARGAR STOCK
    ============================== */
 
-const CLAVE_STOCK = "stockXMXO_v2";
+const CLAVE_STOCK = "stockXMXO_v3";
 
 let stockCamisetas;
 
@@ -1475,15 +1498,15 @@ function actualizarStock(
     if(stock === null){
 
         estado.textContent =
-            "● Disponible";
+            "● NO DISPONIBLE";
 
         estado.className =
-            "stock-disponible";
+            "stock-agotado";
 
         seleccion.textContent =
-            "Combinación disponible";
+            "✕ Combinación no disponible";
 
-        boton.disabled = false;
+        boton.disabled = true;
 
         return;
 
@@ -1533,107 +1556,19 @@ function actualizarStock(
 
 
 /* ==============================
-   FUNDA BAYB GANG
+   ACTUALIZAR FUNDA
    ============================== */
 
 function actualizarStockFunda(){
 
-    const colorElement =
-        document.getElementById("color6");
-
-    const iphoneElement =
-        document.getElementById("talla6");
-
-    const estado =
-        document.getElementById("estadoStock6");
-
-    const seleccion =
-        document.getElementById("stockSeleccion6");
-
-    const boton =
-        document.getElementById("boton6");
-
-
-    if(
-        !colorElement ||
-        !iphoneElement ||
-        !estado ||
-        !seleccion ||
-        !boton
-    ){
-
-        return;
-
-    }
-
-
-    const color =
-        colorElement.value;
-
-    const iphone =
-        iphoneElement.value;
-
-    let disponible = false;
-
-
-    if(
-        color === "Blanco" &&
-        (
-            iphone === "iPhone 12 Pro" ||
-            iphone === "iPhone 13 Pro"
-        )
-    ){
-
-        disponible = true;
-
-    }
-
-
-    if(
-        color === "Negro" &&
-        iphone === "iPhone 14 Pro"
-    ){
-
-        disponible = true;
-
-    }
-
-
-    if(disponible){
-
-        estado.textContent =
-            "● DISPONIBLE";
-
-        estado.className =
-            "stock-disponible";
-
-        seleccion.textContent =
-            "✓ " +
-            color +
-            " · " +
-            iphone +
-            " · Disponible";
-
-        boton.disabled = false;
-
-    }else{
-
-        estado.textContent =
-            "● NO DISPONIBLE";
-
-        estado.className =
-            "stock-agotado";
-
-        seleccion.textContent =
-            "✕ " +
-            color +
-            " · " +
-            iphone +
-            " · No disponible";
-
-        boton.disabled = true;
-
-    }
+    actualizarStock(
+        "FUNDA BAYB GANG",
+        "color6",
+        "talla6",
+        "estadoStock6",
+        "stockSeleccion6",
+        "boton6"
+    );
 
 }
 
@@ -1674,64 +1609,24 @@ function agregarAlCarrito(
         tallaElement.value;
 
 
-    /* BOTAS FC 50 */
+    const stock =
+        obtenerStock(nombre,color,talla);
 
-    if(nombre === "BOTAS FC 50"){
+
+    if(stock === null){
 
         alert(
-            "Las BOTAS FC 50 están agotadas."
+            "Esta combinación no está disponible."
         );
+
+        actualizarTodosLosStocks();
 
         return;
 
     }
 
 
-    /* FUNDA */
-
-    if(nombre === "FUNDA BAYB GANG"){
-
-        const disponible =
-
-            (
-                color === "Blanco" &&
-                (
-                    talla === "iPhone 12 Pro" ||
-                    talla === "iPhone 13 Pro"
-                )
-            )
-
-            ||
-
-            (
-                color === "Negro" &&
-                talla === "iPhone 14 Pro"
-            );
-
-
-        if(!disponible){
-
-            alert(
-                "Esta combinación de color y iPhone no está disponible."
-            );
-
-            actualizarStockFunda();
-
-            return;
-
-        }
-
-    }
-
-
-    const stock =
-        obtenerStock(nombre,color,talla);
-
-
-    if(
-        stock !== null &&
-        stock <= 0
-    ){
+    if(stock <= 0){
 
         alert(
             "Esta combinación de color y talla está agotada."
@@ -1875,6 +1770,50 @@ function actualizarTodosLosStocks(){
 
     actualizarStockFunda();
 
+    const stockBotas =
+        obtenerStock(
+            "BOTAS FC 50",
+            "ROSA",
+            "43"
+        );
+
+    const estadoBotas =
+        document.getElementById("estadoStock7");
+
+    const botonBotas =
+        document.getElementById("boton7");
+
+    if(
+        stockBotas !== null &&
+        stockBotas > 0
+    ){
+
+        estadoBotas.textContent =
+            "● DISPONIBLE";
+
+        estadoBotas.className =
+            "stock-disponible";
+
+        botonBotas.disabled = false;
+
+        botonBotas.textContent =
+            "Añadir al carrito";
+
+    }else{
+
+        estadoBotas.textContent =
+            "● AGOTADO";
+
+        estadoBotas.className =
+            "stock-agotado";
+
+        botonBotas.disabled = true;
+
+        botonBotas.textContent =
+            "Agotado";
+
+    }
+
 }
 
 
@@ -1988,6 +1927,16 @@ function mostrarCarrito(){
    ============================== */
 
 function eliminarProducto(indice){
+
+    if(
+        indice < 0 ||
+        indice >= carrito.length
+    ){
+
+        return;
+
+    }
+
 
     carrito.splice(
         indice,
@@ -2132,6 +2081,59 @@ function cerrarCompra(){
 
 
 /* ==============================
+   COMPROBAR STOCK DEL PEDIDO
+   ============================== */
+
+function comprobarStockPedido(){
+
+    const cantidades = {};
+
+    for(const producto of carrito){
+
+        const clave =
+            producto.nombre +
+            "|" +
+            producto.color +
+            "|" +
+            producto.talla;
+
+
+        if(!cantidades[clave]){
+
+            cantidades[clave] = 0;
+
+        }
+
+
+        cantidades[clave]++;
+
+
+        const stockDisponible =
+            obtenerStock(
+                producto.nombre,
+                producto.color,
+                producto.talla
+            );
+
+
+        if(
+            stockDisponible === null ||
+            stockDisponible < 0
+        ){
+
+            return false;
+
+        }
+
+    }
+
+
+    return true;
+
+}
+
+
+/* ==============================
    DESCONTAR STOCK
    ============================== */
 
@@ -2145,21 +2147,10 @@ function descontarStockPedido(){
             stockCamisetas[producto.nombre][producto.color][producto.talla] !== undefined
         ){
 
-            const stockActual =
-                stockCamisetas
-                    [producto.nombre]
-                    [producto.color]
-                    [producto.talla];
-
-
-            if(stockActual > 0){
-
-                stockCamisetas
-                    [producto.nombre]
-                    [producto.color]
-                    [producto.talla]--;
-
-            }
+            stockCamisetas
+                [producto.nombre]
+                [producto.color]
+                [producto.talla]--;
 
         }
 
@@ -2216,80 +2207,17 @@ async function finalizarCompra(){
     }
 
 
-    /* COMPROBAR STOCK UNA ÚLTIMA VEZ */
+    /* COMPROBAR STOCK */
 
-    for(let producto of carrito){
+    if(!comprobarStockPedido()){
 
-        if(producto.nombre === "BOTAS FC 50"){
+        alert(
+            "Lo sentimos. Uno de los productos seleccionados ya no tiene suficiente stock."
+        );
 
-            alert(
-                "Las BOTAS FC 50 están agotadas."
-            );
+        actualizarTodosLosStocks();
 
-            return;
-
-        }
-
-
-        if(producto.nombre === "FUNDA BAYB GANG"){
-
-            const fundaDisponible =
-
-                (
-                    producto.color === "Blanco" &&
-                    (
-                        producto.talla === "iPhone 12 Pro" ||
-                        producto.talla === "iPhone 13 Pro"
-                    )
-                )
-
-                ||
-
-                (
-                    producto.color === "Negro" &&
-                    producto.talla === "iPhone 14 Pro"
-                );
-
-
-            if(!fundaDisponible){
-
-                alert(
-                    "La combinación de la funda ya no está disponible."
-                );
-
-                return;
-
-            }
-
-        }
-
-
-        const stock =
-            stockCamisetas[producto.nombre] &&
-            stockCamisetas[producto.nombre][producto.color] &&
-            stockCamisetas[producto.nombre][producto.color][producto.talla];
-
-
-        if(
-            stock !== undefined &&
-            stock <= 0
-        ){
-
-            alert(
-                "Lo sentimos. " +
-                producto.nombre +
-                " (" +
-                producto.color +
-                ", talla " +
-                producto.talla +
-                ") ya está agotado."
-            );
-
-            actualizarTodosLosStocks();
-
-            return;
-
-        }
+        return;
 
     }
 
@@ -2406,6 +2334,7 @@ async function finalizarCompra(){
 
 
         let datosRespuesta = null;
+
 
         try{
 
