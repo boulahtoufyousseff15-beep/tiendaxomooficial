@@ -754,7 +754,60 @@ header::before{
         Cargando...
     </button>
 </div>
+<!-- PRODUCTO 7 - GORRA -->
+<div class="producto">
+    <h2>GORRA DE BÉISBOL</h2>
+    <img
+        src="ladera9.jpeg"
+        alt="Gorra de béisbol">
+    <div class="stock">
+        <div
+            id="estadoStock7"
+            class="stock-disponible">
+            ● Cargando stock...
+        </div>
+        <div
+            id="detalleStock7"
+            class="stock-detalle">
+            Cargando stock...
+        </div>
+        <div
+            id="stockSeleccion7"
+            class="stock-seleccion">
+            Selecciona un color
+        </div>
+    </div>
+    <div class="opciones">
+        <label>Color:</label>
+        <select
+            id="color7"
+            onchange="actualizarStockGorra()">
+            <option>Blanco</option>
+            <option>Rosa</option>
+            <option>Negro</option>
+        </select>
+        <!--
+            La gorra no tiene talla para el cliente.
+            Internamente usamos "Única" para que
+            Supabase pueda controlar el stock.
+        -->
+        <select
+            id="talla7"
+            style="display:none;">
+            <option>Única</option>
+        </select>
+    </div>
+    <p class="precio">9.99 €</p>
+    <button
+        id="boton7"
+        class="boton-carrito"
+        disabled
+        onclick="agregarAlCarrito('GORRA DE BÉISBOL','color7','talla7',9.99,'boton7')">
+        Cargando...
+    </button>
+</div>
 </main>
+<!-- CARRITO -->
 <section id="carrito">
 <h2>🛒 Carrito</h2>
 <ul id="lista-carrito"></ul>
@@ -770,6 +823,7 @@ header::before{
     </button>
 </div>
 </section>
+<!-- MODAL PRODUCTO AÑADIDO -->
 <div id="modalCarrito" class="modal-carrito">
 <div class="ventana-carrito">
     <div class="logo-aviso">
@@ -818,6 +872,7 @@ header::before{
     </div>
 </div>
 </div>
+<!-- MODAL COMPRA -->
 <div id="modalCompra" class="modal">
 <div class="ventana-compra">
     <button
@@ -863,6 +918,7 @@ header::before{
     </div>
 </div>
 </div>
+<!-- MODAL CONFIRMACIÓN -->
 <div id="modalConfirmacion" class="modal-confirmacion">
 <div class="confirmacion">
     <div class="lion">
@@ -1215,6 +1271,10 @@ function actualizarDetallesStock(){
         document.getElementById(
             "detalleStock6"
         );
+    const detalle7 =
+        document.getElementById(
+            "detalleStock7"
+        );
     const textoCamiseta =
         function(nombre){
             return (
@@ -1289,6 +1349,30 @@ function actualizarDetallesStock(){
                 "FUNDA BAYB GANG",
                 "Negro",
                 "iPhone 14 Pro"
+            );
+    }
+    /* GORRA */
+    if(detalle7){
+        detalle7.innerHTML =
+            "⚪ Blanco: " +
+            numeroStock(
+                "GORRA DE BÉISBOL",
+                "Blanco",
+                "Única"
+            ) +
+            "<br>" +
+            "🌸 Rosa: " +
+            numeroStock(
+                "GORRA DE BÉISBOL",
+                "ROSA",
+                "Única"
+            ) +
+            "<br>" +
+            "⚫ Negro: " +
+            numeroStock(
+                "GORRA DE BÉISBOL",
+                "Negro",
+                "Única"
             );
     }
 }
@@ -1374,8 +1458,6 @@ function actualizarStock(
         seleccion.textContent =
             "✓ " +
             color +
-            " · Talla " +
-            talla +
             " · Quedan " +
             stock +
             " unidad" +
@@ -1395,8 +1477,6 @@ function actualizarStock(
         seleccion.textContent =
             "✕ " +
             color +
-            " · Talla " +
-            talla +
             " · Sin unidades disponibles";
         boton.disabled = true;
         boton.textContent =
@@ -1414,6 +1494,19 @@ function actualizarStockFunda(){
         "estadoStock6",
         "stockSeleccion6",
         "boton6"
+    );
+}
+/* ==============================
+   ACTUALIZAR GORRA
+   ============================== */
+function actualizarStockGorra(){
+    actualizarStock(
+        "GORRA DE BÉISBOL",
+        "color7",
+        "talla7",
+        "estadoStock7",
+        "stockSeleccion7",
+        "boton7"
     );
 }
 /* ==============================
@@ -1517,7 +1610,9 @@ async function agregarAlCarrito(
         "CAMISETA DE CASA BLANCA":
             "ladera5.jpg",
         "FUNDA BAYB GANG":
-            "ladera8.jpeg"
+            "ladera8.jpeg",
+        "GORRA DE BÉISBOL":
+            "ladera9.jpg"
     };
     const imagenAviso =
         document.getElementById(
@@ -1559,7 +1654,10 @@ async function agregarAlCarrito(
     }
     if(tallaAviso){
         tallaAviso.textContent =
-            talla;
+            nombreNormalizado ===
+            "GORRA DE BÉISBOL"
+                ? "Sin talla"
+                : talla;
     }
     if(precioAviso){
         precioAviso.textContent =
@@ -1608,6 +1706,8 @@ function actualizarTodosLosStocks(){
         "boton5"
     );
     actualizarStockFunda();
+    /* GORRA */
+    actualizarStockGorra();
 }
 /* ==============================
    SEGUIR COMPRANDO
@@ -1674,12 +1774,17 @@ function mostrarCarrito(){
                 document.createElement(
                     "li"
                 );
+            const tallaTexto =
+                producto.nombre ===
+                "GORRA DE BÉISBOL"
+                    ? "Sin talla"
+                    : producto.talla;
             li.innerHTML =
                 producto.nombre +
                 " — Color: " +
                 producto.color +
                 " — Talla: " +
-                producto.talla +
+                tallaTexto +
                 " — " +
                 Number(
                     producto.precio
@@ -1757,7 +1862,9 @@ function comprarCarrito(){
         "CAMISETA DE CASA BLANCA":
             "ladera5.jpg",
         "FUNDA BAYB GANG":
-            "ladera8.jpeg"
+            "ladera8.jpeg",
+        "GORRA DE BÉISBOL":
+            "ladera9.jpg"
     };
     let total = 0;
     carrito.forEach(
@@ -1768,6 +1875,11 @@ function comprarCarrito(){
                 );
             productoDiv.className =
                 "producto-compra";
+            const tallaTexto =
+                producto.nombre ===
+                "GORRA DE BÉISBOL"
+                    ? "Sin talla"
+                    : producto.talla;
             productoDiv.innerHTML = `
                 <img
                     src="${imagenes[producto.nombre]}"
@@ -1781,7 +1893,7 @@ function comprarCarrito(){
                         Color: ${producto.color}
                     </p>
                     <p>
-                        Talla: ${producto.talla}
+                        Talla: ${tallaTexto}
                     </p>
                     <p>
                         Precio:
@@ -2023,6 +2135,11 @@ async function finalizarCompra(){
     let total = 0;
     carrito.forEach(
         function(producto,indice){
+            const tallaTexto =
+                producto.nombre ===
+                "GORRA DE BÉISBOL"
+                    ? "Sin talla"
+                    : producto.talla;
             productosTexto +=
                 (indice + 1) +
                 ". " +
@@ -2030,7 +2147,7 @@ async function finalizarCompra(){
                 " | Color: " +
                 producto.color +
                 " | Talla: " +
-                producto.talla +
+                tallaTexto +
                 " | Precio: " +
                 Number(
                     producto.precio
@@ -2207,7 +2324,8 @@ document.addEventListener(
                 "estadoStock3",
                 "estadoStock4",
                 "estadoStock5",
-                "estadoStock6"
+                "estadoStock6",
+                "estadoStock7"
             ];
             estados.forEach(
                 function(id){
