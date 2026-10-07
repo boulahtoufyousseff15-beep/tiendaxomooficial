@@ -1284,15 +1284,23 @@ async function cargarStockGlobal(){
         return false;
 
     }
-
-
-    stockCamisetas = {};
+stockCamisetas = {};
 
 resultado.data.forEach(function(item){
 
-    stockCamisetas[item.producto] = item.stock;
+    if(!stockCamisetas[item.producto]){
+        stockCamisetas[item.producto] = {};
+    }
+
+    if(!stockCamisetas[item.producto][item.color]){
+        stockCamisetas[item.producto][item.color] = {};
+    }
+
+    stockCamisetas[item.producto][item.color][item.variant] = item.stock;
 
 });
+
+   
 
 stockCargado = true;
 
