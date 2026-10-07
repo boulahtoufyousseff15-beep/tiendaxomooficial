@@ -1259,22 +1259,11 @@ header::before{
 
 <script>
 
-/* ==============================
-   SUPABASE
-   ============================== */
-
 const SUPABASE_URL =
     "https://ikyscrtrfxyldlfjfipd.supabase.co";
 
 const SUPABASE_PUBLISHABLE_KEY =
     "sb_publishable_70i0ND16ktralfkCpzjCBQ_1BIG5G9s";
-
-
-/*
-   Usamos otro nombre para el cliente.
-   Así evitamos posibles conflictos con
-   window.supabase del CDN.
-*/
 
 const supabaseClient =
     window.supabase.createClient(
@@ -1295,7 +1284,7 @@ let stockCargado = false;
    ============================== */
 
 const CORREO_PEDIDOS =
-    "boulahtoufyousseff15@gmail.com";
+    "boulahtoufyoussef15@gmail.com";
 
 
 /* ==============================
@@ -1305,24 +1294,14 @@ const CORREO_PEDIDOS =
 function normalizarNombreProducto(nombre){
 
     if(nombre === null || nombre === undefined){
-
         return "";
-
     }
-
 
     const texto =
         String(nombre).trim();
 
-
     const minusculas =
         texto.toLowerCase();
-
-
-    /*
-       Todos estos nombres significan
-       el mismo producto.
-    */
 
     if(
         minusculas === "camiseta neymar" ||
@@ -1334,7 +1313,6 @@ function normalizarNombreProducto(nombre){
         return "CAMISETA DE NEYMAR SANTOS";
 
     }
-
 
     return texto;
 
@@ -1348,19 +1326,14 @@ function normalizarNombreProducto(nombre){
 function normalizarColor(color){
 
     if(color === null || color === undefined){
-
         return "";
-
     }
-
 
     const texto =
         String(color).trim();
 
-
     const minusculas =
         texto.toLowerCase();
-
 
     if(minusculas === "negro"){
         return "Negro";
@@ -1373,7 +1346,6 @@ function normalizarColor(color){
     if(minusculas === "rosa"){
         return "ROSA";
     }
-
 
     return texto;
 
@@ -1393,7 +1365,6 @@ async function cargarStockGlobal(){
                 "obtener_stock_xmxo"
             );
 
-
         if(resultado.error){
 
             console.error(
@@ -1407,43 +1378,26 @@ async function cargarStockGlobal(){
 
         }
 
-
         stockCamisetas = {};
-
 
         const datos =
             Array.isArray(resultado.data)
                 ? resultado.data
                 : [];
 
-
         datos.forEach(
             function(item){
-
-                /*
-                   Algunas versiones de la función
-                   pueden devolver "producto"
-                   y otras "product".
-                */
 
                 const productoOriginal =
                     item.producto ??
                     item.product;
 
-
-                /*
-                   Algunas versiones pueden devolver
-                   "variant" y otras "talla".
-                */
-
                 const varianteOriginal =
                     item.variant ??
                     item.talla;
 
-
                 const colorOriginal =
                     item.color;
-
 
                 if(
                     productoOriginal === null ||
@@ -1463,28 +1417,23 @@ async function cargarStockGlobal(){
 
                 }
 
-
                 const producto =
                     normalizarNombreProducto(
                         productoOriginal
                     );
-
 
                 const color =
                     normalizarColor(
                         colorOriginal
                     );
 
-
                 const variante =
                     String(
                         varianteOriginal
                     ).trim();
 
-
                 const stock =
                     Number(item.stock);
-
 
                 if(
                     !stockCamisetas[producto]
@@ -1494,7 +1443,6 @@ async function cargarStockGlobal(){
 
                 }
 
-
                 if(
                     !stockCamisetas[producto][color]
                 ){
@@ -1502,7 +1450,6 @@ async function cargarStockGlobal(){
                     stockCamisetas[producto][color] = {};
 
                 }
-
 
                 stockCamisetas
                     [producto]
@@ -1515,12 +1462,10 @@ async function cargarStockGlobal(){
             }
         );
 
-
         console.log(
             "Stock global cargado:",
             stockCamisetas
         );
-
 
         stockCargado = true;
 
@@ -1554,22 +1499,18 @@ function unidadesEnCarrito(
 
     let cantidad = 0;
 
-
     const nombreNormalizado =
         normalizarNombreProducto(
             nombre
         );
-
 
     const colorNormalizado =
         normalizarColor(
             color
         );
 
-
     const tallaNormalizada =
         String(talla).trim();
-
 
     carrito.forEach(
         function(producto){
@@ -1595,7 +1536,6 @@ function unidadesEnCarrito(
         }
     );
 
-
     return cantidad;
 
 }
@@ -1612,27 +1552,21 @@ function obtenerStock(
 ){
 
     if(!stockCargado){
-
         return null;
-
     }
-
 
     const nombreNormalizado =
         normalizarNombreProducto(
             nombre
         );
 
-
     const colorNormalizado =
         normalizarColor(
             color
         );
 
-
     const tallaNormalizada =
         String(talla).trim();
-
 
     if(
         !stockCamisetas[
@@ -1658,7 +1592,6 @@ function obtenerStock(
 
     }
 
-
     const stockActual =
         Number(
             stockCamisetas[
@@ -1670,14 +1603,12 @@ function obtenerStock(
             ]
         );
 
-
     const cantidadCarrito =
         unidadesEnCarrito(
             nombreNormalizado,
             colorNormalizado,
             tallaNormalizada
         );
-
 
     return stockActual -
         cantidadCarrito;
@@ -1700,16 +1631,13 @@ function numeroStock(
             nombre
         );
 
-
     const colorNormalizado =
         normalizarColor(
             color
         );
 
-
     const tallaNormalizada =
         String(talla).trim();
-
 
     if(
         !stockCamisetas[
@@ -1734,7 +1662,6 @@ function numeroStock(
         return 0;
 
     }
-
 
     return Number(
         stockCamisetas[
@@ -1780,7 +1707,6 @@ function actualizarDetallesStock(){
             "detalleStock6"
         );
 
-
     const textoCamiseta =
         function(nombre){
 
@@ -1806,7 +1732,6 @@ function actualizarDetallesStock(){
 
         };
 
-
     if(detalle2){
 
         detalle2.innerHTML =
@@ -1815,7 +1740,6 @@ function actualizarDetallesStock(){
             );
 
     }
-
 
     if(detalle3){
 
@@ -1826,7 +1750,6 @@ function actualizarDetallesStock(){
 
     }
 
-
     if(detalle4){
 
         detalle4.innerHTML =
@@ -1836,7 +1759,6 @@ function actualizarDetallesStock(){
 
     }
 
-
     if(detalle5){
 
         detalle5.innerHTML =
@@ -1845,7 +1767,6 @@ function actualizarDetallesStock(){
             );
 
     }
-
 
     if(detalle6){
 
@@ -1921,7 +1842,6 @@ function actualizarStock(
             idBoton
         );
 
-
     if(
         !colorElement ||
         !tallaElement ||
@@ -1933,7 +1853,6 @@ function actualizarStock(
         return;
 
     }
-
 
     if(!stockCargado){
 
@@ -1955,13 +1874,11 @@ function actualizarStock(
 
     }
 
-
     const color =
         colorElement.value;
 
     const talla =
         tallaElement.value;
-
 
     const stock =
         obtenerStock(
@@ -1969,7 +1886,6 @@ function actualizarStock(
             color,
             talla
         );
-
 
     if(stock === null){
 
@@ -1990,7 +1906,6 @@ function actualizarStock(
         return;
 
     }
-
 
     if(stock > 0){
 
@@ -2079,24 +1994,17 @@ async function agregarAlCarrito(
             idBoton
         );
 
-
     if(boton){
-
         boton.disabled = true;
-
     }
-
 
     const cargado =
         await cargarStockGlobal();
 
-
     if(!cargado){
 
         if(boton){
-
             boton.disabled = false;
-
         }
 
         alert(
@@ -2107,11 +2015,8 @@ async function agregarAlCarrito(
 
     }
 
-
     actualizarDetallesStock();
-
     actualizarTodosLosStocks();
-
 
     const colorElement =
         document.getElementById(
@@ -2122,7 +2027,6 @@ async function agregarAlCarrito(
         document.getElementById(
             idTalla
         );
-
 
     if(
         !colorElement ||
@@ -2135,24 +2039,20 @@ async function agregarAlCarrito(
 
     }
 
-
     const color =
         normalizarColor(
             colorElement.value
         );
-
 
     const talla =
         String(
             tallaElement.value
         ).trim();
 
-
     const nombreNormalizado =
         normalizarNombreProducto(
             nombre
         );
-
 
     const stock =
         obtenerStock(
@@ -2160,7 +2060,6 @@ async function agregarAlCarrito(
             color,
             talla
         );
-
 
     if(stock === null){
 
@@ -2174,7 +2073,6 @@ async function agregarAlCarrito(
 
     }
 
-
     if(stock <= 0){
 
         alert(
@@ -2186,7 +2084,6 @@ async function agregarAlCarrito(
         return;
 
     }
-
 
     const producto = {
 
@@ -2204,14 +2101,11 @@ async function agregarAlCarrito(
 
     };
 
-
     carrito.push(
         producto
     );
 
-
     mostrarCarrito();
-
 
     const imagenes = {
 
@@ -2234,7 +2128,6 @@ async function agregarAlCarrito(
             "ladera7.jpeg"
 
     };
-
 
     const imagenAviso =
         document.getElementById(
@@ -2266,7 +2159,6 @@ async function agregarAlCarrito(
             "modalCarrito"
         );
 
-
     if(imagenAviso){
 
         imagenAviso.src =
@@ -2276,14 +2168,12 @@ async function agregarAlCarrito(
 
     }
 
-
     if(nombreAviso){
 
         nombreAviso.textContent =
             nombreNormalizado;
 
     }
-
 
     if(colorAviso){
 
@@ -2292,14 +2182,12 @@ async function agregarAlCarrito(
 
     }
 
-
     if(tallaAviso){
 
         tallaAviso.textContent =
             talla;
 
     }
-
 
     if(precioAviso){
 
@@ -2308,14 +2196,12 @@ async function agregarAlCarrito(
 
     }
 
-
     if(modalCarrito){
 
         modalCarrito.style.display =
             "flex";
 
     }
-
 
     actualizarTodosLosStocks();
 
@@ -2337,7 +2223,6 @@ function actualizarTodosLosStocks(){
         "boton2"
     );
 
-
     actualizarStock(
         "CAMISETA DE PELASTINA",
         "color3",
@@ -2346,7 +2231,6 @@ function actualizarTodosLosStocks(){
         "stockSeleccion3",
         "boton3"
     );
-
 
     actualizarStock(
         "CAMISETA DE VENUM UFC",
@@ -2357,7 +2241,6 @@ function actualizarTodosLosStocks(){
         "boton4"
     );
 
-
     actualizarStock(
         "CAMISETA DE CASA BLANCA",
         "color5",
@@ -2367,9 +2250,7 @@ function actualizarTodosLosStocks(){
         "boton5"
     );
 
-
     actualizarStockFunda();
-
 
     const stockBotas =
         obtenerStock(
@@ -2377,7 +2258,6 @@ function actualizarTodosLosStocks(){
             "ROSA",
             "43"
         );
-
 
     const estadoBotas =
         document.getElementById(
@@ -2389,7 +2269,6 @@ function actualizarTodosLosStocks(){
             "boton7"
         );
 
-
     if(
         !estadoBotas ||
         !botonBotas
@@ -2398,7 +2277,6 @@ function actualizarTodosLosStocks(){
         return;
 
     }
-
 
     if(stockBotas !== null && stockBotas > 0){
 
@@ -2458,7 +2336,6 @@ function seguirComprando(){
             "modalCarrito"
         );
 
-
     if(modal){
 
         modal.style.display =
@@ -2480,7 +2357,6 @@ function irAlCarrito(){
             "modalCarrito"
         );
 
-
     if(modal){
 
         modal.style.display =
@@ -2488,12 +2364,10 @@ function irAlCarrito(){
 
     }
 
-
     const carritoElemento =
         document.getElementById(
             "carrito"
         );
-
 
     if(carritoElemento){
 
@@ -2517,40 +2391,32 @@ function mostrarCarrito(){
             "lista-carrito"
         );
 
-
     if(!lista){
 
         return;
 
     }
 
-
     lista.innerHTML = "";
 
-
     let total = 0;
-
 
     if(carrito.length === 0){
 
         const vacio =
             document.createElement("li");
 
-
         vacio.textContent =
             "El carrito está vacío.";
 
-
         vacio.style.color =
             "#aaa";
-
 
         lista.appendChild(
             vacio
         );
 
     }
-
 
     carrito.forEach(
         function(producto,indice){
@@ -2559,7 +2425,6 @@ function mostrarCarrito(){
                 document.createElement(
                     "li"
                 );
-
 
             li.innerHTML =
                 producto.nombre +
@@ -2576,11 +2441,9 @@ function mostrarCarrito(){
                 indice +
                 ')">Eliminar</button>';
 
-
             lista.appendChild(
                 li
             );
-
 
             total +=
                 Number(
@@ -2590,12 +2453,10 @@ function mostrarCarrito(){
         }
     );
 
-
     const totalElemento =
         document.getElementById(
             "total"
         );
-
 
     if(totalElemento){
 
@@ -2603,7 +2464,6 @@ function mostrarCarrito(){
             total.toFixed(2);
 
     }
-
 
     actualizarTodosLosStocks();
 
@@ -2625,12 +2485,10 @@ function eliminarProducto(indice){
 
     }
 
-
     carrito.splice(
         indice,
         1
     );
-
 
     mostrarCarrito();
 
@@ -2649,7 +2507,6 @@ function comprarCarrito(){
 
     }
 
-
     if(carrito.length === 0){
 
         alert(
@@ -2660,12 +2517,10 @@ function comprarCarrito(){
 
     }
 
-
     const contenedor =
         document.getElementById(
             "productos-compra"
         );
-
 
     if(!contenedor){
 
@@ -2677,9 +2532,7 @@ function comprarCarrito(){
 
     }
 
-
     contenedor.innerHTML = "";
-
 
     const imagenes = {
 
@@ -2703,9 +2556,7 @@ function comprarCarrito(){
 
     };
 
-
     let total = 0;
-
 
     carrito.forEach(
         function(producto){
@@ -2715,10 +2566,8 @@ function comprarCarrito(){
                     "div"
                 );
 
-
             productoDiv.className =
                 "producto-compra";
-
 
             productoDiv.innerHTML = `
 
@@ -2750,11 +2599,9 @@ function comprarCarrito(){
 
             `;
 
-
             contenedor.appendChild(
                 productoDiv
             );
-
 
             total +=
                 Number(
@@ -2764,12 +2611,10 @@ function comprarCarrito(){
         }
     );
 
-
     const totalCompra =
         document.getElementById(
             "total-compra"
         );
-
 
     if(totalCompra){
 
@@ -2778,12 +2623,10 @@ function comprarCarrito(){
 
     }
 
-
     const modalCompra =
         document.getElementById(
             "modalCompra"
         );
-
 
     if(modalCompra){
 
@@ -2805,7 +2648,6 @@ function cerrarCompra(){
         document.getElementById(
             "modalCompra"
         );
-
 
     if(modal){
 
@@ -2829,9 +2671,7 @@ function comprobarStockPedido(){
 
     }
 
-
     const cantidades = {};
-
 
     for(
         const producto of carrito
@@ -2842,18 +2682,15 @@ function comprobarStockPedido(){
                 producto.nombre
             );
 
-
         const color =
             normalizarColor(
                 producto.color
             );
 
-
         const talla =
             String(
                 producto.talla
             ).trim();
-
 
         const clave =
             nombre +
@@ -2862,16 +2699,13 @@ function comprobarStockPedido(){
             "|" +
             talla;
 
-
         if(!cantidades[clave]){
 
             cantidades[clave] = 0;
 
         }
 
-
         cantidades[clave]++;
-
 
         const stockDisponible =
             obtenerStock(
@@ -2879,7 +2713,6 @@ function comprobarStockPedido(){
                 color,
                 talla
             );
-
 
         if(
             stockDisponible === null ||
@@ -2891,7 +2724,6 @@ function comprobarStockPedido(){
         }
 
     }
-
 
     return true;
 
@@ -2908,7 +2740,6 @@ async function descontarStockPedido(){
 
         const cantidades = {};
 
-
         carrito.forEach(
             function(producto){
 
@@ -2917,18 +2748,15 @@ async function descontarStockPedido(){
                         producto.nombre
                     );
 
-
                 const color =
                     normalizarColor(
                         producto.color
                     );
 
-
                 const talla =
                     String(
                         producto.talla
                     ).trim();
-
 
                 const clave =
                     nombre +
@@ -2936,7 +2764,6 @@ async function descontarStockPedido(){
                     color +
                     "|" +
                     talla;
-
 
                 if(!cantidades[clave]){
 
@@ -2958,12 +2785,10 @@ async function descontarStockPedido(){
 
                 }
 
-
                 cantidades[clave].quantity++;
 
             }
         );
-
 
         const resultado =
             await supabaseClient.rpc(
@@ -2976,7 +2801,6 @@ async function descontarStockPedido(){
                 }
             );
 
-
         if(resultado.error){
 
             console.error(
@@ -2987,7 +2811,6 @@ async function descontarStockPedido(){
             return false;
 
         }
-
 
         if(
             resultado.data !== true
@@ -3002,14 +2825,11 @@ async function descontarStockPedido(){
 
         }
 
-
         await cargarStockGlobal();
-
 
         actualizarDetallesStock();
 
         actualizarTodosLosStocks();
-
 
         return true;
 
@@ -3038,24 +2858,20 @@ async function finalizarCompra(){
             "nombreCliente"
         ).value.trim();
 
-
     const telefono =
         document.getElementById(
             "telefonoCliente"
         ).value.trim();
-
 
     const entrega =
         document.getElementById(
             "entregaCliente"
         ).value;
 
-
     const direccion =
         document.getElementById(
             "direccionCliente"
         ).value.trim();
-
 
     if(
         nombre === "" ||
@@ -3071,7 +2887,6 @@ async function finalizarCompra(){
 
     }
 
-
     if(carrito.length === 0){
 
         alert(
@@ -3084,10 +2899,8 @@ async function finalizarCompra(){
 
     }
 
-
     const stockActualizado =
         await cargarStockGlobal();
-
 
     if(!stockActualizado){
 
@@ -3099,11 +2912,9 @@ async function finalizarCompra(){
 
     }
 
-
     actualizarDetallesStock();
 
     actualizarTodosLosStocks();
-
 
     if(!comprobarStockPedido()){
 
@@ -3116,7 +2927,6 @@ async function finalizarCompra(){
         return;
 
     }
-
 
     if(
         !CORREO_PEDIDOS ||
@@ -3132,11 +2942,9 @@ async function finalizarCompra(){
 
     }
 
-
     let productosTexto = "";
 
     let total = 0;
-
 
     carrito.forEach(
         function(producto,indice){
@@ -3155,7 +2963,6 @@ async function finalizarCompra(){
                 ).toFixed(2) +
                 " €\n";
 
-
             total +=
                 Number(
                     producto.precio
@@ -3164,6 +2971,10 @@ async function finalizarCompra(){
         }
     );
 
+
+    /* ==============================
+       ENVIAR PEDIDO POR FORMSUBMIT
+       ============================== */
 
     try{
 
@@ -3197,27 +3008,24 @@ async function finalizarCompra(){
                         _template:
                             "table",
 
-                        nombre_cliente:
+                        "NOMBRE DEL CLIENTE":
                             nombre,
 
-                        telefono_cliente:
+                        "TELÉFONO":
                             telefono,
 
-                        forma_entrega:
+                        "FORMA DE ENTREGA":
                             entrega,
 
-                        lugar_entrega:
+                        "LUGAR DE ENTREGA":
                             direccion,
 
-                        productos:
+                        "PRODUCTOS DEL PEDIDO":
                             productosTexto,
 
-                        total_pedido:
+                        "TOTAL DEL PEDIDO":
                             total.toFixed(2) +
-                            " €",
-
-                        _url:
-                            window.location.href
+                            " €"
 
                     })
 
@@ -3258,6 +3066,10 @@ async function finalizarCompra(){
         }
 
 
+        /* ==============================
+           DESCONTAR STOCK
+           ============================== */
+
         const stockDescontado =
             await descontarStockPedido();
 
@@ -3279,17 +3091,19 @@ async function finalizarCompra(){
         }
 
 
+        /* ==============================
+           CONFIRMACIÓN
+           ============================== */
+
         const nombreConfirmacion =
             document.getElementById(
                 "nombreConfirmacion"
             );
 
-
         const totalConfirmacion =
             document.getElementById(
                 "totalConfirmacion"
             );
-
 
         if(nombreConfirmacion){
 
@@ -3298,7 +3112,6 @@ async function finalizarCompra(){
 
         }
 
-
         if(totalConfirmacion){
 
             totalConfirmacion.textContent =
@@ -3306,18 +3119,15 @@ async function finalizarCompra(){
 
         }
 
-
         const modalCompra =
             document.getElementById(
                 "modalCompra"
             );
 
-
         const modalConfirmacion =
             document.getElementById(
                 "modalConfirmacion"
             );
-
 
         if(modalCompra){
 
@@ -3326,7 +3136,6 @@ async function finalizarCompra(){
 
         }
 
-
         if(modalConfirmacion){
 
             modalConfirmacion.style.display =
@@ -3334,27 +3143,21 @@ async function finalizarCompra(){
 
         }
 
-
         carrito = [];
 
-
         mostrarCarrito();
-
 
         document.getElementById(
             "nombreCliente"
         ).value = "";
 
-
         document.getElementById(
             "telefonoCliente"
         ).value = "";
 
-
         document.getElementById(
             "direccionCliente"
         ).value = "";
-
 
         actualizarDetallesStock();
 
@@ -3366,7 +3169,6 @@ async function finalizarCompra(){
         alert(
             "No se ha podido enviar el pedido. El stock NO se ha descontado."
         );
-
 
         console.error(
             "Error al enviar pedido:",
@@ -3389,7 +3191,6 @@ function cerrarConfirmacion(){
             "modalConfirmacion"
         );
 
-
     if(modal){
 
         modal.style.display =
@@ -3410,10 +3211,8 @@ document.addEventListener(
 
         mostrarCarrito();
 
-
         const cargado =
             await cargarStockGlobal();
-
 
         if(cargado){
 
@@ -3427,7 +3226,6 @@ document.addEventListener(
                 "No se pudo cargar el stock global."
             );
 
-
             const estados = [
                 "estadoStock2",
                 "estadoStock3",
@@ -3437,7 +3235,6 @@ document.addEventListener(
                 "estadoStock7"
             ];
 
-
             estados.forEach(
                 function(id){
 
@@ -3445,7 +3242,6 @@ document.addEventListener(
                         document.getElementById(
                             id
                         );
-
 
                     if(elemento){
 
