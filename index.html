@@ -257,6 +257,20 @@ header::before{
     font-weight:bold;
 }
 
+#carrito > div button{
+    background:white;
+    color:black;
+    border:none;
+    padding:10px 18px;
+    border-radius:7px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+#carrito > div button:hover{
+    background:#ccc;
+}
+
 .modal,
 .modal-confirmacion,
 .modal-carrito{
@@ -635,14 +649,14 @@ header::before{
 
     <div class="producto">
 
-        <h2>CAMISETA DE NEYMER SANTOS</h2>
+        <h2>CAMISETA DE NEYMAR SANTOS</h2>
 
-        <img src="ladera2.jpg" alt="Producto 2">
+        <img src="ladera2.jpg" alt="Camiseta de Neymar Santos">
 
         <div class="stock">
 
             <div id="estadoStock2" class="stock-disponible">
-                ● Selecciona color y talla
+                ● Cargando stock...
             </div>
 
             <div id="detalleStock2" class="stock-detalle">
@@ -661,7 +675,7 @@ header::before{
 
             <select
                 id="color2"
-                onchange="actualizarStock('Camiseta Neymar','color2','talla2','estadoStock2','stockSeleccion2','boton2')">
+                onchange="actualizarStock('CAMISETA DE NEYMAR SANTOS','color2','talla2','estadoStock2','stockSeleccion2','boton2')">
 
                 <option>Negro</option>
                 <option>Blanco</option>
@@ -672,11 +686,12 @@ header::before{
 
             <select
                 id="talla2"
-                onchange="actualizarStock('Camiseta Neymar','color2','talla2','estadoStock2','stockSeleccion2','boton2')">
+                onchange="actualizarStock('CAMISETA DE NEYMAR SANTOS','color2','talla2','estadoStock2','stockSeleccion2','boton2')">
 
                 <option>S</option>
                 <option>M</option>
                 <option>L</option>
+                <option>XL</option>
 
             </select>
 
@@ -687,9 +702,10 @@ header::before{
         <button
             id="boton2"
             class="boton-carrito"
-            onclick="agregarAlCarrito('Camiseta Neymar','color2','talla2',15.99,'boton2')">
+            disabled
+            onclick="agregarAlCarrito('CAMISETA DE NEYMAR SANTOS','color2','talla2',15.99,'boton2')">
 
-            Añadir al carrito
+            Cargando...
 
         </button>
 
@@ -702,12 +718,12 @@ header::before{
 
         <h2>CAMISETA DE PELASTINA</h2>
 
-        <img src="ladera3.jpg" alt="Producto 3">
+        <img src="ladera3.jpg" alt="Camiseta de Pelastina">
 
         <div class="stock">
 
             <div id="estadoStock3" class="stock-disponible">
-                ● Selecciona color y talla
+                ● Cargando stock...
             </div>
 
             <div id="detalleStock3" class="stock-detalle">
@@ -742,6 +758,7 @@ header::before{
                 <option>S</option>
                 <option>M</option>
                 <option>L</option>
+                <option>XL</option>
 
             </select>
 
@@ -752,9 +769,10 @@ header::before{
         <button
             id="boton3"
             class="boton-carrito"
+            disabled
             onclick="agregarAlCarrito('CAMISETA DE PELASTINA','color3','talla3',10.99,'boton3')">
 
-            Añadir al carrito
+            Cargando...
 
         </button>
 
@@ -767,12 +785,12 @@ header::before{
 
         <h2>CAMISETA DE VENUM UFC</h2>
 
-        <img src="ladera4.jpg" alt="Producto 4">
+        <img src="ladera4.jpg" alt="Camiseta de Venum UFC">
 
         <div class="stock">
 
             <div id="estadoStock4" class="stock-disponible">
-                ● Selecciona color y talla
+                ● Cargando stock...
             </div>
 
             <div id="detalleStock4" class="stock-detalle">
@@ -807,6 +825,7 @@ header::before{
                 <option>S</option>
                 <option>M</option>
                 <option>L</option>
+                <option>XL</option>
 
             </select>
 
@@ -817,9 +836,10 @@ header::before{
         <button
             id="boton4"
             class="boton-carrito"
+            disabled
             onclick="agregarAlCarrito('CAMISETA DE VENUM UFC','color4','talla4',15.99,'boton4')">
 
-            Añadir al carrito
+            Cargando...
 
         </button>
 
@@ -832,12 +852,12 @@ header::before{
 
         <h2>CAMISETA DE CASA BLANCA</h2>
 
-        <img src="ladera5.jpg" alt="Producto 5">
+        <img src="ladera5.jpg" alt="Camiseta de Casa Blanca">
 
         <div class="stock">
 
             <div id="estadoStock5" class="stock-disponible">
-                ● Selecciona color y talla
+                ● Cargando stock...
             </div>
 
             <div id="detalleStock5" class="stock-detalle">
@@ -872,6 +892,7 @@ header::before{
                 <option>S</option>
                 <option>M</option>
                 <option>L</option>
+                <option>XL</option>
 
             </select>
 
@@ -882,9 +903,10 @@ header::before{
         <button
             id="boton5"
             class="boton-carrito"
+            disabled
             onclick="agregarAlCarrito('CAMISETA DE CASA BLANCA','color5','talla5',15.99,'boton5')">
 
-            Añadir al carrito
+            Cargando...
 
         </button>
 
@@ -897,12 +919,12 @@ header::before{
 
         <h2>FUNDA BAYB GANG</h2>
 
-        <img src="ladera8.jpeg" alt="Producto 6">
+        <img src="ladera8.jpeg" alt="Funda Bayb Gang">
 
         <div class="stock">
 
             <div id="estadoStock6" class="stock-disponible">
-                ● Selecciona color y iPhone
+                ● Cargando stock...
             </div>
 
             <div id="detalleStock6" class="stock-detalle">
@@ -946,9 +968,10 @@ header::before{
         <button
             id="boton6"
             class="boton-carrito"
+            disabled
             onclick="agregarAlCarrito('FUNDA BAYB GANG','color6','talla6',6.99,'boton6')">
 
-            Añadir al carrito
+            Cargando...
 
         </button>
 
@@ -961,7 +984,7 @@ header::before{
 
         <h2>BOTAS FC 50</h2>
 
-        <img src="ladera7.jpeg" alt="Producto 7">
+        <img src="ladera7.jpeg" alt="Botas FC 50">
 
         <div class="stock">
 
@@ -969,7 +992,7 @@ header::before{
                 id="estadoStock7"
                 class="stock-agotado">
 
-                ● CARGANDO...
+                ● Cargando stock...
 
             </div>
 
@@ -1029,8 +1052,12 @@ header::before{
             <span id="total">0.00</span> €
         </h3>
 
-        <button onclick="comprarCarrito()">
+        <button
+            type="button"
+            onclick="comprarCarrito()">
+
             Comprar
+
         </button>
 
     </div>
@@ -1088,6 +1115,7 @@ header::before{
         <div class="botones-aviso">
 
             <button
+                type="button"
                 class="boton-seguir"
                 onclick="seguirComprando()">
 
@@ -1096,6 +1124,7 @@ header::before{
             </button>
 
             <button
+                type="button"
                 class="boton-ver-carrito"
                 onclick="irAlCarrito()">
 
@@ -1115,6 +1144,7 @@ header::before{
     <div class="ventana-compra">
 
         <button
+            type="button"
             class="cerrar-modal"
             onclick="cerrarCompra()">
 
@@ -1166,6 +1196,7 @@ header::before{
                 placeholder="Indica dónde quieres recibir el pedido"></textarea>
 
             <button
+                type="button"
                 class="boton-finalizar"
                 onclick="finalizarCompra()">
 
@@ -1209,6 +1240,7 @@ header::before{
         </div>
 
         <button
+            type="button"
             class="boton-cerrar-confirmacion"
             onclick="cerrarConfirmacion()">
 
@@ -1238,7 +1270,13 @@ const SUPABASE_PUBLISHABLE_KEY =
     "sb_publishable_70i0ND16ktralfkCpzjCBQ_1BIG5G9s";
 
 
-const supabase =
+/*
+   Usamos otro nombre para el cliente.
+   Así evitamos posibles conflictos con
+   window.supabase del CDN.
+*/
+
+const supabaseClient =
     window.supabase.createClient(
         SUPABASE_URL,
         SUPABASE_PUBLISHABLE_KEY
@@ -1257,7 +1295,89 @@ let stockCargado = false;
    ============================== */
 
 const CORREO_PEDIDOS =
-    "boulahtoufyousseff15@gmail.com";
+    "TU_CORREO_AQUI@ejemplo.com";
+
+
+/* ==============================
+   NORMALIZAR NOMBRE DEL PRODUCTO
+   ============================== */
+
+function normalizarNombreProducto(nombre){
+
+    if(nombre === null || nombre === undefined){
+
+        return "";
+
+    }
+
+
+    const texto =
+        String(nombre).trim();
+
+
+    const minusculas =
+        texto.toLowerCase();
+
+
+    /*
+       Todos estos nombres significan
+       el mismo producto.
+    */
+
+    if(
+        minusculas === "camiseta neymar" ||
+        minusculas === "camiseta de neymar" ||
+        minusculas === "camiseta de neymer santos" ||
+        minusculas === "camiseta de neymar santos"
+    ){
+
+        return "CAMISETA DE NEYMAR SANTOS";
+
+    }
+
+
+    return texto;
+
+}
+
+
+/* ==============================
+   NORMALIZAR COLOR
+   ============================== */
+
+function normalizarColor(color){
+
+    if(color === null || color === undefined){
+
+        return "";
+
+    }
+
+
+    const texto =
+        String(color).trim();
+
+
+    const minusculas =
+        texto.toLowerCase();
+
+
+    if(minusculas === "negro"){
+        return "Negro";
+    }
+
+    if(minusculas === "blanco"){
+        return "Blanco";
+    }
+
+    if(minusculas === "rosa"){
+        return "ROSA";
+    }
+
+
+    return texto;
+
+}
 
 
 /* ==============================
@@ -1266,17 +1386,151 @@ const CORREO_PEDIDOS =
 
 async function cargarStockGlobal(){
 
-    const resultado =
-        await supabase.rpc(
-            "obtener_stock_xmxo"
+    try{
+
+        const resultado =
+            await supabaseClient.rpc(
+                "obtener_stock_xmxo"
+            );
+
+
+        if(resultado.error){
+
+            console.error(
+                "Error cargando stock global:",
+                resultado.error
+            );
+
+            stockCargado = false;
+
+            return false;
+
+        }
+
+
+        stockCamisetas = {};
+
+
+        const datos =
+            Array.isArray(resultado.data)
+                ? resultado.data
+                : [];
+
+
+        datos.forEach(
+            function(item){
+
+                /*
+                   Algunas versiones de la función
+                   pueden devolver "producto"
+                   y otras "product".
+                */
+
+                const productoOriginal =
+                    item.producto ??
+                    item.product;
+
+
+                /*
+                   Algunas versiones pueden devolver
+                   "variant" y otras "talla".
+                */
+
+                const varianteOriginal =
+                    item.variant ??
+                    item.talla;
+
+
+                const colorOriginal =
+                    item.color;
+
+
+                if(
+                    productoOriginal === null ||
+                    productoOriginal === undefined ||
+                    colorOriginal === null ||
+                    colorOriginal === undefined ||
+                    varianteOriginal === null ||
+                    varianteOriginal === undefined
+                ){
+
+                    console.warn(
+                        "Fila de stock ignorada:",
+                        item
+                    );
+
+                    return;
+
+                }
+
+
+                const producto =
+                    normalizarNombreProducto(
+                        productoOriginal
+                    );
+
+
+                const color =
+                    normalizarColor(
+                        colorOriginal
+                    );
+
+
+                const variante =
+                    String(
+                        varianteOriginal
+                    ).trim();
+
+
+                const stock =
+                    Number(item.stock);
+
+
+                if(
+                    !stockCamisetas[producto]
+                ){
+
+                    stockCamisetas[producto] = {};
+
+                }
+
+
+                if(
+                    !stockCamisetas[producto][color]
+                ){
+
+                    stockCamisetas[producto][color] = {};
+
+                }
+
+
+                stockCamisetas
+                    [producto]
+                    [color]
+                    [variante] =
+                        Number.isFinite(stock)
+                            ? stock
+                            : 0;
+
+            }
         );
 
 
-    if(resultado.error){
+        console.log(
+            "Stock global cargado:",
+            stockCamisetas
+        );
+
+
+        stockCargado = true;
+
+        return true;
+
+    }catch(error){
 
         console.error(
-            "Error cargando stock global:",
-            resultado.error
+            "Error inesperado cargando stock:",
+            error
         );
 
         stockCargado = false;
@@ -1284,27 +1538,7 @@ async function cargarStockGlobal(){
         return false;
 
     }
-stockCamisetas = {};
 
-resultado.data.forEach(function(item){
-
-    if(!stockCamisetas[item.producto]){
-        stockCamisetas[item.producto] = {};
-    }
-
-    if(!stockCamisetas[item.producto][item.color]){
-        stockCamisetas[item.producto][item.color] = {};
-    }
-
-    stockCamisetas[item.producto][item.color][item.variant] = item.stock;
-
-});
-
-   
-
-stockCargado = true;
-
-return true;
 }
 
 
@@ -1321,13 +1555,37 @@ function unidadesEnCarrito(
     let cantidad = 0;
 
 
+    const nombreNormalizado =
+        normalizarNombreProducto(
+            nombre
+        );
+
+
+    const colorNormalizado =
+        normalizarColor(
+            color
+        );
+
+
+    const tallaNormalizada =
+        String(talla).trim();
+
+
     carrito.forEach(
         function(producto){
 
             if(
-                producto.nombre === nombre &&
-                producto.color === color &&
-                producto.talla === talla
+                normalizarNombreProducto(
+                    producto.nombre
+                ) === nombreNormalizado &&
+
+                normalizarColor(
+                    producto.color
+                ) === colorNormalizado &&
+
+                String(
+                    producto.talla
+                ).trim() === tallaNormalizada
             ){
 
                 cantidad++;
@@ -1360,10 +1618,40 @@ function obtenerStock(
     }
 
 
+    const nombreNormalizado =
+        normalizarNombreProducto(
+            nombre
+        );
+
+
+    const colorNormalizado =
+        normalizarColor(
+            color
+        );
+
+
+    const tallaNormalizada =
+        String(talla).trim();
+
+
     if(
-        !stockCamisetas[nombre] ||
-        !stockCamisetas[nombre][color] ||
-        stockCamisetas[nombre][color][talla] === undefined
+        !stockCamisetas[
+            nombreNormalizado
+        ] ||
+
+        !stockCamisetas[
+            nombreNormalizado
+        ][
+            colorNormalizado
+        ] ||
+
+        stockCamisetas[
+            nombreNormalizado
+        ][
+            colorNormalizado
+        ][
+            tallaNormalizada
+        ] === undefined
     ){
 
         return null;
@@ -1372,27 +1660,33 @@ function obtenerStock(
 
 
     const stockActual =
-        stockCamisetas
-            [nombre]
-            [color]
-            [talla];
+        Number(
+            stockCamisetas[
+                nombreNormalizado
+            ][
+                colorNormalizado
+            ][
+                tallaNormalizada
+            ]
+        );
 
 
     const cantidadCarrito =
         unidadesEnCarrito(
-            nombre,
-            color,
-            talla
+            nombreNormalizado,
+            colorNormalizado,
+            tallaNormalizada
         );
 
 
-    return stockActual - cantidadCarrito;
+    return stockActual -
+        cantidadCarrito;
 
 }
 
 
 /* ==============================
-   ACTUALIZAR DETALLES DEL STOCK
+   NUMERO STOCK
    ============================== */
 
 function numeroStock(
@@ -1401,10 +1695,40 @@ function numeroStock(
     talla
 ){
 
+    const nombreNormalizado =
+        normalizarNombreProducto(
+            nombre
+        );
+
+
+    const colorNormalizado =
+        normalizarColor(
+            color
+        );
+
+
+    const tallaNormalizada =
+        String(talla).trim();
+
+
     if(
-        !stockCamisetas[nombre] ||
-        !stockCamisetas[nombre][color] ||
-        stockCamisetas[nombre][color][talla] === undefined
+        !stockCamisetas[
+            nombreNormalizado
+        ] ||
+
+        !stockCamisetas[
+            nombreNormalizado
+        ][
+            colorNormalizado
+        ] ||
+
+        stockCamisetas[
+            nombreNormalizado
+        ][
+            colorNormalizado
+        ][
+            tallaNormalizada
+        ] === undefined
     ){
 
         return 0;
@@ -1412,13 +1736,22 @@ function numeroStock(
     }
 
 
-    return stockCamisetas
-        [nombre]
-        [color]
-        [talla];
+    return Number(
+        stockCamisetas[
+            nombreNormalizado
+        ][
+            colorNormalizado
+        ][
+            tallaNormalizada
+        ]
+    );
 
 }
 
+
+/* ==============================
+   ACTUALIZAR DETALLES DEL STOCK
+   ============================== */
 
 function actualizarDetallesStock(){
 
@@ -1458,44 +1791,60 @@ function actualizarDetallesStock(){
                 numeroStock(nombre,"Negro","M") +
                 " · L " +
                 numeroStock(nombre,"Negro","L") +
+                " · XL " +
+                numeroStock(nombre,"Negro","XL") +
                 "<br>" +
                 "⚪ Blanco: S " +
                 numeroStock(nombre,"Blanco","S") +
                 " · M " +
                 numeroStock(nombre,"Blanco","M") +
                 " · L " +
-                numeroStock(nombre,"Blanco","L")
+                numeroStock(nombre,"Blanco","L") +
+                " · XL " +
+                numeroStock(nombre,"Blanco","XL")
             );
 
         };
 
 
-    if(detalle2)
+    if(detalle2){
+
         detalle2.innerHTML =
             textoCamiseta(
-                "Camiseta Neymar"
+                "CAMISETA DE NEYMAR SANTOS"
             );
 
+    }
 
-    if(detalle3)
+
+    if(detalle3){
+
         detalle3.innerHTML =
             textoCamiseta(
                 "CAMISETA DE PELASTINA"
             );
 
+    }
 
-    if(detalle4)
+
+    if(detalle4){
+
         detalle4.innerHTML =
             textoCamiseta(
                 "CAMISETA DE VENUM UFC"
             );
 
+    }
 
-    if(detalle5)
+
+    if(detalle5){
+
         detalle5.innerHTML =
             textoCamiseta(
                 "CAMISETA DE CASA BLANCA"
             );
+
+    }
 
 
     if(detalle6){
@@ -1548,19 +1897,29 @@ function actualizarStock(
 ){
 
     const colorElement =
-        document.getElementById(idColor);
+        document.getElementById(
+            idColor
+        );
 
     const tallaElement =
-        document.getElementById(idTalla);
+        document.getElementById(
+            idTalla
+        );
 
     const estado =
-        document.getElementById(idEstado);
+        document.getElementById(
+            idEstado
+        );
 
     const seleccion =
-        document.getElementById(idSeleccion);
+        document.getElementById(
+            idSeleccion
+        );
 
     const boton =
-        document.getElementById(idBoton);
+        document.getElementById(
+            idBoton
+        );
 
 
     if(
@@ -1570,6 +1929,27 @@ function actualizarStock(
         !seleccion ||
         !boton
     ){
+
+        return;
+
+    }
+
+
+    if(!stockCargado){
+
+        estado.textContent =
+            "● CARGANDO STOCK...";
+
+        estado.className =
+            "stock-disponible";
+
+        seleccion.textContent =
+            "Esperando stock...";
+
+        boton.disabled = true;
+
+        boton.textContent =
+            "Cargando...";
 
         return;
 
@@ -1604,6 +1984,9 @@ function actualizarStock(
 
         boton.disabled = true;
 
+        boton.textContent =
+            "No disponible";
+
         return;
 
     }
@@ -1625,9 +2008,16 @@ function actualizarStock(
             " · Quedan " +
             stock +
             " unidad" +
-            (stock === 1 ? "" : "es");
+            (
+                stock === 1
+                    ? ""
+                    : "es"
+            );
 
         boton.disabled = false;
+
+        boton.textContent =
+            "Añadir al carrito";
 
     }else{
 
@@ -1645,6 +2035,9 @@ function actualizarStock(
             " · Sin unidades disponibles";
 
         boton.disabled = true;
+
+        boton.textContent =
+            "Agotado";
 
     }
 
@@ -1681,11 +2074,30 @@ async function agregarAlCarrito(
     idBoton
 ){
 
+    const boton =
+        document.getElementById(
+            idBoton
+        );
+
+
+    if(boton){
+
+        boton.disabled = true;
+
+    }
+
+
     const cargado =
         await cargarStockGlobal();
 
 
     if(!cargado){
+
+        if(boton){
+
+            boton.disabled = false;
+
+        }
 
         alert(
             "No se pudo comprobar el stock. Recarga la página e inténtalo de nuevo."
@@ -1697,14 +2109,19 @@ async function agregarAlCarrito(
 
 
     actualizarDetallesStock();
+
     actualizarTodosLosStocks();
 
 
     const colorElement =
-        document.getElementById(idColor);
+        document.getElementById(
+            idColor
+        );
 
     const tallaElement =
-        document.getElementById(idTalla);
+        document.getElementById(
+            idTalla
+        );
 
 
     if(
@@ -1712,21 +2129,34 @@ async function agregarAlCarrito(
         !tallaElement
     ){
 
+        actualizarTodosLosStocks();
+
         return;
 
     }
 
 
     const color =
-        colorElement.value;
+        normalizarColor(
+            colorElement.value
+        );
+
 
     const talla =
-        tallaElement.value;
+        String(
+            tallaElement.value
+        ).trim();
+
+
+    const nombreNormalizado =
+        normalizarNombreProducto(
+            nombre
+        );
 
 
     const stock =
         obtenerStock(
-            nombre,
+            nombreNormalizado,
             color,
             talla
         );
@@ -1760,15 +2190,24 @@ async function agregarAlCarrito(
 
     const producto = {
 
-        nombre:nombre,
-        color:color,
-        talla:talla,
-        precio:precio
+        nombre:
+            nombreNormalizado,
+
+        color:
+            color,
+
+        talla:
+            talla,
+
+        precio:
+            Number(precio)
 
     };
 
 
-    carrito.push(producto);
+    carrito.push(
+        producto
+    );
 
 
     mostrarCarrito();
@@ -1776,7 +2215,7 @@ async function agregarAlCarrito(
 
     const imagenes = {
 
-        "Camiseta Neymar":
+        "CAMISETA DE NEYMAR SANTOS":
             "ladera2.jpg",
 
         "CAMISETA DE PELASTINA":
@@ -1828,29 +2267,54 @@ async function agregarAlCarrito(
         );
 
 
-    if(imagenAviso)
+    if(imagenAviso){
+
         imagenAviso.src =
-            imagenes[nombre];
+            imagenes[
+                nombreNormalizado
+            ];
 
-    if(nombreAviso)
+    }
+
+
+    if(nombreAviso){
+
         nombreAviso.textContent =
-            nombre;
+            nombreNormalizado;
 
-    if(colorAviso)
+    }
+
+
+    if(colorAviso){
+
         colorAviso.textContent =
             color;
 
-    if(tallaAviso)
+    }
+
+
+    if(tallaAviso){
+
         tallaAviso.textContent =
             talla;
 
-    if(precioAviso)
-        precioAviso.textContent =
-            precio.toFixed(2);
+    }
 
-    if(modalCarrito)
+
+    if(precioAviso){
+
+        precioAviso.textContent =
+            Number(precio).toFixed(2);
+
+    }
+
+
+    if(modalCarrito){
+
         modalCarrito.style.display =
             "flex";
+
+    }
 
 
     actualizarTodosLosStocks();
@@ -1865,7 +2329,7 @@ async function agregarAlCarrito(
 function actualizarTodosLosStocks(){
 
     actualizarStock(
-        "Camiseta Neymar",
+        "CAMISETA DE NEYMAR SANTOS",
         "color2",
         "talla2",
         "estadoStock2",
@@ -1927,9 +2391,16 @@ function actualizarTodosLosStocks(){
 
 
     if(
-        stockBotas !== null &&
-        stockBotas > 0
+        !estadoBotas ||
+        !botonBotas
     ){
+
+        return;
+
+    }
+
+
+    if(stockBotas !== null && stockBotas > 0){
 
         estadoBotas.textContent =
             "● DISPONIBLE";
@@ -1942,6 +2413,20 @@ function actualizarTodosLosStocks(){
 
         botonBotas.textContent =
             "Añadir al carrito";
+
+    }else if(!stockCargado){
+
+        estadoBotas.textContent =
+            "● CARGANDO STOCK...";
+
+        estadoBotas.className =
+            "stock-disponible";
+
+        botonBotas.disabled =
+            true;
+
+        botonBotas.textContent =
+            "Cargando...";
 
     }else{
 
@@ -1968,10 +2453,18 @@ function actualizarTodosLosStocks(){
 
 function seguirComprando(){
 
-    document.getElementById(
-        "modalCarrito"
-    ).style.display =
-        "none";
+    const modal =
+        document.getElementById(
+            "modalCarrito"
+        );
+
+
+    if(modal){
+
+        modal.style.display =
+            "none";
+
+    }
 
 }
 
@@ -1982,17 +2475,33 @@ function seguirComprando(){
 
 function irAlCarrito(){
 
-    document.getElementById(
-        "modalCarrito"
-    ).style.display =
-        "none";
+    const modal =
+        document.getElementById(
+            "modalCarrito"
+        );
 
 
-    document.getElementById(
-        "carrito"
-    ).scrollIntoView({
-        behavior:"smooth"
-    });
+    if(modal){
+
+        modal.style.display =
+            "none";
+
+    }
+
+
+    const carritoElemento =
+        document.getElementById(
+            "carrito"
+        );
+
+
+    if(carritoElemento){
+
+        carritoElemento.scrollIntoView({
+            behavior:"smooth"
+        });
+
+    }
 
 }
 
@@ -2009,59 +2518,91 @@ function mostrarCarrito(){
         );
 
 
-    if(!lista)
+    if(!lista){
+
         return;
+
+    }
 
 
     lista.innerHTML = "";
 
+
     let total = 0;
+
+
+    if(carrito.length === 0){
+
+        const vacio =
+            document.createElement("li");
+
+
+        vacio.textContent =
+            "El carrito está vacío.";
+
+
+        vacio.style.color =
+            "#aaa";
+
+
+        lista.appendChild(
+            vacio
+        );
+
+    }
 
 
     carrito.forEach(
         function(producto,indice){
 
             const li =
-                document.createElement("li");
+                document.createElement(
+                    "li"
+                );
 
 
             li.innerHTML =
-
                 producto.nombre +
-
                 " — Color: " +
-
                 producto.color +
-
                 " — Talla: " +
-
                 producto.talla +
-
                 " — " +
-
-                producto.precio.toFixed(2) +
-
+                Number(
+                    producto.precio
+                ).toFixed(2) +
                 " € " +
-
-                '<button class="eliminar" onclick="eliminarProducto(' +
-
+                '<button type="button" class="eliminar" onclick="eliminarProducto(' +
                 indice +
-
                 ')">Eliminar</button>';
 
 
-            lista.appendChild(li);
+            lista.appendChild(
+                li
+            );
 
-            total += producto.precio;
+
+            total +=
+                Number(
+                    producto.precio
+                );
 
         }
     );
 
 
-    document.getElementById(
-        "total"
-    ).textContent =
-        total.toFixed(2);
+    const totalElemento =
+        document.getElementById(
+            "total"
+        );
+
+
+    if(totalElemento){
+
+        totalElemento.textContent =
+            total.toFixed(2);
+
+    }
 
 
     actualizarTodosLosStocks();
@@ -2102,6 +2643,13 @@ function eliminarProducto(indice){
 
 function comprarCarrito(){
 
+    if(!Array.isArray(carrito)){
+
+        carrito = [];
+
+    }
+
+
     if(carrito.length === 0){
 
         alert(
@@ -2119,12 +2667,23 @@ function comprarCarrito(){
         );
 
 
+    if(!contenedor){
+
+        alert(
+            "No se pudo abrir la ventana de compra."
+        );
+
+        return;
+
+    }
+
+
     contenedor.innerHTML = "";
 
 
     const imagenes = {
 
-        "Camiseta Neymar":
+        "CAMISETA DE NEYMAR SANTOS":
             "ladera2.jpg",
 
         "CAMISETA DE PELASTINA":
@@ -2152,7 +2711,9 @@ function comprarCarrito(){
         function(producto){
 
             const productoDiv =
-                document.createElement("div");
+                document.createElement(
+                    "div"
+                );
 
 
             productoDiv.className =
@@ -2182,7 +2743,7 @@ function comprarCarrito(){
 
                     <p>
                         Precio:
-                        ${producto.precio.toFixed(2)} €
+                        ${Number(producto.precio).toFixed(2)} €
                     </p>
 
                 </div>
@@ -2195,22 +2756,41 @@ function comprarCarrito(){
             );
 
 
-            total += producto.precio;
+            total +=
+                Number(
+                    producto.precio
+                );
 
         }
     );
 
 
-    document.getElementById(
-        "total-compra"
-    ).textContent =
-        total.toFixed(2);
+    const totalCompra =
+        document.getElementById(
+            "total-compra"
+        );
 
 
-    document.getElementById(
-        "modalCompra"
-    ).style.display =
-        "flex";
+    if(totalCompra){
+
+        totalCompra.textContent =
+            total.toFixed(2);
+
+    }
+
+
+    const modalCompra =
+        document.getElementById(
+            "modalCompra"
+        );
+
+
+    if(modalCompra){
+
+        modalCompra.style.display =
+            "flex";
+
+    }
 
 }
 
@@ -2221,10 +2801,18 @@ function comprarCarrito(){
 
 function cerrarCompra(){
 
-    document.getElementById(
-        "modalCompra"
-    ).style.display =
-        "none";
+    const modal =
+        document.getElementById(
+            "modalCompra"
+        );
+
+
+    if(modal){
+
+        modal.style.display =
+            "none";
+
+    }
 
 }
 
@@ -2235,6 +2823,13 @@ function cerrarCompra(){
 
 function comprobarStockPedido(){
 
+    if(!stockCargado){
+
+        return false;
+
+    }
+
+
     const cantidades = {};
 
 
@@ -2242,12 +2837,30 @@ function comprobarStockPedido(){
         const producto of carrito
     ){
 
+        const nombre =
+            normalizarNombreProducto(
+                producto.nombre
+            );
+
+
+        const color =
+            normalizarColor(
+                producto.color
+            );
+
+
+        const talla =
+            String(
+                producto.talla
+            ).trim();
+
+
         const clave =
-            producto.nombre +
+            nombre +
             "|" +
-            producto.color +
+            color +
             "|" +
-            producto.talla;
+            talla;
 
 
         if(!cantidades[clave]){
@@ -2262,9 +2875,9 @@ function comprobarStockPedido(){
 
         const stockDisponible =
             obtenerStock(
-                producto.nombre,
-                producto.color,
-                producto.talla
+                nombre,
+                color,
+                talla
             );
 
 
@@ -2291,86 +2904,125 @@ function comprobarStockPedido(){
 
 async function descontarStockPedido(){
 
-    const cantidades = {};
+    try{
+
+        const cantidades = {};
 
 
-    carrito.forEach(
-        function(producto){
+        carrito.forEach(
+            function(producto){
 
-            const clave =
-                producto.nombre +
-                "|" +
-                producto.color +
-                "|" +
-                producto.talla;
+                const nombre =
+                    normalizarNombreProducto(
+                        producto.nombre
+                    );
 
 
-            if(!cantidades[clave]){
+                const color =
+                    normalizarColor(
+                        producto.color
+                    );
 
-                cantidades[clave] = {
 
-                    product:
-                        producto.nombre,
+                const talla =
+                    String(
+                        producto.talla
+                    ).trim();
 
-                    color:
-                        producto.color,
 
-                    variant:
-                        producto.talla,
+                const clave =
+                    nombre +
+                    "|" +
+                    color +
+                    "|" +
+                    talla;
 
-                    quantity:0
 
-                };
+                if(!cantidades[clave]){
+
+                    cantidades[clave] = {
+
+                        product:
+                            nombre,
+
+                        color:
+                            color,
+
+                        variant:
+                            talla,
+
+                        quantity:
+                            0
+
+                    };
+
+                }
+
+
+                cantidades[clave].quantity++;
 
             }
+        );
 
 
-            cantidades[clave].quantity++;
+        const resultado =
+            await supabaseClient.rpc(
+                "descontar_pedido_xmxo",
+                {
+                    p_items:
+                        Object.values(
+                            cantidades
+                        )
+                }
+            );
+
+
+        if(resultado.error){
+
+            console.error(
+                "Error descontando stock global:",
+                resultado.error
+            );
+
+            return false;
 
         }
-    );
 
 
-    const resultado =
-        await supabase.rpc(
-            "descontar_pedido_xmxo",
-            {
-                p_items:
-                    Object.values(
-                        cantidades
-                    )
-            }
-        );
+        if(
+            resultado.data !== true
+        ){
+
+            console.error(
+                "La función de Supabase no confirmó el descuento:",
+                resultado.data
+            );
+
+            return false;
+
+        }
 
 
-    if(resultado.error){
+        await cargarStockGlobal();
+
+
+        actualizarDetallesStock();
+
+        actualizarTodosLosStocks();
+
+
+        return true;
+
+    }catch(error){
 
         console.error(
-            "Error descontando stock global:",
-            resultado.error
+            "Error inesperado descontando stock:",
+            error
         );
 
         return false;
 
     }
-
-
-    if(resultado.data !== true){
-
-        return false;
-
-    }
-
-
-    await cargarStockGlobal();
-
-
-    actualizarDetallesStock();
-
-    actualizarTodosLosStocks();
-
-
-    return true;
 
 }
 
@@ -2420,7 +3072,18 @@ async function finalizarCompra(){
     }
 
 
-    /* CARGAR STOCK MÁS RECIENTE */
+    if(carrito.length === 0){
+
+        alert(
+            "El carrito está vacío."
+        );
+
+        cerrarCompra();
+
+        return;
+
+    }
+
 
     const stockActualizado =
         await cargarStockGlobal();
@@ -2442,8 +3105,6 @@ async function finalizarCompra(){
     actualizarTodosLosStocks();
 
 
-    /* COMPROBAR STOCK */
-
     if(!comprobarStockPedido()){
 
         alert(
@@ -2457,8 +3118,6 @@ async function finalizarCompra(){
     }
 
 
-    /* COMPROBAR CORREO */
-
     if(
         !CORREO_PEDIDOS ||
         CORREO_PEDIDOS ===
@@ -2466,7 +3125,7 @@ async function finalizarCompra(){
     ){
 
         alert(
-            "El correo de pedidos todavía no está configurado."
+            "Primero configura tu correo de pedidos en CORREO_PEDIDOS."
         );
 
         return;
@@ -2483,29 +3142,24 @@ async function finalizarCompra(){
         function(producto,indice){
 
             productosTexto +=
-
                 (indice + 1) +
-
                 ". " +
-
                 producto.nombre +
-
                 " | Color: " +
-
                 producto.color +
-
                 " | Talla: " +
-
                 producto.talla +
-
                 " | Precio: " +
-
-                producto.precio.toFixed(2) +
-
+                Number(
+                    producto.precio
+                ).toFixed(2) +
                 " €\n";
 
 
-            total += producto.precio;
+            total +=
+                Number(
+                    producto.precio
+                );
 
         }
     );
@@ -2513,65 +3167,67 @@ async function finalizarCompra(){
 
     try{
 
-        const respuesta = await fetch(
+        const respuesta =
+            await fetch(
 
-            "https://formsubmit.co/ajax/" +
-            encodeURIComponent(
-                CORREO_PEDIDOS
-            ),
+                "https://formsubmit.co/ajax/" +
+                encodeURIComponent(
+                    CORREO_PEDIDOS
+                ),
 
-            {
+                {
 
-                method:"POST",
+                    method:"POST",
 
-                headers:{
+                    headers:{
 
-                    "Content-Type":
-                        "application/json",
+                        "Content-Type":
+                            "application/json",
 
-                    "Accept":
-                        "application/json"
+                        "Accept":
+                            "application/json"
 
-                },
+                    },
 
-                body:JSON.stringify({
+                    body:JSON.stringify({
 
-                    _subject:
-                        "🦁 NUEVO PEDIDO - TIENDA XMXO",
+                        _subject:
+                            "🦁 NUEVO PEDIDO - TIENDA XMXO",
 
-                    _template:
-                        "table",
+                        _template:
+                            "table",
 
-                    nombre_cliente:
-                        nombre,
+                        nombre_cliente:
+                            nombre,
 
-                    telefono_cliente:
-                        telefono,
+                        telefono_cliente:
+                            telefono,
 
-                    forma_entrega:
-                        entrega,
+                        forma_entrega:
+                            entrega,
 
-                    lugar_entrega:
-                        direccion,
+                        lugar_entrega:
+                            direccion,
 
-                    productos:
-                        productosTexto,
+                        productos:
+                            productosTexto,
 
-                    total_pedido:
-                        total.toFixed(2) +
-                        " €",
+                        total_pedido:
+                            total.toFixed(2) +
+                            " €",
 
-                    _url:
-                        "https://www.tiendaxmxo.store/"
+                        _url:
+                            window.location.href
 
-                })
+                    })
 
-            }
+                }
 
-        );
+            );
 
 
-        let datosRespuesta = null;
+        let datosRespuesta =
+            null;
 
 
         try{
@@ -2581,7 +3237,8 @@ async function finalizarCompra(){
 
         }catch(error){
 
-            datosRespuesta = null;
+            datosRespuesta =
+                null;
 
         }
 
@@ -2601,12 +3258,6 @@ async function finalizarCompra(){
         }
 
 
-        /*
-        ==========================================
-        PEDIDO ENVIADO CORRECTAMENTE
-        ==========================================
-        */
-
         const stockDescontado =
             await descontarStockPedido();
 
@@ -2614,7 +3265,7 @@ async function finalizarCompra(){
         if(!stockDescontado){
 
             alert(
-                "El pedido fue enviado, pero el stock cambió mientras se procesaba. Revisa el stock antes de confirmar el pedido."
+                "El pedido fue enviado, pero el stock no pudo descontarse correctamente. Revisa el stock antes de volver a realizar el pedido."
             );
 
             await cargarStockGlobal();
@@ -2628,28 +3279,60 @@ async function finalizarCompra(){
         }
 
 
-        document.getElementById(
-            "nombreConfirmacion"
-        ).textContent =
-            nombre;
+        const nombreConfirmacion =
+            document.getElementById(
+                "nombreConfirmacion"
+            );
 
 
-        document.getElementById(
-            "totalConfirmacion"
-        ).textContent =
-            total.toFixed(2);
+        const totalConfirmacion =
+            document.getElementById(
+                "totalConfirmacion"
+            );
 
 
-        document.getElementById(
-            "modalCompra"
-        ).style.display =
-            "none";
+        if(nombreConfirmacion){
+
+            nombreConfirmacion.textContent =
+                nombre;
+
+        }
 
 
-        document.getElementById(
-            "modalConfirmacion"
-        ).style.display =
-            "flex";
+        if(totalConfirmacion){
+
+            totalConfirmacion.textContent =
+                total.toFixed(2);
+
+        }
+
+
+        const modalCompra =
+            document.getElementById(
+                "modalCompra"
+            );
+
+
+        const modalConfirmacion =
+            document.getElementById(
+                "modalConfirmacion"
+            );
+
+
+        if(modalCompra){
+
+            modalCompra.style.display =
+                "none";
+
+        }
+
+
+        if(modalConfirmacion){
+
+            modalConfirmacion.style.display =
+                "flex";
+
+        }
 
 
         carrito = [];
@@ -2681,8 +3364,7 @@ async function finalizarCompra(){
     }catch(error){
 
         alert(
-            "No se ha podido enviar el pedido. " +
-            "El stock NO se ha descontado."
+            "No se ha podido enviar el pedido. El stock NO se ha descontado."
         );
 
 
@@ -2702,10 +3384,18 @@ async function finalizarCompra(){
 
 function cerrarConfirmacion(){
 
-    document.getElementById(
-        "modalConfirmacion"
-    ).style.display =
-        "none";
+    const modal =
+        document.getElementById(
+            "modalConfirmacion"
+        );
+
+
+    if(modal){
+
+        modal.style.display =
+            "none";
+
+    }
 
 }
 
@@ -2717,6 +3407,9 @@ function cerrarConfirmacion(){
 document.addEventListener(
     "DOMContentLoaded",
     async function(){
+
+        mostrarCarrito();
+
 
         const cargado =
             await cargarStockGlobal();
@@ -2730,8 +3423,41 @@ document.addEventListener(
 
         }else{
 
-            alert(
-                "No se pudo cargar el stock global. Comprueba la conexión con Supabase."
+            console.error(
+                "No se pudo cargar el stock global."
+            );
+
+
+            const estados = [
+                "estadoStock2",
+                "estadoStock3",
+                "estadoStock4",
+                "estadoStock5",
+                "estadoStock6",
+                "estadoStock7"
+            ];
+
+
+            estados.forEach(
+                function(id){
+
+                    const elemento =
+                        document.getElementById(
+                            id
+                        );
+
+
+                    if(elemento){
+
+                        elemento.textContent =
+                            "● ERROR CARGANDO STOCK";
+
+                        elemento.className =
+                            "stock-agotado";
+
+                    }
+
+                }
             );
 
         }
