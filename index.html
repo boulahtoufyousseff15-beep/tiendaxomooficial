@@ -1288,40 +1288,15 @@ async function cargarStockGlobal(){
 
     stockCamisetas = {};
 
+resultado.data.forEach(function(item){
 
-    resultado.data.forEach(
-        function(item){
+    stockCamisetas[item.producto] = item.stock;
 
-            if(!stockCamisetas[item.product]){
+});
 
-                stockCamisetas[item.product] = {};
+stockCargado = true;
 
-            }
-
-
-            if(
-                !stockCamisetas[item.product][item.color]
-            ){
-
-                stockCamisetas[item.product][item.color] = {};
-
-            }
-
-
-            stockCamisetas
-                [item.product]
-                [item.color]
-                [item.variant] =
-                    item.stock;
-
-        }
-    );
-
-
-    stockCargado = true;
-
-    return true;
-
+return true;
 }
 
 
