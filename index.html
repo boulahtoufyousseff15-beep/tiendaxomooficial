@@ -571,31 +571,24 @@ header::before{
         <option>Negro</option>
         <option>Blanco</option>
     </select>
-    <label>Talla:</label>
-    <select id="talla2" onchange="actualizarStock(
-        'CAMISETA DE NEYMAR SANTOS',
-        'color2',
-        'talla2',
-        'estadoStock2',
-        'stockSeleccion2',
-        'boton2'
-    )">
-        <option>S</option>
-        <option>M</option>
-        <option>L</option>
-        <option>XL</option>
-    </select>
-</div>
-<p class="precio">15.99 €</p>
-<button id="boton2" class="boton-carrito" disabled onclick="agregarAlCarrito(
+<label>Talla:</label>
+<select id="talla2" onchange="actualizarStock(
     'CAMISETA DE NEYMAR SANTOS',
     'color2',
     'talla2',
-    15.99,
+    'estadoStock2',
+    'stockSeleccion2',
     'boton2'
 )">
-    Cargando...
-</button>
+    <option>S</option>
+    <option>M</option>
+    <option>L</option>
+    <option>XL</option>
+</select>
+</div>
+<p class="precio">15.99 €</p>
+
+Cargando…
 </div>
 <!-- PRODUCTO 2 -->
 <div class="producto">
@@ -619,31 +612,24 @@ header::before{
         <option>Negro</option>
         <option>Blanco</option>
     </select>
-    <label>Talla:</label>
-    <select id="talla5" onchange="actualizarStock(
-        'CAMISETA DE CASA BLANCA',
-        'color5',
-        'talla5',
-        'estadoStock5',
-        'stockSeleccion5',
-        'boton5'
-    )">
-        <option>S</option>
-        <option>M</option>
-        <option>L</option>
-        <option>XL</option>
-    </select>
-</div>
-<p class="precio">15.99 €</p>
-<button id="boton5" class="boton-carrito" disabled onclick="agregarAlCarrito(
+<label>Talla:</label>
+<select id="talla5" onchange="actualizarStock(
     'CAMISETA DE CASA BLANCA',
     'color5',
     'talla5',
-    15.99,
+    'estadoStock5',
+    'stockSeleccion5',
     'boton5'
 )">
-    Cargando...
-</button>
+    <option>S</option>
+    <option>M</option>
+    <option>L</option>
+    <option>XL</option>
+</select>
+</div>
+<p class="precio">15.99 €</p>
+
+Cargando…
 </div>
 <!-- PRODUCTO 3 -->
 <div class="producto">
@@ -660,24 +646,17 @@ header::before{
         <option>Blanco</option>
         <option>Negro</option>
     </select>
-    <label>iPhone:</label>
-    <select id="talla6" onchange="actualizarStockFunda()">
-        <option>iPhone 13 Pro</option>
-        <option>iPhone 14 Pro</option>
-    </select>
+<label>iPhone:</label>
+<select id="talla6" onchange="actualizarStockFunda()">
+    <option>iPhone 13 Pro</option>
+    <option>iPhone 14 Pro</option>
+</select>
 </div>
 <p class="precio">6.99 €</p>
-<button id="boton6" class="boton-carrito" disabled onclick="agregarAlCarrito(
-    'FUNDA BAYB GANG',
-    'color6',
-    'talla6',
-    6.99,
-    'boton6'
-)">
-    Cargando...
-</button>
+
+Cargando…
 </div>
-<!-- PRODUCTO 4 - GORRA EXISTENTE -->
+<!-- PRODUCTO 4 -->
 <div class="producto">
     <h2>GORRA DE BÉISBOL UNISEX</h2>
 <img src="ladera9.jpeg" alt="Gorra de béisbol">
@@ -693,22 +672,15 @@ header::before{
         <option>Rosa</option>
         <option>Negro</option>
     </select>
-    <select id="talla7" style="display:none;">
-        <option>Única</option>
-    </select>
+<select id="talla7" style="display:none;">
+    <option>Única</option>
+</select>
 </div>
 <p class="precio">9.99 €</p>
-<button id="boton7" class="boton-carrito" disabled onclick="agregarAlCarrito(
-    'GORRA DE BÉISBOL',
-    'color7',
-    'talla7',
-    9.99,
-    'boton7'
-)">
-    Cargando...
-</button>
+
+Cargando…
 </div>
-<!-- PRODUCTO 10 - NIKE AIR FORCE 1 -->
+<!-- PRODUCTO 10 -->
 <div class="producto">
     <h2>NIKE AIR FORCE 1</h2>
 <img src="LADERA10.jpg" alt="Nike Air Force 1">
@@ -729,32 +701,25 @@ header::before{
     )">
         <option>Blanco</option>
     </select>
-    <label>Talla:</label>
-    <select id="talla10" onchange="actualizarStockNuevo(
-        'NIKE AIR FORCE 1',
-        'color10',
-        'talla10',
-        'estadoStock10',
-        'stockSeleccion10',
-        'boton10'
-    )">
-        <option>40</option>
-    </select>
-</div>
-<p class="precio">25.99 €</p>
-<button id="boton10" class="boton-carrito" disabled onclick="agregarAlCarrito(
+<label>Talla:</label>
+<select id="talla10" onchange="actualizarStockNuevo(
     'NIKE AIR FORCE 1',
     'color10',
     'talla10',
-    25.99,
+    'estadoStock10',
+    'stockSeleccion10',
     'boton10'
 )">
-    Cargando...
-</button>
+    <option>40</option>
+</select>
 </div>
-<!-- PRODUCTO 11 - GORRA GUCCI -->
+<p class="precio">25.99 €</p>
+
+Cargando…
+</div>
+<!-- PRODUCTO 11 - GORRA DE GUCCI -->
 <div class="producto">
-    <h2>GORRA GUCCI</h2>
+    <h2>GORRA DE GUCCI</h2>
 <img src="LADERA11.jpg" alt="Gorra Gucci">
 <div class="stock">
     <div id="estadoStock11" class="stock-disponible">● Cargando stock...</div>
@@ -764,7 +729,7 @@ header::before{
 <div class="opciones">
     <label>Color:</label>
     <select id="color11" onchange="actualizarStockNuevo(
-        'GORRA GUCCI',
+        'GORRA DE GUCCI',
         'color11',
         'talla11',
         'estadoStock11',
@@ -774,24 +739,17 @@ header::before{
         <option>Negro</option>
         <option>Rosa</option>
     </select>
-    <select id="talla11" style="display:none;">
-        <option>Única</option>
-    </select>
+<select id="talla11" style="display:none;">
+    <option>Única</option>
+</select>
 </div>
 <p class="precio">9.99 €</p>
-<button id="boton11" class="boton-carrito" disabled onclick="agregarAlCarrito(
-    'GORRA GUCCI',
-    'color11',
-    'talla11',
-    9.99,
-    'boton11'
-)">
-    Cargando...
-</button>
+
+Cargando…
 </div>
-<!-- PRODUCTO 12 - ZAPATILLA NIKE -->
+<!-- PRODUCTO 12 - ZAPATILLA DE NIKE -->
 <div class="producto">
-    <h2>ZAPATILLA NIKE</h2>
+    <h2>ZAPATILLA DE NIKE</h2>
 <img src="LADERA12.jpg" alt="Zapatilla Nike">
 <div class="stock">
     <div id="estadoStock12" class="stock-disponible">● Cargando stock...</div>
@@ -801,7 +759,7 @@ header::before{
 <div class="opciones">
     <label>Color:</label>
     <select id="color12" onchange="actualizarStockNuevo(
-        'ZAPATILLA NIKE',
+        'ZAPATILLA DE NIKE',
         'color12',
         'talla12',
         'estadoStock12',
@@ -810,33 +768,26 @@ header::before{
     )">
         <option>Blanco</option>
     </select>
-    <label>Talla:</label>
-    <select id="talla12" onchange="actualizarStockNuevo(
-        'ZAPATILLA NIKE',
-        'color12',
-        'talla12',
-        'estadoStock12',
-        'stockSeleccion12',
-        'boton12'
-    )">
-        <option>40</option>
-    </select>
-</div>
-<p class="precio">31.99 €</p>
-<button id="boton12" class="boton-carrito" disabled onclick="agregarAlCarrito(
-    'ZAPATILLA NIKE',
+<label>Talla:</label>
+<select id="talla12" onchange="actualizarStockNuevo(
+    'ZAPATILLA DE NIKE',
     'color12',
     'talla12',
-    31.99,
+    'estadoStock12',
+    'stockSeleccion12',
     'boton12'
 )">
-    Cargando...
-</button>
+    <option>40</option>
+</select>
 </div>
-<!-- PRODUCTO 13 - BOLSO PRADA HOMBRE -->
+<p class="precio">31.99 €</p>
+
+Cargando…
+</div>
+<!-- PRODUCTO 13 - BOLSILLO DE PRADA HOMBRE -->
 <div class="producto">
-    <h2>BOLSO PRADA HOMBRE</h2>
-<img src="LADERA13.jpg" alt="Bolso Prada hombre">
+    <h2>BOLSILLO DE PRADA HOMBRE</h2>
+<img src="LADERA13.jpg" alt="Bolsillo Prada hombre">
 <div class="stock">
     <div id="estadoStock13" class="stock-disponible">● Cargando stock...</div>
     <div id="detalleStock13" class="stock-detalle">Cargando stock...</div>
@@ -845,7 +796,7 @@ header::before{
 <div class="opciones">
     <label>Color:</label>
     <select id="color13" onchange="actualizarStockNuevo(
-        'BOLSO PRADA HOMBRE',
+        'BOLSILLO DE PRADA HOMBRE',
         'color13',
         'talla13',
         'estadoStock13',
@@ -854,24 +805,17 @@ header::before{
     )">
         <option>Negro</option>
     </select>
-    <select id="talla13" style="display:none;">
-        <option>Única</option>
-    </select>
+<select id="talla13" style="display:none;">
+    <option>Única</option>
+</select>
 </div>
 <p class="precio">18.99 €</p>
-<button id="boton13" class="boton-carrito" disabled onclick="agregarAlCarrito(
-    'BOLSO PRADA HOMBRE',
-    'color13',
-    'talla13',
-    18.99,
-    'boton13'
-)">
-    Cargando...
-</button>
+
+Cargando…
 </div>
-<!-- PRODUCTO 14 - RELOJ ROLEX -->
+<!-- PRODUCTO 14 - RELOJ DE ROLEX -->
 <div class="producto">
-    <h2>RELOJ ROLEX</h2>
+    <h2>RELOJ DE ROLEX</h2>
 <img src="LADERA14.jpg" alt="Reloj Rolex">
 <div class="stock">
     <div id="estadoStock14" class="stock-disponible">● Cargando stock...</div>
@@ -881,7 +825,7 @@ header::before{
 <div class="opciones">
     <label>Color:</label>
     <select id="color14" onchange="actualizarStockNuevo(
-        'RELOJ ROLEX',
+        'RELOJ DE ROLEX',
         'color14',
         'talla14',
         'estadoStock14',
@@ -890,20 +834,13 @@ header::before{
     )">
         <option>Azul</option>
     </select>
-    <select id="talla14" style="display:none;">
-        <option>Única</option>
-    </select>
+<select id="talla14" style="display:none;">
+    <option>Única</option>
+</select>
 </div>
 <p class="precio">15.99 €</p>
-<button id="boton14" class="boton-carrito" disabled onclick="agregarAlCarrito(
-    'RELOJ ROLEX',
-    'color14',
-    'talla14',
-    15.99,
-    'boton14'
-)">
-    Cargando...
-</button>
+
+Cargando…
 </div>
 </main>
 <!-- CARRITO -->
@@ -931,28 +868,28 @@ header::before{
 </div>
 <div class="aviso-producto">
     <img id="imagenAviso" src="" alt="Producto añadido">
-    <div class="aviso-producto-info">
-        <h3 id="nombreAviso">Producto</h3>
-        <p>
-            Color:
-            <span id="colorAviso"></span>
-        </p>
-        <p>
-            Talla:
-            <span id="tallaAviso"></span>
-        </p>
-        <p class="aviso-precio">
-            <span id="precioAviso">0.00</span> €
-        </p>
-    </div>
+<div class="aviso-producto-info">
+    <h3 id="nombreAviso">Producto</h3>
+    <p>
+        Color:
+        <span id="colorAviso"></span>
+    </p>
+    <p>
+        Talla:
+        <span id="tallaAviso"></span>
+    </p>
+    <p class="aviso-precio">
+        <span id="precioAviso">0.00</span> €
+    </p>
+</div>
 </div>
 <div class="botones-aviso">
     <button type="button" class="boton-seguir" onclick="seguirComprando()">
         Seguir comprando
     </button>
-    <button type="button" class="boton-ver-carrito" onclick="irAlCarrito()">
-        🛒 Ver carrito
-    </button>
+<button type="button" class="boton-ver-carrito" onclick="irAlCarrito()">
+    🛒 Ver carrito
+</button>
 </div>
 </div>
 </div>
@@ -970,19 +907,19 @@ header::before{
 </h3>
 <div class="formulario-pedido">
     <h3>📦 Datos del pedido</h3>
-    <label>Nombre:</label>
-    <input type="text" id="nombreCliente" placeholder="Tu nombre">
-    <label>Teléfono:</label>
-    <input type="tel" id="telefonoCliente" placeholder="Tu teléfono">
-    <label>Forma de entrega:</label>
-    <select id="entregaCliente">
-        <option>Entrega en persona</option>
-    </select>
-    <label>Lugar de entrega:</label>
-    <textarea id="direccionCliente" placeholder="Indica dónde quieres recibir el pedido"></textarea>
-    <button type="button" class="boton-finalizar" onclick="finalizarCompra()">
-        FINALIZAR PEDIDO
-    </button>
+<label>Nombre:</label>
+<input type="text" id="nombreCliente" placeholder="Tu nombre">
+<label>Teléfono:</label>
+<input type="tel" id="telefonoCliente" placeholder="Tu teléfono">
+<label>Forma de entrega:</label>
+<select id="entregaCliente">
+    <option>Entrega en persona</option>
+</select>
+<label>Lugar de entrega:</label>
+<textarea id="direccionCliente" placeholder="Indica dónde quieres recibir el pedido"></textarea>
+<button type="button" class="boton-finalizar" onclick="finalizarCompra()">
+    FINALIZAR PEDIDO
+</button>
 </div>
 </div>
 </div>
@@ -1044,6 +981,30 @@ function normalizarNombreProducto(nombre){
     ){
         return "CAMISETA DE NEYMAR SANTOS";
     }
+    if(
+        minusculas === "gorra gucci" ||
+        minusculas === "gorra de gucci"
+    ){
+        return "GORRA DE GUCCI";
+    }
+    if(
+        minusculas === "zapatilla nike" ||
+        minusculas === "zapatilla de nike"
+    ){
+        return "ZAPATILLA DE NIKE";
+    }
+    if(
+        minusculas === "bolso prada hombre" ||
+        minusculas === "bolsillo de prada hombre"
+    ){
+        return "BOLSILLO DE PRADA HOMBRE";
+    }
+    if(
+        minusculas === "reloj rolex" ||
+        minusculas === "reloj de rolex"
+    ){
+        return "RELOJ DE ROLEX";
+    }
     return texto;
 }
 /*
@@ -1081,12 +1042,12 @@ function productoSinTalla(nombre){
         normalizarNombreProducto(nombre);
     return (
         nombreNormalizado === "GORRA DE BÉISBOL" ||
-        nombreNormalizado === "GORRA GUCCI" ||
-        nombreNormalizado === "BOLSO PRADA HOMBRE" ||
-        nombreNormalizado === "RELOJ ROLEX"
+        nombreNormalizado === "GORRA DE GUCCI" ||
+        nombreNormalizado === "BOLSILLO DE PRADA HOMBRE" ||
+        nombreNormalizado === "RELOJ DE ROLEX"
     );
 }
-function textoTallaProducto(nombre, talla){
+function textoTallaProducto(nombre,talla){
     if(productoSinTalla(nombre)){
         return "Sin talla";
     }
@@ -1266,15 +1227,24 @@ ACTUALIZAR DETALLES STOCK
 ========================================
 */
 function actualizarDetallesStock(){
-    const detalle2 = document.getElementById("detalleStock2");
-    const detalle5 = document.getElementById("detalleStock5");
-    const detalle6 = document.getElementById("detalleStock6");
-    const detalle7 = document.getElementById("detalleStock7");
-    const detalle10 = document.getElementById("detalleStock10");
-    const detalle11 = document.getElementById("detalleStock11");
-    const detalle12 = document.getElementById("detalleStock12");
-    const detalle13 = document.getElementById("detalleStock13");
-    const detalle14 = document.getElementById("detalleStock14");
+    const detalle2 =
+        document.getElementById("detalleStock2");
+    const detalle5 =
+        document.getElementById("detalleStock5");
+    const detalle6 =
+        document.getElementById("detalleStock6");
+    const detalle7 =
+        document.getElementById("detalleStock7");
+    const detalle10 =
+        document.getElementById("detalleStock10");
+    const detalle11 =
+        document.getElementById("detalleStock11");
+    const detalle12 =
+        document.getElementById("detalleStock12");
+    const detalle13 =
+        document.getElementById("detalleStock13");
+    const detalle14 =
+        document.getElementById("detalleStock14");
     const textoCamiseta = function(nombre){
         return (
             "⚫ Negro: S " +
@@ -1298,64 +1268,120 @@ function actualizarDetallesStock(){
     };
     if(detalle2){
         detalle2.innerHTML =
-            textoCamiseta("CAMISETA DE NEYMAR SANTOS");
+            textoCamiseta(
+                "CAMISETA DE NEYMAR SANTOS"
+            );
     }
     if(detalle5){
         detalle5.innerHTML =
-            textoCamiseta("CAMISETA DE CASA BLANCA");
+            textoCamiseta(
+                "CAMISETA DE CASA BLANCA"
+            );
     }
     if(detalle6){
         detalle6.innerHTML =
             "⚪ Blanco · iPhone 13 Pro: " +
-            numeroStock("FUNDA BAYB GANG","Blanco","iPhone 13 Pro") +
+            numeroStock(
+                "FUNDA BAYB GANG",
+                "Blanco",
+                "iPhone 13 Pro"
+            ) +
             "<br>" +
             "⚪ Blanco · iPhone 14 Pro: " +
-            numeroStock("FUNDA BAYB GANG","Blanco","iPhone 14 Pro") +
+            numeroStock(
+                "FUNDA BAYB GANG",
+                "Blanco",
+                "iPhone 14 Pro"
+            ) +
             "<br>" +
             "⚫ Negro · iPhone 13 Pro: " +
-            numeroStock("FUNDA BAYB GANG","Negro","iPhone 13 Pro") +
+            numeroStock(
+                "FUNDA BAYB GANG",
+                "Negro",
+                "iPhone 13 Pro"
+            ) +
             "<br>" +
             "⚫ Negro · iPhone 14 Pro: " +
-            numeroStock("FUNDA BAYB GANG","Negro","iPhone 14 Pro");
+            numeroStock(
+                "FUNDA BAYB GANG",
+                "Negro",
+                "iPhone 14 Pro"
+            );
     }
     if(detalle7){
         detalle7.innerHTML =
             "⚪ Blanco: " +
-            numeroStock("GORRA DE BÉISBOL","Blanco","Única") +
+            numeroStock(
+                "GORRA DE BÉISBOL",
+                "Blanco",
+                "Única"
+            ) +
             "<br>" +
             "🌸 Rosa: " +
-            numeroStock("GORRA DE BÉISBOL","ROSA","Única") +
+            numeroStock(
+                "GORRA DE BÉISBOL",
+                "ROSA",
+                "Única"
+            ) +
             "<br>" +
             "⚫ Negro: " +
-            numeroStock("GORRA DE BÉISBOL","Negro","Única");
+            numeroStock(
+                "GORRA DE BÉISBOL",
+                "Negro",
+                "Única"
+            );
     }
     if(detalle10){
         detalle10.innerHTML =
             "⚪ Blanco · Talla 40: " +
-            numeroStock("NIKE AIR FORCE 1","Blanco","40");
+            numeroStock(
+                "NIKE AIR FORCE 1",
+                "Blanco",
+                "40"
+            );
     }
     if(detalle11){
         detalle11.innerHTML =
             "⚫ Negro: " +
-            numeroStock("GORRA GUCCI","Negro","Única") +
+            numeroStock(
+                "GORRA DE GUCCI",
+                "Negro",
+                "Única"
+            ) +
             "<br>" +
             "🌸 Rosa: " +
-            numeroStock("GORRA GUCCI","ROSA","Única");
+            numeroStock(
+                "GORRA DE GUCCI",
+                "ROSA",
+                "Única"
+            );
     }
     if(detalle12){
         detalle12.innerHTML =
             "⚪ Blanco · Talla 40: " +
-            numeroStock("ZAPATILLA NIKE","Blanco","40");
+            numeroStock(
+                "ZAPATILLA DE NIKE",
+                "Blanco",
+                "40"
+            );
     }
     if(detalle13){
         detalle13.innerHTML =
             "⚫ Negro: " +
-            numeroStock("BOLSO PRADA HOMBRE","Negro","Única");
+            numeroStock(
+                "BOLSILLO DE PRADA HOMBRE",
+                "Negro",
+                "Única"
+            );
     }
     if(detalle14){
         detalle14.innerHTML =
             "🔵 Azul: " +
-            numeroStock("RELOJ ROLEX","Azul","Única");
+            numeroStock(
+                "RELOJ DE ROLEX",
+                "Azul",
+                "Única"
+            );
     }
 }
 /*
@@ -1525,13 +1551,13 @@ const imagenes = {
         "ladera9.jpeg",
     "NIKE AIR FORCE 1":
         "LADERA10.jpg",
-    "GORRA GUCCI":
+    "GORRA DE GUCCI":
         "LADERA11.jpg",
-    "ZAPATILLA NIKE":
+    "ZAPATILLA DE NIKE":
         "LADERA12.jpg",
-    "BOLSO PRADA HOMBRE":
+    "BOLSILLO DE PRADA HOMBRE":
         "LADERA13.jpg",
-    "RELOJ ROLEX":
+    "RELOJ DE ROLEX":
         "LADERA14.jpg"
 };
 /*
@@ -1691,7 +1717,7 @@ function actualizarTodosLosStocks(){
         "boton10"
     );
     actualizarStockNuevo(
-        "GORRA GUCCI",
+        "GORRA DE GUCCI",
         "color11",
         "talla11",
         "estadoStock11",
@@ -1699,7 +1725,7 @@ function actualizarTodosLosStocks(){
         "boton11"
     );
     actualizarStockNuevo(
-        "ZAPATILLA NIKE",
+        "ZAPATILLA DE NIKE",
         "color12",
         "talla12",
         "estadoStock12",
@@ -1707,7 +1733,7 @@ function actualizarTodosLosStocks(){
         "boton12"
     );
     actualizarStockNuevo(
-        "BOLSO PRADA HOMBRE",
+        "BOLSILLO DE PRADA HOMBRE",
         "color13",
         "talla13",
         "estadoStock13",
@@ -1715,7 +1741,7 @@ function actualizarTodosLosStocks(){
         "boton13"
     );
     actualizarStockNuevo(
-        "RELOJ ROLEX",
+        "RELOJ DE ROLEX",
         "color14",
         "talla14",
         "estadoStock14",
@@ -2208,12 +2234,22 @@ async function finalizarCompra(){
             new Date();
         const parteFecha =
             ahora.getFullYear() +
-            String(ahora.getMonth() + 1).padStart(2,"0") +
-            String(ahora.getDate()).padStart(2,"0");
+            String(
+                ahora.getMonth() + 1
+            ).padStart(2,"0") +
+            String(
+                ahora.getDate()
+            ).padStart(2,"0");
         const parteHora =
-            String(ahora.getHours()).padStart(2,"0") +
-            String(ahora.getMinutes()).padStart(2,"0") +
-            String(ahora.getSeconds()).padStart(2,"0");
+            String(
+                ahora.getHours()
+            ).padStart(2,"0") +
+            String(
+                ahora.getMinutes()
+            ).padStart(2,"0") +
+            String(
+                ahora.getSeconds()
+            ).padStart(2,"0");
         const codigoAleatorio =
             Math.random()
                 .toString(36)
