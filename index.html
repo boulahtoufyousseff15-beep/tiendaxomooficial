@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>TIENDA XMXO</title>
+
 <style>
 body{
     font-family:Arial,sans-serif;
@@ -12,6 +13,7 @@ body{
     color:white;
     position:relative;
 }
+
 body::before{
     content:"🦁";
     position:fixed;
@@ -23,8 +25,14 @@ body::before{
     z-index:-1;
     pointer-events:none;
 }
+
 header{
-    background:radial-gradient(circle at center,#242424 0%,#090909 45%,#000 100%);
+    background:radial-gradient(
+        circle at center,
+        #242424 0%,
+        #090909 45%,
+        #000 100%
+    );
     color:white;
     text-align:center;
     padding:28px 20px 22px;
@@ -32,6 +40,7 @@ header{
     position:relative;
     overflow:hidden;
 }
+
 header::before{
     content:"";
     position:absolute;
@@ -45,6 +54,7 @@ header::before{
     left:50%;
     transform:translateX(-50%);
 }
+
 .logo-xmxo{
     display:flex;
     justify-content:center;
@@ -53,39 +63,62 @@ header::before{
     position:relative;
     z-index:2;
 }
+
 .leon-logo{
     font-size:78px;
     line-height:1;
-    filter:drop-shadow(0 0 5px white) drop-shadow(0 0 12px #d4af37);
+    filter:
+        drop-shadow(0 0 5px white)
+        drop-shadow(0 0 12px #d4af37);
     animation:brilloLeon 2.5s infinite alternate;
 }
+
 .nombre-tienda{
     display:flex;
     flex-direction:column;
     align-items:flex-start;
     line-height:1;
 }
+
 .nombre-tienda span{
     font-size:18px;
     letter-spacing:7px;
     color:#ddd;
     margin-bottom:7px;
 }
+
 .nombre-tienda strong{
     font-size:55px;
     letter-spacing:9px;
-    background:linear-gradient(90deg,#fff,#d4af37,#fff,#d4af37);
+    background:
+        linear-gradient(
+            90deg,
+            #fff,
+            #d4af37,
+            #fff,
+            #d4af37
+        );
     -webkit-background-clip:text;
     -webkit-text-fill-color:transparent;
 }
+
 .linea-logo{
     width:220px;
     height:2px;
     margin:18px auto 13px;
-    background:linear-gradient(90deg,transparent,#d4af37,white,#d4af37,transparent);
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #d4af37,
+            white,
+            #d4af37,
+            transparent
+        );
     position:relative;
     z-index:2;
 }
+
 .subtitulo-xmxo{
     margin:0;
     color:#ccc;
@@ -94,22 +127,29 @@ header::before{
     position:relative;
     z-index:2;
 }
+
 @keyframes brilloLeon{
     from{
         transform:scale(1);
-        filter:drop-shadow(0 0 5px white) drop-shadow(0 0 8px #d4af37);
+        filter:
+            drop-shadow(0 0 5px white)
+            drop-shadow(0 0 8px #d4af37);
     }
     to{
         transform:scale(1.06);
-        filter:drop-shadow(0 0 8px white) drop-shadow(0 0 20px #d4af37);
+        filter:
+            drop-shadow(0 0 8px white)
+            drop-shadow(0 0 20px #d4af37);
     }
 }
+
 .tienda{
     display:grid;
     grid-template-columns:repeat(3,1fr);
     gap:25px;
     padding:30px;
 }
+
 .producto{
     background:#111;
     color:white;
@@ -119,6 +159,7 @@ header::before{
     border:1px solid white;
     box-shadow:0 2px 8px rgba(255,255,255,.15);
 }
+
 .producto img{
     width:100%;
     max-width:250px;
@@ -126,6 +167,7 @@ header::before{
     object-fit:contain;
     border-radius:8px;
 }
+
 .stock{
     margin:15px 0;
     padding:12px;
@@ -134,37 +176,44 @@ header::before{
     border-radius:10px;
     text-align:center;
 }
+
 .stock-disponible{
     color:#8cff8c;
     font-weight:bold;
     font-size:15px;
 }
+
 .stock-agotado{
     color:#ff6b6b;
     font-weight:bold;
     font-size:15px;
 }
+
 .stock-detalle{
     color:#ccc;
     font-size:13px;
     margin-top:7px;
     line-height:1.6;
 }
+
 .stock-seleccion{
     margin-top:7px;
     color:#d4af37;
     font-weight:bold;
     font-size:13px;
 }
+
 .opciones{
     text-align:left;
     margin-top:15px;
 }
+
 .opciones label{
     display:block;
     margin-top:10px;
     font-weight:bold;
 }
+
 .opciones select{
     width:100%;
     padding:8px;
@@ -174,11 +223,13 @@ header::before{
     border:none;
     border-radius:5px;
 }
+
 .precio{
     font-size:20px;
     font-weight:bold;
     margin:15px 0;
 }
+
 .boton-carrito{
     background:white;
     color:black;
@@ -189,16 +240,19 @@ header::before{
     font-weight:bold;
     transition:.2s;
 }
+
 .boton-carrito:hover{
     background:#ccc;
     transform:scale(1.02);
 }
+
 .boton-carrito:disabled{
     background:#444;
     color:#888;
     cursor:not-allowed;
     transform:none;
 }
+
 #carrito{
     background:#111;
     color:white;
@@ -207,14 +261,17 @@ header::before{
     border-radius:12px;
     border:1px solid white;
 }
+
 #lista-carrito{
     padding:0;
 }
+
 #lista-carrito li{
     list-style:none;
     padding:10px 0;
     border-bottom:1px solid #555;
 }
+
 .eliminar{
     margin-left:10px;
     background:white;
@@ -225,6 +282,7 @@ header::before{
     cursor:pointer;
     font-weight:bold;
 }
+
 #carrito > div button{
     background:white;
     color:black;
@@ -234,9 +292,11 @@ header::before{
     cursor:pointer;
     font-weight:bold;
 }
+
 #carrito > div button:hover{
     background:#ccc;
 }
+
 .modal,
 .modal-confirmacion,
 .modal-carrito{
@@ -249,18 +309,22 @@ header::before{
     justify-content:center;
     align-items:center;
 }
+
 .modal{
     background:rgba(0,0,0,.85);
     z-index:1000;
 }
+
 .modal-confirmacion{
     background:rgba(0,0,0,.90);
     z-index:2000;
 }
+
 .modal-carrito{
     background:rgba(0,0,0,.88);
     z-index:3000;
 }
+
 .ventana-carrito{
     width:90%;
     max-width:430px;
@@ -274,28 +338,39 @@ header::before{
         0 0 50px rgba(255,255,255,.12);
     animation:aparecerCarrito .25s ease;
 }
+
 .logo-aviso{
     font-size:55px;
     margin-bottom:5px;
     filter:drop-shadow(0 0 10px #d4af37);
 }
+
 .ventana-carrito h2{
     margin:5px 0;
     color:white;
     font-size:25px;
 }
+
 .aviso-linea{
     width:80px;
     height:2px;
-    background:linear-gradient(90deg,#d4af37,white,#d4af37);
+    background:
+        linear-gradient(
+            90deg,
+            #d4af37,
+            white,
+            #d4af37
+        );
     margin:15px auto 20px;
 }
+
 .aviso-exito{
     color:#8cff8c;
     font-weight:bold;
     font-size:16px;
     margin-bottom:18px;
 }
+
 .aviso-producto{
     background:#111;
     border:1px solid #444;
@@ -306,6 +381,7 @@ header::before{
     gap:15px;
     text-align:left;
 }
+
 .aviso-producto img{
     width:95px;
     height:95px;
@@ -313,28 +389,34 @@ header::before{
     border-radius:10px;
     background:#050505;
 }
+
 .aviso-producto-info{
     flex:1;
 }
+
 .aviso-producto-info h3{
     margin:0 0 8px;
     font-size:17px;
 }
+
 .aviso-producto-info p{
     margin:5px 0;
     color:#ccc;
     font-size:14px;
 }
+
 .aviso-precio{
     color:#d4af37 !important;
     font-size:17px !important;
     font-weight:bold;
 }
+
 .botones-aviso{
     display:flex;
     gap:10px;
     margin-top:22px;
 }
+
 .boton-seguir,
 .boton-ver-carrito{
     flex:1;
@@ -344,22 +426,27 @@ header::before{
     font-weight:bold;
     font-size:14px;
 }
+
 .boton-seguir{
     background:#111;
     color:white;
     border:1px solid white;
 }
+
 .boton-ver-carrito{
     background:white;
     color:black;
     border:none;
 }
+
 .boton-seguir:hover{
     background:#222;
 }
+
 .boton-ver-carrito:hover{
     background:#ccc;
 }
+
 @keyframes aparecerCarrito{
     from{
         transform:scale(.85);
@@ -370,6 +457,7 @@ header::before{
         opacity:1;
     }
 }
+
 .ventana-compra{
     background:#000;
     color:white;
@@ -383,6 +471,7 @@ header::before{
     box-shadow:0 0 30px rgba(255,255,255,.25);
     text-align:center;
 }
+
 .cerrar-modal{
     float:right;
     background:white;
@@ -395,6 +484,7 @@ header::before{
     cursor:pointer;
     font-weight:bold;
 }
+
 .producto-compra{
     display:flex;
     align-items:center;
@@ -406,27 +496,32 @@ header::before{
     text-align:left;
     border:1px solid #555;
 }
+
 .producto-compra img{
     width:90px;
     height:90px;
     object-fit:contain;
     border-radius:8px;
 }
+
 .producto-compra-info{
     flex:1;
 }
+
 .formulario-pedido{
     text-align:left;
     margin-top:25px;
     padding-top:20px;
     border-top:1px solid #555;
 }
+
 .formulario-pedido label{
     display:block;
     margin-top:15px;
     margin-bottom:5px;
     font-weight:bold;
 }
+
 .formulario-pedido input,
 .formulario-pedido textarea,
 .formulario-pedido select{
@@ -439,10 +534,12 @@ header::before{
     color:black;
     font-size:15px;
 }
+
 .formulario-pedido textarea{
     min-height:80px;
     resize:vertical;
 }
+
 .boton-finalizar{
     background:white;
     color:black;
@@ -455,9 +552,17 @@ header::before{
     margin-top:20px;
     width:100%;
 }
+
 .boton-finalizar:hover{
     background:#ccc;
 }
+
+.boton-finalizar:disabled{
+    background:#555;
+    color:#aaa;
+    cursor:not-allowed;
+}
+
 .confirmacion{
     width:90%;
     max-width:500px;
@@ -468,16 +573,20 @@ header::before{
     text-align:center;
     box-shadow:0 0 35px rgba(255,255,255,.25);
 }
+
 .confirmacion .lion{
     font-size:65px;
 }
+
 .confirmacion h2{
     font-size:28px;
 }
+
 .confirmacion p{
     color:#ddd;
     line-height:1.6;
 }
+
 .confirmacion-total{
     background:#111;
     border:1px solid #555;
@@ -487,6 +596,7 @@ header::before{
     font-size:20px;
     font-weight:bold;
 }
+
 .boton-cerrar-confirmacion{
     background:white;
     color:black;
@@ -497,33 +607,41 @@ header::before{
     font-size:16px;
     font-weight:bold;
 }
+
 @media(max-width:800px){
     .tienda{
         grid-template-columns:1fr;
     }
 }
+
 @media(max-width:600px){
     .logo-xmxo{
         gap:10px;
     }
+
     .leon-logo{
         font-size:55px;
     }
+
     .nombre-tienda span{
         font-size:13px;
         letter-spacing:4px;
     }
+
     .nombre-tienda strong{
         font-size:36px;
         letter-spacing:5px;
     }
+
     .subtitulo-xmxo{
         font-size:9px;
         letter-spacing:1px;
     }
+
     .botones-aviso{
         flex-direction:column;
     }
+
     .aviso-producto img{
         width:80px;
         height:80px;
@@ -531,433 +649,780 @@ header::before{
 }
 </style>
 </head>
+
 <body>
+
 <header>
 <div class="logo-xmxo">
     <div class="leon-logo">🦁</div>
+
     <div class="nombre-tienda">
         <span>TIENDA</span>
         <strong>XMXO</strong>
     </div>
 </div>
+
 <div class="linea-logo"></div>
+
 <p class="subtitulo-xmxo">
     LOS MEJORES PRODUCTOS · BUENA CALIDAD · SOBRE TODO LA CONFIANZA
 </p>
 </header>
+
 <main class="tienda">
+
 <!-- PRODUCTO 1 -->
 <div class="producto">
+
     <h2>CAMISETA DE NEYMAR SANTOS</h2>
-    <img src="ladera2.jpg" alt="Camiseta de Neymar Santos">
+
+    <img
+        src="ladera2.jpg"
+        alt="Camiseta de Neymar Santos"
+    >
+
     <div class="stock">
-        <div id="estadoStock2" class="stock-disponible">
+
+        <div
+            id="estadoStock2"
+            class="stock-disponible"
+        >
             ● Cargando stock...
         </div>
-        <div id="detalleStock2" class="stock-detalle">
+
+        <div
+            id="detalleStock2"
+            class="stock-detalle"
+        >
             Cargando stock...
         </div>
-        <div id="stockSeleccion2" class="stock-seleccion">
+
+        <div
+            id="stockSeleccion2"
+            class="stock-seleccion"
+        >
             Selecciona una combinación
         </div>
+
     </div>
+
     <div class="opciones">
+
         <label>Color:</label>
+
         <select
             id="color2"
-            onchange="actualizarStock('CAMISETA DE NEYMAR SANTOS','color2','talla2','estadoStock2','stockSeleccion2','boton2')">
+            onchange="actualizarStock(
+                'CAMISETA DE NEYMAR SANTOS',
+                'color2',
+                'talla2',
+                'estadoStock2',
+                'stockSeleccion2',
+                'boton2'
+            )"
+        >
             <option>Negro</option>
             <option>Blanco</option>
         </select>
+
         <label>Talla:</label>
+
         <select
             id="talla2"
-            onchange="actualizarStock('CAMISETA DE NEYMAR SANTOS','color2','talla2','estadoStock2','stockSeleccion2','boton2')">
+            onchange="actualizarStock(
+                'CAMISETA DE NEYMAR SANTOS',
+                'color2',
+                'talla2',
+                'estadoStock2',
+                'stockSeleccion2',
+                'boton2'
+            )"
+        >
             <option>S</option>
             <option>M</option>
             <option>L</option>
             <option>XL</option>
         </select>
+
     </div>
+
     <p class="precio">15.99 €</p>
+
     <button
         id="boton2"
         class="boton-carrito"
         disabled
-        onclick="agregarAlCarrito('CAMISETA DE NEYMAR SANTOS','color2','talla2',15.99,'boton2')">
+        onclick="agregarAlCarrito(
+            'CAMISETA DE NEYMAR SANTOS',
+            'color2',
+            'talla2',
+            15.99,
+            'boton2'
+        )"
+    >
         Cargando...
     </button>
+
 </div>
-    
+
+
 <!-- PRODUCTO 2 -->
 <div class="producto">
+
     <h2>CAMISETA DE CASA BLANCA</h2>
-    <img src="ladera5.jpg" alt="Camiseta de Casa Blanca">
+
+    <img
+        src="ladera5.jpg"
+        alt="Camiseta de Casa Blanca"
+    >
+
     <div class="stock">
-        <div id="estadoStock5" class="stock-disponible">
+
+        <div
+            id="estadoStock5"
+            class="stock-disponible"
+        >
             ● Cargando stock...
         </div>
-        <div id="detalleStock5" class="stock-detalle">
+
+        <div
+            id="detalleStock5"
+            class="stock-detalle"
+        >
             Cargando stock...
         </div>
-        <div id="stockSeleccion5" class="stock-seleccion">
+
+        <div
+            id="stockSeleccion5"
+            class="stock-seleccion"
+        >
             Selecciona una combinación
         </div>
+
     </div>
+
     <div class="opciones">
+
         <label>Color:</label>
+
         <select
             id="color5"
-            onchange="actualizarStock('CAMISETA DE CASA BLANCA','color5','talla5','estadoStock5','stockSeleccion5','boton5')">
+            onchange="actualizarStock(
+                'CAMISETA DE CASA BLANCA',
+                'color5',
+                'talla5',
+                'estadoStock5',
+                'stockSeleccion5',
+                'boton5'
+            )"
+        >
             <option>Negro</option>
             <option>Blanco</option>
         </select>
+
         <label>Talla:</label>
+
         <select
             id="talla5"
-            onchange="actualizarStock('CAMISETA DE CASA BLANCA','color5','talla5','estadoStock5','stockSeleccion5','boton5')">
+            onchange="actualizarStock(
+                'CAMISETA DE CASA BLANCA',
+                'color5',
+                'talla5',
+                'estadoStock5',
+                'stockSeleccion5',
+                'boton5'
+            )"
+        >
             <option>S</option>
             <option>M</option>
             <option>L</option>
             <option>XL</option>
         </select>
+
     </div>
+
     <p class="precio">15.99 €</p>
+
     <button
         id="boton5"
         class="boton-carrito"
         disabled
-        onclick="agregarAlCarrito('CAMISETA DE CASA BLANCA','color5','talla5',15.99,'boton5')">
+        onclick="agregarAlCarrito(
+            'CAMISETA DE CASA BLANCA',
+            'color5',
+            'talla5',
+            15.99,
+            'boton5'
+        )"
+    >
         Cargando...
     </button>
+
 </div>
+
+
 <!-- PRODUCTO 3 -->
 <div class="producto">
+
     <h2>FUNDA BAYB GANG</h2>
-    <img src="ladera8.jpeg" alt="Funda Bayb Gang">
+
+    <img
+        src="ladera8.jpeg"
+        alt="Funda Bayb Gang"
+    >
+
     <div class="stock">
-        <div id="estadoStock6" class="stock-disponible">
+
+        <div
+            id="estadoStock6"
+            class="stock-disponible"
+        >
             ● Cargando stock...
         </div>
-        <div id="detalleStock6" class="stock-detalle">
+
+        <div
+            id="detalleStock6"
+            class="stock-detalle"
+        >
             Cargando stock...
         </div>
-        <div id="stockSeleccion6" class="stock-seleccion">
+
+        <div
+            id="stockSeleccion6"
+            class="stock-seleccion"
+        >
             Selecciona una combinación
         </div>
+
     </div>
+
     <div class="opciones">
+
         <label>Color:</label>
+
         <select
             id="color6"
-            onchange="actualizarStockFunda()">
+            onchange="actualizarStockFunda()"
+        >
             <option>Blanco</option>
             <option>Negro</option>
         </select>
+
         <label>iPhone:</label>
+
         <select
             id="talla6"
-            onchange="actualizarStockFunda()">
+            onchange="actualizarStockFunda()"
+        >
             <option>iPhone 13 Pro</option>
             <option>iPhone 14 Pro</option>
         </select>
+
     </div>
+
     <p class="precio">6.99 €</p>
+
     <button
         id="boton6"
         class="boton-carrito"
         disabled
-        onclick="agregarAlCarrito('FUNDA BAYB GANG','color6','talla6',6.99,'boton6')">
+        onclick="agregarAlCarrito(
+            'FUNDA BAYB GANG',
+            'color6',
+            'talla6',
+            6.99,
+            'boton6'
+        )"
+    >
         Cargando...
     </button>
+
 </div>
+
+
 <!-- PRODUCTO 4 - GORRA -->
 <div class="producto">
+
     <h2>GORRA DE BÉISBOL UNISEX</h2>
+
+    <!-- CORREGIDO: LA FOTO ES LADERA9.JPEG -->
     <img
         src="ladera9.jpeg"
-        alt="Gorra de béisbol">
+        alt="Gorra de béisbol"
+    >
+
     <div class="stock">
+
         <div
             id="estadoStock7"
-            class="stock-disponible">
+            class="stock-disponible"
+        >
             ● Cargando stock...
         </div>
+
         <div
             id="detalleStock7"
-            class="stock-detalle">
+            class="stock-detalle"
+        >
             Cargando stock...
         </div>
+
         <div
             id="stockSeleccion7"
-            class="stock-seleccion">
+            class="stock-seleccion"
+        >
             Selecciona un color
         </div>
+
     </div>
+
     <div class="opciones">
+
         <label>Color:</label>
+
         <select
             id="color7"
-            onchange="actualizarStockGorra()">
+            onchange="actualizarStockGorra()"
+        >
             <option>Blanco</option>
             <option>Rosa</option>
             <option>Negro</option>
         </select>
+
         <!--
-            La gorra no tiene talla para el cliente.
-            Internamente usamos "Única" para que
-            Supabase pueda controlar el stock.
+            La gorra no tiene talla.
+            Internamente usamos "Única".
         -->
+
         <select
             id="talla7"
-            style="display:none;">
+            style="display:none;"
+        >
             <option>Única</option>
         </select>
+
     </div>
+
     <p class="precio">9.99 €</p>
+
     <button
         id="boton7"
         class="boton-carrito"
         disabled
-        onclick="agregarAlCarrito('GORRA DE BÉISBOL','color7','talla7',9.99,'boton7')">
+        onclick="agregarAlCarrito(
+            'GORRA DE BÉISBOL',
+            'color7',
+            'talla7',
+            9.99,
+            'boton7'
+        )"
+    >
         Cargando...
     </button>
+
 </div>
+
 </main>
+
+
 <!-- CARRITO -->
+
 <section id="carrito">
+
 <h2>🛒 Carrito</h2>
+
 <ul id="lista-carrito"></ul>
-<div style="display:flex;justify-content:space-between;align-items:center;">
-    <h3>
-        Total:
-        <span id="total">0.00</span> €
-    </h3>
-    <button
-        type="button"
-        onclick="comprarCarrito()">
-        Comprar
-    </button>
+
+<div
+    style="
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+    "
+>
+
+<h3>
+    Total:
+    <span id="total">0.00</span> €
+</h3>
+
+<button
+    type="button"
+    onclick="comprarCarrito()"
+>
+    Comprar
+</button>
+
 </div>
+
 </section>
+
+
 <!-- MODAL PRODUCTO AÑADIDO -->
-<div id="modalCarrito" class="modal-carrito">
+
+<div
+    id="modalCarrito"
+    class="modal-carrito"
+>
+
 <div class="ventana-carrito">
+
     <div class="logo-aviso">
         🦁
     </div>
+
     <h2>TIENDA XMXO</h2>
+
     <div class="aviso-linea"></div>
+
     <div class="aviso-exito">
         ✓ PRODUCTO AÑADIDO AL CARRITO
     </div>
+
     <div class="aviso-producto">
+
         <img
             id="imagenAviso"
             src=""
-            alt="Producto añadido">
+            alt="Producto añadido"
+        >
+
         <div class="aviso-producto-info">
+
             <h3 id="nombreAviso">
                 Producto
             </h3>
+
             <p>
                 Color:
                 <span id="colorAviso"></span>
             </p>
+
             <p>
                 Talla:
                 <span id="tallaAviso"></span>
             </p>
+
             <p class="aviso-precio">
                 <span id="precioAviso">0.00</span> €
             </p>
+
         </div>
+
     </div>
+
     <div class="botones-aviso">
+
         <button
             type="button"
             class="boton-seguir"
-            onclick="seguirComprando()">
+            onclick="seguirComprando()"
+        >
             Seguir comprando
         </button>
+
         <button
             type="button"
             class="boton-ver-carrito"
-            onclick="irAlCarrito()">
+            onclick="irAlCarrito()"
+        >
             🛒 Ver carrito
         </button>
+
     </div>
+
 </div>
+
 </div>
+
+
 <!-- MODAL COMPRA -->
-<div id="modalCompra" class="modal">
+
+<div
+    id="modalCompra"
+    class="modal"
+>
+
 <div class="ventana-compra">
+
     <button
         type="button"
         class="cerrar-modal"
-        onclick="cerrarCompra()">
+        onclick="cerrarCompra()"
+    >
         ×
     </button>
+
     <h2>🦁 FINALIZAR PEDIDO</h2>
+
     <div id="productos-compra"></div>
+
     <h3>
         Total:
         <span id="total-compra">0.00</span> €
     </h3>
+
     <div class="formulario-pedido">
+
         <h3>📦 Datos del pedido</h3>
+
         <label>Nombre:</label>
+
         <input
             type="text"
             id="nombreCliente"
-            placeholder="Tu nombre">
+            placeholder="Tu nombre"
+        >
+
         <label>Teléfono:</label>
+
         <input
             type="tel"
             id="telefonoCliente"
-            placeholder="Tu teléfono">
+            placeholder="Tu teléfono"
+        >
+
         <label>Forma de entrega:</label>
+
         <select id="entregaCliente">
             <option>
                 Entrega en persona
             </option>
         </select>
+
         <label>Lugar de entrega:</label>
+
         <textarea
             id="direccionCliente"
-            placeholder="Indica dónde quieres recibir el pedido"></textarea>
+            placeholder="Indica dónde quieres recibir el pedido"
+        ></textarea>
+
         <button
             type="button"
             class="boton-finalizar"
-            onclick="finalizarCompra()">
+            onclick="finalizarCompra()"
+        >
             FINALIZAR PEDIDO
         </button>
+
     </div>
+
 </div>
+
 </div>
+
+
 <!-- MODAL CONFIRMACIÓN -->
-<div id="modalConfirmacion" class="modal-confirmacion">
+
+<div
+    id="modalConfirmacion"
+    class="modal-confirmacion"
+>
+
 <div class="confirmacion">
+
     <div class="lion">
         🦁
     </div>
+
     <h2>¡PEDIDO REALIZADO!</h2>
+
     <p>
         Gracias
         <strong id="nombreConfirmacion"></strong>.
     </p>
+
     <p>
         Hemos recibido correctamente tu pedido.
     </p>
+
     <div class="confirmacion-total">
+
         Total:
         <span id="totalConfirmacion">
             0.00
         </span> €
+
     </div>
+
     <button
         type="button"
         class="boton-cerrar-confirmacion"
-        onclick="cerrarConfirmacion()">
+        onclick="cerrarConfirmacion()"
+    >
         Cerrar
     </button>
+
 </div>
+
 </div>
+
+
 <!-- SUPABASE -->
+
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
 <script>
+
 const SUPABASE_URL =
     "https://ikyscrtrfxyldlfjfipd.supabase.co";
+
 const SUPABASE_PUBLISHABLE_KEY =
     "sb_publishable_70i0ND16ktralfkCpzjCBQ_1BIG5G9s";
+
 const supabaseClient =
     window.supabase.createClient(
         SUPABASE_URL,
         SUPABASE_PUBLISHABLE_KEY
     );
+
+
 let carrito = [];
+
 let stockCamisetas = {};
+
 let stockCargado = false;
-/* ==============================
-   CORREO DE LOS PEDIDOS
-   ============================== */
+
+/*
+========================================
+BLOQUEO PARA EVITAR DOBLE PEDIDO
+========================================
+*/
+
+let enviandoPedido = false;
+
+
+/*
+========================================
+CORREO DE LOS PEDIDOS
+========================================
+*/
+
 const CORREO_PEDIDOS =
-    "boulahtoufyoussef15@gmail.com";
-/* ==============================
-   NORMALIZAR NOMBRE DEL PRODUCTO
-   ============================== */
+    "boulahtoufyousseff15@gmail.com";
+
+
+/*
+========================================
+NORMALIZAR PRODUCTO
+========================================
+*/
+
 function normalizarNombreProducto(nombre){
-    if(nombre === null || nombre === undefined){
+
+    if(
+        nombre === null ||
+        nombre === undefined
+    ){
         return "";
     }
+
     const texto =
         String(nombre).trim();
+
     const minusculas =
         texto.toLowerCase();
+
     if(
         minusculas === "camiseta neymar" ||
         minusculas === "camiseta de neymar" ||
         minusculas === "camiseta de neymer santos" ||
         minusculas === "camiseta de neymar santos"
     ){
+
         return "CAMISETA DE NEYMAR SANTOS";
+
     }
+
     return texto;
 }
-/* ==============================
-   NORMALIZAR COLOR
-   ============================== */
+
+
+/*
+========================================
+NORMALIZAR COLOR
+========================================
+*/
+
 function normalizarColor(color){
-    if(color === null || color === undefined){
+
+    if(
+        color === null ||
+        color === undefined
+    ){
         return "";
     }
+
     const texto =
         String(color).trim();
+
     const minusculas =
         texto.toLowerCase();
+
     if(minusculas === "negro"){
         return "Negro";
     }
+
     if(minusculas === "blanco"){
         return "Blanco";
     }
+
     if(minusculas === "rosa"){
         return "ROSA";
     }
+
     return texto;
 }
-/* ==============================
-   CARGAR STOCK GLOBAL
-   ============================== */
+
+
+/*
+========================================
+CARGAR STOCK GLOBAL
+========================================
+*/
+
 async function cargarStockGlobal(){
+
     try{
+
         const resultado =
             await supabaseClient.rpc(
                 "obtener_stock_xmxo"
             );
+
         if(resultado.error){
+
             console.error(
                 "Error cargando stock global:",
                 resultado.error
             );
+
             stockCargado = false;
+
             return false;
         }
+
         stockCamisetas = {};
+
         const datos =
             Array.isArray(resultado.data)
                 ? resultado.data
                 : [];
+
         datos.forEach(
             function(item){
+
                 const productoOriginal =
                     item.producto ??
                     item.product;
+
                 const varianteOriginal =
                     item.variant ??
                     item.talla;
+
                 const colorOriginal =
                     item.color;
+
                 if(
                     productoOriginal === null ||
                     productoOriginal === undefined ||
@@ -966,128 +1431,186 @@ async function cargarStockGlobal(){
                     varianteOriginal === null ||
                     varianteOriginal === undefined
                 ){
+
                     console.warn(
                         "Fila de stock ignorada:",
                         item
                     );
+
                     return;
                 }
+
                 const producto =
                     normalizarNombreProducto(
                         productoOriginal
                     );
+
                 const color =
                     normalizarColor(
                         colorOriginal
                     );
+
                 const variante =
                     String(
                         varianteOriginal
                     ).trim();
+
                 const stock =
                     Number(item.stock);
+
                 if(
                     !stockCamisetas[producto]
                 ){
-                    stockCamisetas[producto] = {};
+
+                    stockCamisetas[producto] =
+                        {};
+
                 }
+
                 if(
-                    !stockCamisetas[producto][color]
+                    !stockCamisetas[
+                        producto
+                    ][color]
                 ){
-                    stockCamisetas[producto][color] = {};
+
+                    stockCamisetas[
+                        producto
+                    ][color] = {};
+
                 }
-                stockCamisetas
-                    [producto]
-                    [color]
-                    [variante] =
-                        Number.isFinite(stock)
-                            ? stock
-                            : 0;
+
+                stockCamisetas[
+                    producto
+                ][
+                    color
+                ][
+                    variante
+                ] =
+                    Number.isFinite(stock)
+                        ? stock
+                        : 0;
+
             }
         );
+
         console.log(
             "Stock global cargado:",
             stockCamisetas
         );
+
         stockCargado = true;
+
         return true;
+
     }catch(error){
+
         console.error(
             "Error inesperado cargando stock:",
             error
         );
+
         stockCargado = false;
+
         return false;
     }
 }
-/* ==============================
-   UNIDADES EN EL CARRITO
-   ============================== */
+
+
+/*
+========================================
+UNIDADES EN CARRITO
+========================================
+*/
+
 function unidadesEnCarrito(
     nombre,
     color,
     talla
 ){
+
     let cantidad = 0;
+
     const nombreNormalizado =
         normalizarNombreProducto(
             nombre
         );
+
     const colorNormalizado =
         normalizarColor(
             color
         );
+
     const tallaNormalizada =
         String(talla).trim();
+
     carrito.forEach(
         function(producto){
+
             if(
                 normalizarNombreProducto(
                     producto.nombre
                 ) === nombreNormalizado &&
+
                 normalizarColor(
                     producto.color
                 ) === colorNormalizado &&
+
                 String(
                     producto.talla
                 ).trim() === tallaNormalizada
             ){
+
                 cantidad++;
+
             }
+
         }
     );
+
     return cantidad;
 }
-/* ==============================
-   OBTENER STOCK
-   ============================== */
+
+
+/*
+========================================
+OBTENER STOCK
+========================================
+*/
+
 function obtenerStock(
     nombre,
     color,
     talla
 ){
+
     if(!stockCargado){
         return null;
     }
+
     const nombreNormalizado =
         normalizarNombreProducto(
             nombre
         );
+
     const colorNormalizado =
         normalizarColor(
             color
         );
+
     const tallaNormalizada =
         String(talla).trim();
+
     if(
         !stockCamisetas[
             nombreNormalizado
         ] ||
+
         !stockCamisetas[
             nombreNormalizado
         ][
             colorNormalizado
         ] ||
+
         stockCamisetas[
             nombreNormalizado
         ][
@@ -1096,8 +1619,11 @@ function obtenerStock(
             tallaNormalizada
         ] === undefined
     ){
+
         return null;
+
     }
+
     const stockActual =
         Number(
             stockCamisetas[
@@ -1108,42 +1634,57 @@ function obtenerStock(
                 tallaNormalizada
             ]
         );
+
     const cantidadCarrito =
         unidadesEnCarrito(
             nombreNormalizado,
             colorNormalizado,
             tallaNormalizada
         );
-    return stockActual -
-        cantidadCarrito;
+
+    return (
+        stockActual -
+        cantidadCarrito
+    );
 }
-/* ==============================
-   NUMERO STOCK
-   ============================== */
+
+
+/*
+========================================
+NÚMERO STOCK
+========================================
+*/
+
 function numeroStock(
     nombre,
     color,
     talla
 ){
+
     const nombreNormalizado =
         normalizarNombreProducto(
             nombre
         );
+
     const colorNormalizado =
         normalizarColor(
             color
         );
+
     const tallaNormalizada =
         String(talla).trim();
+
     if(
         !stockCamisetas[
             nombreNormalizado
         ] ||
+
         !stockCamisetas[
             nombreNormalizado
         ][
             colorNormalizado
         ] ||
+
         stockCamisetas[
             nombreNormalizado
         ][
@@ -1152,8 +1693,10 @@ function numeroStock(
             tallaNormalizada
         ] === undefined
     ){
+
         return 0;
     }
+
     return Number(
         stockCamisetas[
             nombreNormalizado
@@ -1164,138 +1707,240 @@ function numeroStock(
         ]
     );
 }
-/* ==============================
-   ACTUALIZAR DETALLES DEL STOCK
-   ============================== */
+
+
+/*
+========================================
+ACTUALIZAR DETALLES STOCK
+========================================
+*/
+
 function actualizarDetallesStock(){
+
     const detalle2 =
         document.getElementById(
             "detalleStock2"
         );
+
     const detalle3 =
         document.getElementById(
             "detalleStock3"
         );
+
     const detalle4 =
         document.getElementById(
             "detalleStock4"
         );
+
     const detalle5 =
         document.getElementById(
             "detalleStock5"
         );
+
     const detalle6 =
         document.getElementById(
             "detalleStock6"
         );
+
     const detalle7 =
         document.getElementById(
             "detalleStock7"
         );
+
     const textoCamiseta =
         function(nombre){
+
             return (
+
                 "⚫ Negro: S " +
-                numeroStock(nombre,"Negro","S") +
+                numeroStock(
+                    nombre,
+                    "Negro",
+                    "S"
+                ) +
+
                 " · M " +
-                numeroStock(nombre,"Negro","M") +
+                numeroStock(
+                    nombre,
+                    "Negro",
+                    "M"
+                ) +
+
                 " · L " +
-                numeroStock(nombre,"Negro","L") +
+                numeroStock(
+                    nombre,
+                    "Negro",
+                    "L"
+                ) +
+
                 " · XL " +
-                numeroStock(nombre,"Negro","XL") +
+                numeroStock(
+                    nombre,
+                    "Negro",
+                    "XL"
+                ) +
+
                 "<br>" +
+
                 "⚪ Blanco: S " +
-                numeroStock(nombre,"Blanco","S") +
+                numeroStock(
+                    nombre,
+                    "Blanco",
+                    "S"
+                ) +
+
                 " · M " +
-                numeroStock(nombre,"Blanco","M") +
+                numeroStock(
+                    nombre,
+                    "Blanco",
+                    "M"
+                ) +
+
                 " · L " +
-                numeroStock(nombre,"Blanco","L") +
+                numeroStock(
+                    nombre,
+                    "Blanco",
+                    "L"
+                ) +
+
                 " · XL " +
-                numeroStock(nombre,"Blanco","XL")
+                numeroStock(
+                    nombre,
+                    "Blanco",
+                    "XL"
+                )
+
             );
         };
+
+
     if(detalle2){
+
         detalle2.innerHTML =
             textoCamiseta(
                 "CAMISETA DE NEYMAR SANTOS"
             );
+
     }
+
+
     if(detalle3){
+
         detalle3.innerHTML =
             textoCamiseta(
                 "CAMISETA DE PELASTINA"
             );
+
     }
+
+
     if(detalle4){
+
         detalle4.innerHTML =
             textoCamiseta(
                 "CAMISETA DE VENUM UFC"
             );
+
     }
+
+
     if(detalle5){
+
         detalle5.innerHTML =
             textoCamiseta(
                 "CAMISETA DE CASA BLANCA"
             );
+
     }
+
+
     if(detalle6){
+
         detalle6.innerHTML =
+
             "⚪ Blanco · iPhone 13 Pro: " +
+
             numeroStock(
                 "FUNDA BAYB GANG",
                 "Blanco",
                 "iPhone 13 Pro"
             ) +
+
             "<br>" +
+
             "⚪ Blanco · iPhone 14 Pro: " +
+
             numeroStock(
                 "FUNDA BAYB GANG",
                 "Blanco",
                 "iPhone 14 Pro"
             ) +
+
             "<br>" +
+
             "⚫ Negro · iPhone 13 Pro: " +
+
             numeroStock(
                 "FUNDA BAYB GANG",
                 "Negro",
                 "iPhone 13 Pro"
             ) +
+
             "<br>" +
+
             "⚫ Negro · iPhone 14 Pro: " +
+
             numeroStock(
                 "FUNDA BAYB GANG",
                 "Negro",
                 "iPhone 14 Pro"
             );
+
     }
-    /* GORRA */
+
+
     if(detalle7){
+
         detalle7.innerHTML =
+
             "⚪ Blanco: " +
+
             numeroStock(
                 "GORRA DE BÉISBOL",
                 "Blanco",
                 "Única"
             ) +
+
             "<br>" +
+
             "🌸 Rosa: " +
+
             numeroStock(
                 "GORRA DE BÉISBOL",
                 "ROSA",
                 "Única"
             ) +
+
             "<br>" +
+
             "⚫ Negro: " +
+
             numeroStock(
                 "GORRA DE BÉISBOL",
                 "Negro",
                 "Única"
             );
+
     }
 }
-/* ==============================
-   ACTUALIZAR STOCK VISUAL
-   ============================== */
+
+
+/*
+========================================
+ACTUALIZAR STOCK VISUAL
+========================================
+*/
+
 function actualizarStock(
     nombre,
     idColor,
@@ -1304,26 +1949,32 @@ function actualizarStock(
     idSeleccion,
     idBoton
 ){
+
     const colorElement =
         document.getElementById(
             idColor
         );
+
     const tallaElement =
         document.getElementById(
             idTalla
         );
+
     const estado =
         document.getElementById(
             idEstado
         );
+
     const seleccion =
         document.getElementById(
             idSeleccion
         );
+
     const boton =
         document.getElementById(
             idBoton
         );
+
     if(
         !colorElement ||
         !tallaElement ||
@@ -1331,47 +1982,74 @@ function actualizarStock(
         !seleccion ||
         !boton
     ){
+
         return;
+
     }
+
+
     if(!stockCargado){
+
         estado.textContent =
             "● CARGANDO STOCK...";
+
         estado.className =
             "stock-disponible";
+
         seleccion.textContent =
             "Esperando stock...";
+
         boton.disabled = true;
+
         boton.textContent =
             "Cargando...";
+
         return;
     }
+
+
     const color =
         colorElement.value;
+
     const talla =
         tallaElement.value;
+
     const stock =
         obtenerStock(
             nombre,
             color,
             talla
         );
+
+
     if(stock === null){
+
         estado.textContent =
             "● NO DISPONIBLE";
+
         estado.className =
             "stock-agotado";
+
         seleccion.textContent =
             "✕ Combinación no disponible";
+
         boton.disabled = true;
+
         boton.textContent =
             "No disponible";
+
         return;
     }
+
+
     if(stock > 0){
+
         estado.textContent =
             "● DISPONIBLE";
+
         estado.className =
             "stock-disponible";
+
         seleccion.textContent =
             "✓ " +
             color +
@@ -1383,27 +2061,41 @@ function actualizarStock(
                     ? ""
                     : "es"
             );
+
         boton.disabled = false;
+
         boton.textContent =
             "Añadir al carrito";
+
     }else{
+
         estado.textContent =
             "● AGOTADO";
+
         estado.className =
             "stock-agotado";
+
         seleccion.textContent =
             "✕ " +
             color +
             " · Sin unidades disponibles";
+
         boton.disabled = true;
+
         boton.textContent =
             "Agotado";
     }
 }
-/* ==============================
-   ACTUALIZAR FUNDA
-   ============================== */
+
+
+/*
+========================================
+FUNDA
+========================================
+*/
+
 function actualizarStockFunda(){
+
     actualizarStock(
         "FUNDA BAYB GANG",
         "color6",
@@ -1412,11 +2104,18 @@ function actualizarStockFunda(){
         "stockSeleccion6",
         "boton6"
     );
+
 }
-/* ==============================
-   ACTUALIZAR GORRA
-   ============================== */
+
+
+/*
+========================================
+GORRA
+========================================
+*/
+
 function actualizarStockGorra(){
+
     actualizarStock(
         "GORRA DE BÉISBOL",
         "color7",
@@ -1425,10 +2124,48 @@ function actualizarStockGorra(){
         "stockSeleccion7",
         "boton7"
     );
+
 }
-/* ==============================
-   AÑADIR AL CARRITO
-   ============================== */
+
+
+/*
+========================================
+IMÁGENES DE PRODUCTOS
+
+IMPORTANTE:
+GORRA = LADERA9.JPEG
+========================================
+*/
+
+const imagenes = {
+
+    "CAMISETA DE NEYMAR SANTOS":
+        "ladera2.jpg",
+
+    "CAMISETA DE PELASTINA":
+        "ladera3.jpg",
+
+    "CAMISETA DE VENUM UFC":
+        "ladera4.jpg",
+
+    "CAMISETA DE CASA BLANCA":
+        "ladera5.jpg",
+
+    "FUNDA BAYB GANG":
+        "ladera8.jpeg",
+
+    "GORRA DE BÉISBOL":
+        "ladera9.jpeg"
+
+};
+
+
+/*
+========================================
+AÑADIR AL CARRITO
+========================================
+*/
+
 async function agregarAlCarrito(
     nombre,
     idColor,
@@ -1436,160 +2173,237 @@ async function agregarAlCarrito(
     precio,
     idBoton
 ){
+
     const boton =
         document.getElementById(
             idBoton
         );
+
     if(boton){
         boton.disabled = true;
     }
+
+
     const cargado =
         await cargarStockGlobal();
+
+
     if(!cargado){
+
         if(boton){
             boton.disabled = false;
         }
+
         alert(
             "No se pudo comprobar el stock. Recarga la página e inténtalo de nuevo."
         );
+
         return;
     }
+
+
     actualizarDetallesStock();
+
     actualizarTodosLosStocks();
+
+
     const colorElement =
         document.getElementById(
             idColor
         );
+
     const tallaElement =
         document.getElementById(
             idTalla
         );
+
+
     if(
         !colorElement ||
         !tallaElement
     ){
+
         actualizarTodosLosStocks();
+
         return;
     }
+
+
     const color =
         normalizarColor(
             colorElement.value
         );
+
     const talla =
         String(
             tallaElement.value
         ).trim();
+
     const nombreNormalizado =
         normalizarNombreProducto(
             nombre
         );
+
+
     const stock =
         obtenerStock(
             nombreNormalizado,
             color,
             talla
         );
+
+
     if(stock === null){
+
         alert(
             "Esta combinación no está disponible."
         );
+
         actualizarTodosLosStocks();
+
         return;
     }
+
+
     if(stock <= 0){
+
         alert(
             "Esta combinación de color y talla está agotada."
         );
+
         actualizarTodosLosStocks();
+
         return;
     }
+
+
     const producto = {
+
         nombre:
             nombreNormalizado,
+
         color:
             color,
+
         talla:
             talla,
+
         precio:
             Number(precio)
+
     };
+
+
     carrito.push(
         producto
     );
+
+
     mostrarCarrito();
-    const imagenes = {
-        "CAMISETA DE NEYMAR SANTOS":
-            "ladera2.jpg",
-        "CAMISETA DE PELASTINA":
-            "ladera3.jpg",
-        "CAMISETA DE VENUM UFC":
-            "ladera4.jpg",
-        "CAMISETA DE CASA BLANCA":
-            "ladera5.jpg",
-        "FUNDA BAYB GANG":
-            "ladera8.jpeg",
-        "GORRA DE BÉISBOL":
-            "ladera9.jpg"
-    };
+
+
     const imagenAviso =
         document.getElementById(
             "imagenAviso"
         );
+
     const nombreAviso =
         document.getElementById(
             "nombreAviso"
         );
+
     const colorAviso =
         document.getElementById(
             "colorAviso"
         );
+
     const tallaAviso =
         document.getElementById(
             "tallaAviso"
         );
+
     const precioAviso =
         document.getElementById(
             "precioAviso"
         );
+
     const modalCarrito =
         document.getElementById(
             "modalCarrito"
         );
+
+
     if(imagenAviso){
+
         imagenAviso.src =
             imagenes[
                 nombreNormalizado
             ];
+
     }
+
+
     if(nombreAviso){
+
         nombreAviso.textContent =
             nombreNormalizado;
+
     }
+
+
     if(colorAviso){
+
         colorAviso.textContent =
             color;
+
     }
+
+
     if(tallaAviso){
+
         tallaAviso.textContent =
+
             nombreNormalizado ===
             "GORRA DE BÉISBOL"
+
                 ? "Sin talla"
+
                 : talla;
+
     }
+
+
     if(precioAviso){
+
         precioAviso.textContent =
-            Number(precio).toFixed(2);
+            Number(
+                precio
+            ).toFixed(2);
+
     }
+
+
     if(modalCarrito){
+
         modalCarrito.style.display =
             "flex";
+
     }
+
+
     actualizarTodosLosStocks();
+
 }
-/* ==============================
-   ACTUALIZAR TODOS
-   ============================== */
+
+
+/*
+========================================
+ACTUALIZAR TODOS
+========================================
+*/
+
 function actualizarTodosLosStocks(){
+
     actualizarStock(
         "CAMISETA DE NEYMAR SANTOS",
         "color2",
@@ -1598,6 +2412,8 @@ function actualizarTodosLosStocks(){
         "stockSeleccion2",
         "boton2"
     );
+
+
     actualizarStock(
         "CAMISETA DE PELASTINA",
         "color3",
@@ -1606,6 +2422,8 @@ function actualizarTodosLosStocks(){
         "stockSeleccion3",
         "boton3"
     );
+
+
     actualizarStock(
         "CAMISETA DE VENUM UFC",
         "color4",
@@ -1614,6 +2432,8 @@ function actualizarTodosLosStocks(){
         "stockSeleccion4",
         "boton4"
     );
+
+
     actualizarStock(
         "CAMISETA DE CASA BLANCA",
         "color5",
@@ -1622,330 +2442,566 @@ function actualizarTodosLosStocks(){
         "stockSeleccion5",
         "boton5"
     );
+
+
     actualizarStockFunda();
-    /* GORRA */
+
     actualizarStockGorra();
+
 }
-/* ==============================
-   SEGUIR COMPRANDO
-   ============================== */
+
+
+/*
+========================================
+SEGUIR COMPRANDO
+========================================
+*/
+
 function seguirComprando(){
+
     const modal =
         document.getElementById(
             "modalCarrito"
         );
+
     if(modal){
+
         modal.style.display =
             "none";
+
     }
+
 }
-/* ==============================
-   IR AL CARRITO
-   ============================== */
+
+
+/*
+========================================
+IR AL CARRITO
+========================================
+*/
+
 function irAlCarrito(){
+
     const modal =
         document.getElementById(
             "modalCarrito"
         );
+
     if(modal){
+
         modal.style.display =
             "none";
+
     }
+
+
     const carritoElemento =
         document.getElementById(
             "carrito"
         );
+
     if(carritoElemento){
+
         carritoElemento.scrollIntoView({
             behavior:"smooth"
         });
+
     }
+
 }
-/* ==============================
-   MOSTRAR CARRITO
-   ============================== */
+
+
+/*
+========================================
+MOSTRAR CARRITO
+========================================
+*/
+
 function mostrarCarrito(){
+
     const lista =
         document.getElementById(
             "lista-carrito"
         );
+
     if(!lista){
         return;
     }
+
+
     lista.innerHTML = "";
+
     let total = 0;
+
+
     if(carrito.length === 0){
+
         const vacio =
-            document.createElement("li");
+            document.createElement(
+                "li"
+            );
+
         vacio.textContent =
             "El carrito está vacío.";
+
         vacio.style.color =
             "#aaa";
+
         lista.appendChild(
             vacio
         );
+
     }
+
+
     carrito.forEach(
-        function(producto,indice){
+        function(
+            producto,
+            indice
+        ){
+
             const li =
                 document.createElement(
                     "li"
                 );
+
+
             const tallaTexto =
+
                 producto.nombre ===
                 "GORRA DE BÉISBOL"
+
                     ? "Sin talla"
+
                     : producto.talla;
+
+
             li.innerHTML =
+
                 producto.nombre +
+
                 " — Color: " +
+
                 producto.color +
+
                 " — Talla: " +
+
                 tallaTexto +
+
                 " — " +
+
                 Number(
                     producto.precio
                 ).toFixed(2) +
+
                 " € " +
+
                 '<button type="button" class="eliminar" onclick="eliminarProducto(' +
+
                 indice +
+
                 ')">Eliminar</button>';
+
+
             lista.appendChild(
                 li
             );
+
+
             total +=
                 Number(
                     producto.precio
                 );
+
         }
     );
+
+
     const totalElemento =
         document.getElementById(
             "total"
         );
+
+
     if(totalElemento){
+
         totalElemento.textContent =
             total.toFixed(2);
+
     }
+
+
     actualizarTodosLosStocks();
+
 }
-/* ==============================
-   ELIMINAR PRODUCTO
-   ============================== */
-function eliminarProducto(indice){
+
+
+/*
+========================================
+ELIMINAR PRODUCTO
+========================================
+*/
+
+function eliminarProducto(
+    indice
+){
+
     if(
         indice < 0 ||
         indice >= carrito.length
     ){
+
         return;
+
     }
+
+
     carrito.splice(
         indice,
         1
     );
+
+
     mostrarCarrito();
+
 }
-/* ==============================
-   COMPRAR
-   ============================== */
+
+
+/*
+========================================
+COMPRAR
+========================================
+*/
+
 function comprarCarrito(){
-    if(!Array.isArray(carrito)){
+
+    if(
+        !Array.isArray(
+            carrito
+        )
+    ){
+
         carrito = [];
+
     }
-    if(carrito.length === 0){
+
+
+    if(
+        carrito.length === 0
+    ){
+
         alert(
             "El carrito está vacío."
         );
+
         return;
+
     }
+
+
     const contenedor =
         document.getElementById(
             "productos-compra"
         );
+
+
     if(!contenedor){
+
         alert(
             "No se pudo abrir la ventana de compra."
         );
+
         return;
+
     }
+
+
     contenedor.innerHTML = "";
-    const imagenes = {
-        "CAMISETA DE NEYMAR SANTOS":
-            "ladera2.jpg",
-        "CAMISETA DE PELASTINA":
-            "ladera3.jpg",
-        "CAMISETA DE VENUM UFC":
-            "ladera4.jpg",
-        "CAMISETA DE CASA BLANCA":
-            "ladera5.jpg",
-        "FUNDA BAYB GANG":
-            "ladera8.jpeg",
-        "GORRA DE BÉISBOL":
-            "ladera9.jpg"
-    };
+
+
     let total = 0;
+
+
     carrito.forEach(
         function(producto){
+
             const productoDiv =
                 document.createElement(
                     "div"
                 );
+
+
             productoDiv.className =
                 "producto-compra";
+
+
             const tallaTexto =
+
                 producto.nombre ===
                 "GORRA DE BÉISBOL"
+
                     ? "Sin talla"
+
                     : producto.talla;
+
+
             productoDiv.innerHTML = `
+
                 <img
                     src="${imagenes[producto.nombre]}"
                     alt="${producto.nombre}"
                 >
+
                 <div class="producto-compra-info">
+
                     <h3>
                         ${producto.nombre}
                     </h3>
+
                     <p>
-                        Color: ${producto.color}
+                        Color:
+                        ${producto.color}
                     </p>
+
                     <p>
-                        Talla: ${tallaTexto}
+                        Talla:
+                        ${tallaTexto}
                     </p>
+
                     <p>
                         Precio:
-                        ${Number(producto.precio).toFixed(2)} €
+                        ${Number(
+                            producto.precio
+                        ).toFixed(2)} €
                     </p>
+
                 </div>
+
             `;
+
+
             contenedor.appendChild(
                 productoDiv
             );
+
+
             total +=
                 Number(
                     producto.precio
                 );
+
         }
     );
+
+
     const totalCompra =
         document.getElementById(
             "total-compra"
         );
+
+
     if(totalCompra){
+
         totalCompra.textContent =
             total.toFixed(2);
+
     }
+
+
     const modalCompra =
         document.getElementById(
             "modalCompra"
         );
+
+
     if(modalCompra){
+
         modalCompra.style.display =
             "flex";
+
     }
+
 }
-/* ==============================
-   CERRAR COMPRA
-   ============================== */
+
+
+/*
+========================================
+CERRAR COMPRA
+========================================
+*/
+
 function cerrarCompra(){
+
     const modal =
         document.getElementById(
             "modalCompra"
         );
+
+
     if(modal){
+
         modal.style.display =
             "none";
+
     }
+
 }
-/* ==============================
-   COMPROBAR STOCK DEL PEDIDO
-   ============================== */
+
+
+/*
+========================================
+COMPROBAR STOCK DEL PEDIDO
+========================================
+*/
+
 function comprobarStockPedido(){
+
     if(!stockCargado){
+
         return false;
+
     }
+
+
     const cantidades = {};
+
+
     for(
         const producto of carrito
     ){
+
         const nombre =
             normalizarNombreProducto(
                 producto.nombre
             );
+
         const color =
             normalizarColor(
                 producto.color
             );
+
         const talla =
             String(
                 producto.talla
             ).trim();
+
+
         const clave =
             nombre +
             "|" +
             color +
             "|" +
             talla;
-        if(!cantidades[clave]){
+
+
+        if(
+            !cantidades[clave]
+        ){
+
             cantidades[clave] = 0;
+
         }
+
+
         cantidades[clave]++;
+
+
         const stockDisponible =
             obtenerStock(
                 nombre,
                 color,
                 talla
             );
+
+
         if(
             stockDisponible === null ||
             stockDisponible < 0
         ){
+
             return false;
+
         }
+
     }
+
+
     return true;
+
 }
-/* ==============================
-   DESCONTAR STOCK GLOBAL
-   ============================== */
+
+
+/*
+========================================
+DESCONTAR STOCK GLOBAL
+========================================
+*/
+
 async function descontarStockPedido(){
+
     try{
+
         const cantidades = {};
+
+
         carrito.forEach(
             function(producto){
+
                 const nombre =
                     normalizarNombreProducto(
                         producto.nombre
                     );
+
                 const color =
                     normalizarColor(
                         producto.color
                     );
+
                 const talla =
                     String(
                         producto.talla
                     ).trim();
+
+
                 const clave =
                     nombre +
                     "|" +
                     color +
                     "|" +
                     talla;
-                if(!cantidades[clave]){
+
+
+                if(
+                    !cantidades[clave]
+                ){
+
                     cantidades[clave] = {
+
                         product:
                             nombre,
+
                         color:
                             color,
+
                         variant:
                             talla,
+
                         quantity:
                             0
+
                     };
+
                 }
-                cantidades[clave].quantity++;
+
+
+                cantidades[
+                    clave
+                ].quantity++;
+
             }
         );
+
+
         const resultado =
             await supabaseClient.rpc(
                 "descontar_pedido_xmxo",
@@ -1956,311 +3012,865 @@ async function descontarStockPedido(){
                         )
                 }
             );
+
+
         if(resultado.error){
+
             console.error(
                 "Error descontando stock global:",
                 resultado.error
             );
+
             return false;
+
         }
+
+
         if(
             resultado.data !== true
         ){
+
             console.error(
                 "La función de Supabase no confirmó el descuento:",
                 resultado.data
             );
+
             return false;
+
         }
+
+
         await cargarStockGlobal();
+
         actualizarDetallesStock();
+
         actualizarTodosLosStocks();
+
         return true;
+
+
     }catch(error){
+
         console.error(
             "Error inesperado descontando stock:",
             error
         );
+
         return false;
+
     }
+
 }
-/* ==============================
-   FINALIZAR PEDIDO
-   ============================== */
+
+
+/*
+========================================
+ENVIAR PEDIDO POR GMAIL
+========================================
+
+IMPORTANTE:
+
+- Hasta 4 intentos si hay fallo.
+- 20 segundos de espera máxima por intento.
+- Si FormSubmit confirma el pedido,
+  NO se vuelve a enviar.
+========================================
+*/
+
+async function enviarPedidoPorCorreo(
+    datos
+){
+
+    const url =
+        "https://formsubmit.co/ajax/" +
+        encodeURIComponent(
+            CORREO_PEDIDOS
+        );
+
+
+    let ultimoError =
+        null;
+
+
+    for(
+        let intento = 1;
+        intento <= 4;
+        intento++
+    ){
+
+        const controller =
+            new AbortController();
+
+
+        const timeout =
+            setTimeout(
+                function(){
+
+                    controller.abort();
+
+                },
+                20000
+            );
+
+
+        try{
+
+            console.log(
+                "Enviando pedido. Intento:",
+                intento
+            );
+
+
+            const respuesta =
+                await fetch(
+                    url,
+                    {
+                        method:"POST",
+
+                        headers:{
+                            "Content-Type":
+                                "application/json",
+
+                            "Accept":
+                                "application/json"
+                        },
+
+                        body:
+                            JSON.stringify(
+                                datos
+                            ),
+
+                        signal:
+                            controller.signal
+                    }
+                );
+
+
+            clearTimeout(
+                timeout
+            );
+
+
+            let datosRespuesta =
+                null;
+
+
+            try{
+
+                datosRespuesta =
+                    await respuesta.json();
+
+            }catch(error){
+
+                datosRespuesta =
+                    null;
+
+            }
+
+
+            /*
+            Si el servidor acepta el pedido,
+            TERMINAMOS aquí.
+            */
+
+            if(
+                respuesta.ok &&
+                (
+                    !datosRespuesta ||
+                    datosRespuesta.success !== false
+                )
+            ){
+
+                console.log(
+                    "PEDIDO ACEPTADO POR FORMSUBMIT.",
+                    "Intento:",
+                    intento
+                );
+
+                return true;
+
+            }
+
+
+            ultimoError =
+                new Error(
+                    "FormSubmit respondió con HTTP " +
+                    respuesta.status
+                );
+
+
+        }catch(error){
+
+            clearTimeout(
+                timeout
+            );
+
+
+            ultimoError =
+                error;
+
+
+            console.warn(
+                "Falló el intento:",
+                intento,
+                error
+            );
+
+        }
+
+
+        /*
+        Esperamos 2,5 segundos
+        antes de volver a intentar.
+        */
+
+        if(
+            intento < 4
+        ){
+
+            await new Promise(
+                function(resolve){
+
+                    setTimeout(
+                        resolve,
+                        2500
+                    );
+
+                }
+            );
+
+        }
+
+    }
+
+
+    console.error(
+        "No se pudo enviar el pedido después de 4 intentos:",
+        ultimoError
+    );
+
+
+    return false;
+
+}
+
+
+/*
+========================================
+FINALIZAR PEDIDO
+========================================
+*/
+
 async function finalizarCompra(){
+
+    /*
+    Evita que el cliente pueda
+    enviar el mismo pedido dos veces.
+    */
+
+    if(enviandoPedido){
+
+        return;
+
+    }
+
+
     const nombre =
         document.getElementById(
             "nombreCliente"
         ).value.trim();
+
+
     const telefono =
         document.getElementById(
             "telefonoCliente"
         ).value.trim();
+
+
     const entrega =
         document.getElementById(
             "entregaCliente"
         ).value;
+
+
     const direccion =
         document.getElementById(
             "direccionCliente"
         ).value.trim();
+
+
+    const boton =
+        document.querySelector(
+            ".boton-finalizar"
+        );
+
+
+    /*
+    Comprobar datos
+    */
+
     if(
         nombre === "" ||
         telefono === "" ||
         direccion === ""
     ){
+
         alert(
             "Por favor, completa todos los datos del pedido."
         );
+
         return;
+
     }
-    if(carrito.length === 0){
+
+
+    if(
+        carrito.length === 0
+    ){
+
         alert(
             "El carrito está vacío."
         );
+
         cerrarCompra();
+
         return;
+
     }
-    const stockActualizado =
-        await cargarStockGlobal();
-    if(!stockActualizado){
-        alert(
-            "No se pudo comprobar el stock. Inténtalo de nuevo."
-        );
-        return;
-    }
-    actualizarDetallesStock();
-    actualizarTodosLosStocks();
-    if(!comprobarStockPedido()){
-        alert(
-            "Lo sentimos. Uno de los productos seleccionados ya no tiene suficiente stock."
-        );
-        actualizarTodosLosStocks();
-        return;
-    }
+
+
     if(
         !CORREO_PEDIDOS ||
         CORREO_PEDIDOS ===
         "TU_CORREO_AQUI@ejemplo.com"
     ){
+
         alert(
-            "Primero configura tu correo de pedidos en CORREO_PEDIDOS."
+            "Primero configura tu correo de pedidos."
         );
+
         return;
+
     }
-    let productosTexto = "";
-    let total = 0;
-    carrito.forEach(
-        function(producto,indice){
-            const tallaTexto =
-                producto.nombre ===
-                "GORRA DE BÉISBOL"
-                    ? "Sin talla"
-                    : producto.talla;
-            productosTexto +=
-                (indice + 1) +
-                ". " +
-                producto.nombre +
-                " | Color: " +
-                producto.color +
-                " | Talla: " +
-                tallaTexto +
-                " | Precio: " +
-                Number(
-                    producto.precio
-                ).toFixed(2) +
-                " €\n";
-            total +=
-                Number(
-                    producto.precio
-                );
-        }
-    );
-    /* ==============================
-       ENVIAR PEDIDO POR FORMSUBMIT
-       ============================== */
+
+
+    /*
+    BLOQUEAR BOTÓN
+    */
+
+    enviandoPedido = true;
+
+
+    if(boton){
+
+        boton.disabled = true;
+
+        boton.textContent =
+            "ENVIANDO PEDIDO...";
+
+    }
+
+
     try{
-        const respuesta =
-            await fetch(
-                "https://formsubmit.co/ajax/" +
-                encodeURIComponent(
-                    CORREO_PEDIDOS
-                ),
+
+        /*
+        Comprobar stock actualizado
+        */
+
+        const stockActualizado =
+            await cargarStockGlobal();
+
+
+        if(!stockActualizado){
+
+            throw new Error(
+                "No se pudo comprobar el stock."
+            );
+
+        }
+
+
+        actualizarDetallesStock();
+
+        actualizarTodosLosStocks();
+
+
+        if(
+            !comprobarStockPedido()
+        ){
+
+            alert(
+                "Lo sentimos. Uno de los productos seleccionados ya no tiene suficiente stock."
+            );
+
+            return;
+
+        }
+
+
+        /*
+        ID ÚNICO DEL PEDIDO
+        */
+
+        const ahora =
+            new Date();
+
+
+        const parteFecha =
+            ahora.getFullYear() +
+
+            String(
+                ahora.getMonth() + 1
+            ).padStart(
+                2,
+                "0"
+            ) +
+
+            String(
+                ahora.getDate()
+            ).padStart(
+                2,
+                "0"
+            );
+
+
+        const parteHora =
+            String(
+                ahora.getHours()
+            ).padStart(
+                2,
+                "0"
+            ) +
+
+            String(
+                ahora.getMinutes()
+            ).padStart(
+                2,
+                "0"
+            ) +
+
+            String(
+                ahora.getSeconds()
+            ).padStart(
+                2,
+                "0"
+            );
+
+
+        const codigoAleatorio =
+            Math.random()
+                .toString(36)
+                .substring(
+                    2,
+                    8
+                )
+                .toUpperCase();
+
+
+        const idPedido =
+            "XMXO-" +
+            parteFecha +
+            "-" +
+            parteHora +
+            "-" +
+            codigoAleatorio;
+
+
+        const fechaPedido =
+            ahora.toLocaleString(
+                "es-ES",
                 {
-                    method:"POST",
-                    headers:{
-                        "Content-Type":
-                            "application/json",
-                        "Accept":
-                            "application/json"
-                    },
-                    body:JSON.stringify({
-                        _subject:
-                            "🦁 NUEVO PEDIDO - TIENDA XMXO",
-                        _template:
-                            "table",
-                        "NOMBRE DEL CLIENTE":
-                            nombre,
-                        "TELÉFONO":
-                            telefono,
-                        "FORMA DE ENTREGA":
-                            entrega,
-                        "LUGAR DE ENTREGA":
-                            direccion,
-                        "PRODUCTOS DEL PEDIDO":
-                            productosTexto,
-                        "TOTAL DEL PEDIDO":
-                            total.toFixed(2) +
-                            " €"
-                    })
+                    dateStyle:
+                        "short",
+
+                    timeStyle:
+                        "medium"
                 }
             );
-        let datosRespuesta =
-            null;
-        try{
-            datosRespuesta =
-                await respuesta.json();
-        }catch(error){
-            datosRespuesta =
-                null;
-        }
-        if(
-            !respuesta.ok ||
-            (
-                datosRespuesta &&
-                datosRespuesta.success === false
-            )
-        ){
-            throw new Error(
-                "FormSubmit no aceptó el pedido."
+
+
+        /*
+        PRODUCTOS
+        */
+
+        let productosTexto =
+            "";
+
+        let total =
+            0;
+
+
+        carrito.forEach(
+            function(
+                producto,
+                indice
+            ){
+
+                const tallaTexto =
+
+                    producto.nombre ===
+                    "GORRA DE BÉISBOL"
+
+                        ? "Sin talla"
+
+                        : producto.talla;
+
+
+                productosTexto +=
+
+                    (
+                        indice + 1
+                    ) +
+
+                    ". " +
+
+                    producto.nombre +
+
+                    " | Color: " +
+
+                    producto.color +
+
+                    " | Talla: " +
+
+                    tallaTexto +
+
+                    " | Precio: " +
+
+                    Number(
+                        producto.precio
+                    ).toFixed(2) +
+
+                    " €\n";
+
+
+                total +=
+                    Number(
+                        producto.precio
+                    );
+
+            }
+        );
+
+
+        /*
+        DATOS QUE RECIBIRÁS EN GMAIL
+        */
+
+        const datosPedido = {
+
+            _subject:
+                "🦁 NUEVO PEDIDO - " +
+                idPedido +
+                " - TIENDA XMXO",
+
+            _template:
+                "table",
+
+            "ID DEL PEDIDO":
+                idPedido,
+
+            "FECHA DEL PEDIDO":
+                fechaPedido,
+
+            "NOMBRE DEL CLIENTE":
+                nombre,
+
+            "TELÉFONO":
+                telefono,
+
+            "FORMA DE ENTREGA":
+                entrega,
+
+            "LUGAR DE ENTREGA":
+                direccion,
+
+            "PRODUCTOS DEL PEDIDO":
+                productosTexto,
+
+            "TOTAL DEL PEDIDO":
+                total.toFixed(2) +
+                " €"
+
+        };
+
+
+        /*
+        ENVIAR A FORMSUBMIT
+        */
+
+        const enviado =
+            await enviarPedidoPorCorreo(
+                datosPedido
             );
+
+
+        if(!enviado){
+
+            throw new Error(
+                "FormSubmit no confirmó el envío."
+            );
+
         }
-        /* ==============================
-           DESCONTAR STOCK
-           ============================== */
+
+
+        /*
+        SOLO DESPUÉS DE ENVIAR:
+        DESCONTAR STOCK
+        */
+
         const stockDescontado =
             await descontarStockPedido();
+
+
         if(!stockDescontado){
+
             alert(
-                "El pedido fue enviado, pero el stock no pudo descontarse correctamente. Revisa el stock antes de volver a realizar el pedido."
+                "El pedido fue enviado correctamente, pero el stock no pudo descontarse. NO vuelvas a realizar el pedido."
             );
+
             await cargarStockGlobal();
+
             actualizarDetallesStock();
+
             actualizarTodosLosStocks();
+
             return;
+
         }
-        /* ==============================
-           CONFIRMACIÓN
-           ============================== */
+
+
+        /*
+        CONFIRMACIÓN
+        */
+
         const nombreConfirmacion =
             document.getElementById(
                 "nombreConfirmacion"
             );
+
+
         const totalConfirmacion =
             document.getElementById(
                 "totalConfirmacion"
             );
+
+
         if(nombreConfirmacion){
+
             nombreConfirmacion.textContent =
                 nombre;
+
         }
+
+
         if(totalConfirmacion){
+
             totalConfirmacion.textContent =
                 total.toFixed(2);
+
         }
+
+
         const modalCompra =
             document.getElementById(
                 "modalCompra"
             );
+
+
         const modalConfirmacion =
             document.getElementById(
                 "modalConfirmacion"
             );
+
+
         if(modalCompra){
+
             modalCompra.style.display =
                 "none";
+
         }
+
+
         if(modalConfirmacion){
+
             modalConfirmacion.style.display =
                 "flex";
+
         }
+
+
+        /*
+        VACIAR CARRITO
+        */
+
         carrito = [];
+
+
         mostrarCarrito();
+
+
         document.getElementById(
             "nombreCliente"
         ).value = "";
+
+
         document.getElementById(
             "telefonoCliente"
         ).value = "";
+
+
         document.getElementById(
             "direccionCliente"
         ).value = "";
+
+
         actualizarDetallesStock();
+
         actualizarTodosLosStocks();
-    }catch(error){
-        alert(
-            "No se ha podido enviar el pedido. El stock NO se ha descontado."
+
+
+        console.log(
+            "PEDIDO ENVIADO CORRECTAMENTE:",
+            idPedido
         );
+
+
+    }catch(error){
+
         console.error(
             "Error al enviar pedido:",
             error
         );
+
+
+        alert(
+            "No se ha podido enviar el pedido. El stock NO se ha descontado."
+        );
+
+
+    }finally{
+
+        /*
+        Volver a activar botón
+        */
+
+        enviandoPedido = false;
+
+
+        if(boton){
+
+            boton.disabled = false;
+
+            boton.textContent =
+                "FINALIZAR PEDIDO";
+
+        }
+
     }
+
 }
-/* ==============================
-   CERRAR CONFIRMACIÓN
-   ============================== */
+
+
+/*
+========================================
+CERRAR CONFIRMACIÓN
+========================================
+*/
+
 function cerrarConfirmacion(){
+
     const modal =
         document.getElementById(
             "modalConfirmacion"
         );
+
+
     if(modal){
+
         modal.style.display =
             "none";
+
     }
+
 }
-/* ==============================
-   ACTIVAR STOCK AL CARGAR
-   ============================== */
+
+
+/*
+========================================
+ACTIVAR STOCK AL CARGAR
+========================================
+*/
+
 document.addEventListener(
     "DOMContentLoaded",
+
     async function(){
+
         mostrarCarrito();
+
+
         const cargado =
             await cargarStockGlobal();
+
+
         if(cargado){
+
             actualizarDetallesStock();
+
             actualizarTodosLosStocks();
+
         }else{
+
             console.error(
                 "No se pudo cargar el stock global."
             );
+
+
             const estados = [
+
                 "estadoStock2",
+
                 "estadoStock3",
+
                 "estadoStock4",
+
                 "estadoStock5",
+
                 "estadoStock6",
+
                 "estadoStock7"
+
             ];
+
+
             estados.forEach(
                 function(id){
+
                     const elemento =
                         document.getElementById(
                             id
                         );
+
+
                     if(elemento){
+
                         elemento.textContent =
                             "● ERROR CARGANDO STOCK";
+
                         elemento.className =
                             "stock-agotado";
+
                     }
+
                 }
             );
+
         }
+
     }
 );
+
 </script>
+
 </body>
 </html>
