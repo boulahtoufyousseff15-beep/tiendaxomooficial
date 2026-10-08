@@ -571,16 +571,26 @@ header::before{
         <option>Negro</option>
         <option>Blanco</option>
     </select>
-
-Talla:
-S
-M
-L
-XL
+    <label>Talla:</label>
+    <select id="talla2" onchange="actualizarStock(
+        'CAMISETA DE NEYMAR SANTOS',
+        'color2',
+        'talla2',
+        'estadoStock2',
+        'stockSeleccion2',
+        'boton2'
+    )">
+        <option>S</option>
+        <option>M</option>
+        <option>L</option>
+        <option>XL</option>
+    </select>
 </div>
 <p class="precio">15.99 €</p>
-
-Cargando…
+<button type="button" id="boton2" class="boton-carrito"
+onclick="agregarAlCarrito('CAMISETA DE NEYMAR SANTOS','color2','talla2',15.99,'boton2')">
+Añadir al carrito
+</button>
 </div>
 <!-- PRODUCTO 2 -->
 <div class="producto">
@@ -604,16 +614,26 @@ Cargando…
         <option>Negro</option>
         <option>Blanco</option>
     </select>
-
-Talla:
-S
-M
-L
-XL
+    <label>Talla:</label>
+    <select id="talla5" onchange="actualizarStock(
+        'CAMISETA DE CASA BLANCA',
+        'color5',
+        'talla5',
+        'estadoStock5',
+        'stockSeleccion5',
+        'boton5'
+    )">
+        <option>S</option>
+        <option>M</option>
+        <option>L</option>
+        <option>XL</option>
+    </select>
 </div>
 <p class="precio">15.99 €</p>
-
-Cargando…
+<button type="button" id="boton5" class="boton-carrito"
+onclick="agregarAlCarrito('CAMISETA DE CASA BLANCA','color5','talla5',15.99,'boton5')">
+Añadir al carrito
+</button>
 </div>
 <!-- PRODUCTO 3 -->
 <div class="producto">
@@ -630,14 +650,17 @@ Cargando…
         <option>Blanco</option>
         <option>Negro</option>
     </select>
-
-iPhone:
-iPhone 13 Pro
-iPhone 14 Pro
+    <label>iPhone:</label>
+    <select id="talla6" onchange="actualizarStockFunda()">
+        <option>iPhone 13 Pro</option>
+        <option>iPhone 14 Pro</option>
+    </select>
 </div>
 <p class="precio">6.99 €</p>
-
-Cargando…
+<button type="button" id="boton6" class="boton-carrito"
+onclick="agregarAlCarrito('FUNDA BAYB GANG','color6','talla6',6.99,'boton6')">
+Añadir al carrito
+</button>
 </div>
 <!-- PRODUCTO 4 -->
 <div class="producto">
@@ -655,13 +678,15 @@ Cargando…
         <option>Rosa</option>
         <option>Negro</option>
     </select>
-<select id="talla7" style="display:none;">
-    <option>Única</option>
-</select>
+    <select id="talla7" style="display:none;">
+        <option>Única</option>
+    </select>
 </div>
 <p class="precio">9.99 €</p>
-
-Cargando…
+<button type="button" id="boton7" class="boton-carrito"
+onclick="agregarAlCarrito('GORRA DE BÉISBOL','color7','talla7',9.99,'boton7')">
+Añadir al carrito
+</button>
 </div>
 <!-- PRODUCTO 10 -->
 <div class="producto">
@@ -684,15 +709,25 @@ Cargando…
     )">
         <option>Blanco</option>
     </select>
-
-Talla:
-40
+    <label>Talla:</label>
+    <select id="talla10" onchange="actualizarStockNuevo(
+        'NIKE AIR FORCE 1',
+        'color10',
+        'talla10',
+        'estadoStock10',
+        'stockSeleccion10',
+        'boton10'
+    )">
+        <option>40</option>
+    </select>
 </div>
 <p class="precio">25.99 €</p>
-
-Cargando…
+<button type="button" id="boton10" class="boton-carrito"
+onclick="agregarAlCarrito('NIKE AIR FORCE 1','color10','talla10',25.99,'boton10')">
+Añadir al carrito
+</button>
 </div>
-<!-- PRODUCTO 11 - GORRA DE GUCCI -->
+<!-- PRODUCTO 11 -->
 <div class="producto">
     <h2>GORRA DE GUCCI</h2>
 <img src="LADERA11.jpg" alt="Gorra Gucci">
@@ -714,15 +749,17 @@ Cargando…
         <option>Negro</option>
         <option>Rosa</option>
     </select>
-<select id="talla11" style="display:none;">
-    <option>Única</option>
-</select>
+    <select id="talla11" style="display:none;">
+        <option>Única</option>
+    </select>
 </div>
 <p class="precio">9.99 €</p>
-
-Cargando…
+<button type="button" id="boton11" class="boton-carrito"
+onclick="agregarAlCarrito('GORRA DE GUCCI','color11','talla11',9.99,'boton11')">
+Añadir al carrito
+</button>
 </div>
-<!-- PRODUCTO 12 - ZAPATILLA DE NIKE -->
+<!-- PRODUCTO 12 -->
 <div class="producto">
     <h2>ZAPATILLA DE NIKE</h2>
 <img src="LADERA12.jpg" alt="Zapatilla Nike">
@@ -743,15 +780,25 @@ Cargando…
     )">
         <option>Blanco</option>
     </select>
-
-Talla:
-40
+    <label>Talla:</label>
+    <select id="talla12" onchange="actualizarStockNuevo(
+        'ZAPATILLA DE NIKE',
+        'color12',
+        'talla12',
+        'estadoStock12',
+        'stockSeleccion12',
+        'boton12'
+    )">
+        <option>40</option>
+    </select>
 </div>
 <p class="precio">31.99 €</p>
-
-Cargando…
+<button type="button" id="boton12" class="boton-carrito"
+onclick="agregarAlCarrito('ZAPATILLA DE NIKE','color12','talla12',31.99,'boton12')">
+Añadir al carrito
+</button>
 </div>
-<!-- PRODUCTO 13 - BOLSILLO DE PRADA HOMBRE -->
+<!-- PRODUCTO 13 -->
 <div class="producto">
     <h2>BOLSILLO DE PRADA HOMBRE</h2>
 <img src="LADERA13.jpg" alt="Bolsillo Prada hombre">
@@ -772,15 +819,17 @@ Cargando…
     )">
         <option>Negro</option>
     </select>
-<select id="talla13" style="display:none;">
-    <option>Única</option>
-</select>
+    <select id="talla13" style="display:none;">
+        <option>Única</option>
+    </select>
 </div>
 <p class="precio">18.99 €</p>
-
-Cargando…
+<button type="button" id="boton13" class="boton-carrito"
+onclick="agregarAlCarrito('BOLSILLO DE PRADA HOMBRE','color13','talla13',18.99,'boton13')">
+Añadir al carrito
+</button>
 </div>
-<!-- PRODUCTO 14 - RELOJ DE ROLEX -->
+<!-- PRODUCTO 14 -->
 <div class="producto">
     <h2>RELOJ DE ROLEX</h2>
 <img src="LADERA14.jpg" alt="Reloj Rolex">
@@ -801,13 +850,15 @@ Cargando…
     )">
         <option>Azul</option>
     </select>
-<select id="talla14" style="display:none;">
-    <option>Única</option>
-</select>
+    <select id="talla14" style="display:none;">
+        <option>Única</option>
+    </select>
 </div>
 <p class="precio">15.99 €</p>
-
-Cargando…
+<button type="button" id="boton14" class="boton-carrito"
+onclick="agregarAlCarrito('RELOJ DE ROLEX','color14','talla14',15.99,'boton14')">
+Añadir al carrito
+</button>
 </div>
 </main>
 <!-- CARRITO -->
@@ -2381,7 +2432,8 @@ function cerrarConfirmacion(){
             "modalConfirmacion"
         );
     if(modal){
-        modal.style.display = "none";
+        modal.style.display =
+            "none";
     }
 }
 /*
@@ -2424,6 +2476,24 @@ document.addEventListener(
                 }
             });
         }
+        /*
+        ACTUALIZAR STOCK AUTOMÁTICAMENTE
+        CADA 10 SEGUNDOS
+        */
+        setInterval(
+            async function(){
+                if(enviandoPedido){
+                    return;
+                }
+                const actualizado =
+                    await cargarStockGlobal();
+                if(actualizado){
+                    actualizarDetallesStock();
+                    actualizarTodosLosStocks();
+                }
+            },
+            10000
+        );
     }
 );
 </script>
