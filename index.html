@@ -6,546 +6,546 @@
 <title>TIENDA XMXO</title>
 <style>
 body{
-    font-family:Arial,sans-serif;
-    margin:0;
-    background:#000;
-    color:white;
-    position:relative;
+font-family:Arial,sans-serif;
+margin:0;
+background:#000;
+color:white;
+position:relative;
 }
 body::before{
-    content:"🦁";
-    position:fixed;
-    top:50%;
-    left:50%;
-    transform:translate(-50%,-50%);
-    font-size:400px;
-    opacity:.08;
-    z-index:-1;
-    pointer-events:none;
+content:"🦁";
+position:fixed;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+font-size:400px;
+opacity:.08;
+z-index:-1;
+pointer-events:none;
 }
 header{
-    background:radial-gradient(circle at center,#242424 0%,#090909 45%,#000 100%);
-    color:white;
-    text-align:center;
-    padding:28px 20px 22px;
-    border-bottom:2px solid #d4af37;
-    position:relative;
-    overflow:hidden;
+background:radial-gradient(circle at center,#242424 0%,#090909 45%,#000 100%);
+color:white;
+text-align:center;
+padding:28px 20px 22px;
+border-bottom:2px solid #d4af37;
+position:relative;
+overflow:hidden;
 }
 header::before{
-    content:"";
-    position:absolute;
-    width:280px;
-    height:280px;
-    background:#d4af37;
-    border-radius:50%;
-    filter:blur(110px);
-    opacity:.12;
-    top:-150px;
-    left:50%;
-    transform:translateX(-50%);
+content:"";
+position:absolute;
+width:280px;
+height:280px;
+background:#d4af37;
+border-radius:50%;
+filter:blur(110px);
+opacity:.12;
+top:-150px;
+left:50%;
+transform:translateX(-50%);
 }
 .logo-xmxo{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    gap:18px;
-    position:relative;
-    z-index:2;
+display:flex;
+justify-content:center;
+align-items:center;
+gap:18px;
+position:relative;
+z-index:2;
 }
 .leon-logo{
-    font-size:78px;
-    line-height:1;
-    filter:drop-shadow(0 0 5px white) drop-shadow(0 0 12px #d4af37);
-    animation:brilloLeon 2.5s infinite alternate;
+font-size:78px;
+line-height:1;
+filter:drop-shadow(0 0 5px white) drop-shadow(0 0 12px #d4af37);
+animation:brilloLeon 2.5s infinite alternate;
 }
 .nombre-tienda{
-    display:flex;
-    flex-direction:column;
-    align-items:flex-start;
-    line-height:1;
+display:flex;
+flex-direction:column;
+align-items:flex-start;
+line-height:1;
 }
 .nombre-tienda span{
-    font-size:18px;
-    letter-spacing:7px;
-    color:#ddd;
-    margin-bottom:7px;
+font-size:18px;
+letter-spacing:7px;
+color:#ddd;
+margin-bottom:7px;
 }
 .nombre-tienda strong{
-    font-size:55px;
-    letter-spacing:9px;
-    background:linear-gradient(90deg,#fff,#d4af37,#fff,#d4af37);
-    -webkit-background-clip:text;
-    -webkit-text-fill-color:transparent;
+font-size:55px;
+letter-spacing:9px;
+background:linear-gradient(90deg,#fff,#d4af37,#fff,#d4af37);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
 }
 .linea-logo{
-    width:220px;
-    height:2px;
-    margin:18px auto 13px;
-    background:linear-gradient(90deg,transparent,#d4af37,white,#d4af37,transparent);
-    position:relative;
-    z-index:2;
+width:220px;
+height:2px;
+margin:18px auto 13px;
+background:linear-gradient(90deg,transparent,#d4af37,white,#d4af37,transparent);
+position:relative;
+z-index:2;
 }
 .subtitulo-xmxo{
-    margin:0;
-    color:#ccc;
-    font-size:12px;
-    letter-spacing:2px;
-    position:relative;
-    z-index:2;
+margin:0;
+color:#ccc;
+font-size:12px;
+letter-spacing:2px;
+position:relative;
+z-index:2;
 }
 @keyframes brilloLeon{
-    from{
-        transform:scale(1);
-        filter:drop-shadow(0 0 5px white) drop-shadow(0 0 8px #d4af37);
-    }
-    to{
-        transform:scale(1.06);
-        filter:drop-shadow(0 0 8px white) drop-shadow(0 0 20px #d4af37);
-    }
+from{
+transform:scale(1);
+filter:drop-shadow(0 0 5px white) drop-shadow(0 0 8px #d4af37);
+}
+to{
+transform:scale(1.06);
+filter:drop-shadow(0 0 8px white) drop-shadow(0 0 20px #d4af37);
+}
 }
 .tienda{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:25px;
-    padding:30px;
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:25px;
+padding:30px;
 }
 .producto{
-    background:#111;
-    color:white;
-    padding:20px;
-    border-radius:12px;
-    text-align:center;
-    border:1px solid white;
-    box-shadow:0 2px 8px rgba(255,255,255,.15);
+background:#111;
+color:white;
+padding:20px;
+border-radius:12px;
+text-align:center;
+border:1px solid white;
+box-shadow:0 2px 8px rgba(255,255,255,.15);
 }
 .producto img{
-    width:100%;
-    max-width:250px;
-    height:250px;
-    object-fit:contain;
-    border-radius:8px;
+width:100%;
+max-width:250px;
+height:250px;
+object-fit:contain;
+border-radius:8px;
 }
 .stock{
-    margin:15px 0;
-    padding:12px;
-    background:#0d0d0d;
-    border:1px solid #444;
-    border-radius:10px;
-    text-align:center;
+margin:15px 0;
+padding:12px;
+background:#0d0d0d;
+border:1px solid #444;
+border-radius:10px;
+text-align:center;
 }
 .stock-disponible{
-    color:#8cff8c;
-    font-weight:bold;
-    font-size:15px;
+color:#8cff8c;
+font-weight:bold;
+font-size:15px;
 }
 .stock-agotado{
-    color:#ff6b6b;
-    font-weight:bold;
-    font-size:15px;
+color:#ff6b6b;
+font-weight:bold;
+font-size:15px;
 }
 .stock-detalle{
-    color:#ccc;
-    font-size:13px;
-    margin-top:7px;
-    line-height:1.6;
+color:#ccc;
+font-size:13px;
+margin-top:7px;
+line-height:1.6;
 }
 .stock-seleccion{
-    margin-top:7px;
-    color:#d4af37;
-    font-weight:bold;
-    font-size:13px;
+margin-top:7px;
+color:#d4af37;
+font-weight:bold;
+font-size:13px;
 }
 .opciones{
-    text-align:left;
-    margin-top:15px;
+text-align:left;
+margin-top:15px;
 }
 .opciones label{
-    display:block;
-    margin-top:10px;
-    font-weight:bold;
+display:block;
+margin-top:10px;
+font-weight:bold;
 }
 .opciones select{
-    width:100%;
-    padding:8px;
-    margin-top:5px;
-    background:white;
-    color:black;
-    border:none;
-    border-radius:5px;
+width:100%;
+padding:8px;
+margin-top:5px;
+background:white;
+color:black;
+border:none;
+border-radius:5px;
 }
 .precio{
-    font-size:20px;
-    font-weight:bold;
-    margin:15px 0;
+font-size:20px;
+font-weight:bold;
+margin:15px 0;
 }
 .boton-carrito{
-    background:white;
-    color:black;
-    border:none;
-    padding:10px 18px;
-    border-radius:6px;
-    cursor:pointer;
-    font-weight:bold;
-    transition:.2s;
+background:white;
+color:black;
+border:none;
+padding:10px 18px;
+border-radius:6px;
+cursor:pointer;
+font-weight:bold;
+transition:.2s;
 }
 .boton-carrito:hover{
-    background:#ccc;
-    transform:scale(1.02);
+background:#ccc;
+transform:scale(1.02);
 }
 .boton-carrito:disabled{
-    background:#444;
-    color:#888;
-    cursor:not-allowed;
-    transform:none;
+background:#444;
+color:#888;
+cursor:not-allowed;
+transform:none;
 }
 #carrito{
-    background:#111;
-    color:white;
-    margin:30px;
-    padding:25px;
-    border-radius:12px;
-    border:1px solid white;
+background:#111;
+color:white;
+margin:30px;
+padding:25px;
+border-radius:12px;
+border:1px solid white;
 }
 #lista-carrito{
-    padding:0;
+padding:0;
 }
 #lista-carrito li{
-    list-style:none;
-    padding:10px 0;
-    border-bottom:1px solid #555;
+list-style:none;
+padding:10px 0;
+border-bottom:1px solid #555;
 }
 .eliminar{
-    margin-left:10px;
-    background:white;
-    color:black;
-    border:none;
-    padding:5px 8px;
-    border-radius:4px;
-    cursor:pointer;
-    font-weight:bold;
+margin-left:10px;
+background:white;
+color:black;
+border:none;
+padding:5px 8px;
+border-radius:4px;
+cursor:pointer;
+font-weight:bold;
 }
 #carrito > div button{
-    background:white;
-    color:black;
-    border:none;
-    padding:10px 18px;
-    border-radius:7px;
-    cursor:pointer;
-    font-weight:bold;
+background:white;
+color:black;
+border:none;
+padding:10px 18px;
+border-radius:7px;
+cursor:pointer;
+font-weight:bold;
 }
 #carrito > div button:hover{
-    background:#ccc;
+background:#ccc;
 }
 .modal,
 .modal-confirmacion,
 .modal-carrito{
-    display:none;
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    justify-content:center;
-    align-items:center;
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+justify-content:center;
+align-items:center;
 }
 .modal{
-    background:rgba(0,0,0,.85);
-    z-index:1000;
+background:rgba(0,0,0,.85);
+z-index:1000;
 }
 .modal-confirmacion{
-    background:rgba(0,0,0,.90);
-    z-index:2000;
+background:rgba(0,0,0,.90);
+z-index:2000;
 }
 .modal-carrito{
-    background:rgba(0,0,0,.88);
-    z-index:3000;
+background:rgba(0,0,0,.88);
+z-index:3000;
 }
 .ventana-carrito{
-    width:90%;
-    max-width:430px;
-    background:#050505;
-    border:2px solid #d4af37;
-    border-radius:22px;
-    padding:28px 22px;
-    text-align:center;
-    box-shadow:0 0 20px rgba(212,175,55,.25),0 0 50px rgba(255,255,255,.12);
-    animation:aparecerCarrito .25s ease;
+width:90%;
+max-width:430px;
+background:#050505;
+border:2px solid #d4af37;
+border-radius:22px;
+padding:28px 22px;
+text-align:center;
+box-shadow:0 0 20px rgba(212,175,55,.25),0 0 50px rgba(255,255,255,.12);
+animation:aparecerCarrito .25s ease;
 }
 .logo-aviso{
-    font-size:55px;
-    margin-bottom:5px;
-    filter:drop-shadow(0 0 10px #d4af37);
+font-size:55px;
+margin-bottom:5px;
+filter:drop-shadow(0 0 10px #d4af37);
 }
 .ventana-carrito h2{
-    margin:5px 0;
-    color:white;
-    font-size:25px;
+margin:5px 0;
+color:white;
+font-size:25px;
 }
 .aviso-linea{
-    width:80px;
-    height:2px;
-    background:linear-gradient(90deg,#d4af37,white,#d4af37);
-    margin:15px auto 20px;
+width:80px;
+height:2px;
+background:linear-gradient(90deg,#d4af37,white,#d4af37);
+margin:15px auto 20px;
 }
 .aviso-exito{
-    color:#8cff8c;
-    font-weight:bold;
-    font-size:16px;
-    margin-bottom:18px;
+color:#8cff8c;
+font-weight:bold;
+font-size:16px;
+margin-bottom:18px;
 }
 .aviso-producto{
-    background:#111;
-    border:1px solid #444;
-    border-radius:15px;
-    padding:14px;
-    display:flex;
-    align-items:center;
-    gap:15px;
-    text-align:left;
+background:#111;
+border:1px solid #444;
+border-radius:15px;
+padding:14px;
+display:flex;
+align-items:center;
+gap:15px;
+text-align:left;
 }
 .aviso-producto img{
-    width:95px;
-    height:95px;
-    object-fit:contain;
-    border-radius:10px;
-    background:#050505;
+width:95px;
+height:95px;
+object-fit:contain;
+border-radius:10px;
+background:#050505;
 }
 .aviso-producto-info{
-    flex:1;
+flex:1;
 }
 .aviso-producto-info h3{
-    margin:0 0 8px;
-    font-size:17px;
+margin:0 0 8px;
+font-size:17px;
 }
 .aviso-producto-info p{
-    margin:5px 0;
-    color:#ccc;
-    font-size:14px;
+margin:5px 0;
+color:#ccc;
+font-size:14px;
 }
 .aviso-precio{
-    color:#d4af37 !important;
-    font-size:17px !important;
-    font-weight:bold;
+color:#d4af37 !important;
+font-size:17px !important;
+font-weight:bold;
 }
 .botones-aviso{
-    display:flex;
-    gap:10px;
-    margin-top:22px;
+display:flex;
+gap:10px;
+margin-top:22px;
 }
 .boton-seguir,
 .boton-ver-carrito{
-    flex:1;
-    padding:12px 8px;
-    border-radius:9px;
-    cursor:pointer;
-    font-weight:bold;
-    font-size:14px;
+flex:1;
+padding:12px 8px;
+border-radius:9px;
+cursor:pointer;
+font-weight:bold;
+font-size:14px;
 }
 .boton-seguir{
-    background:#111;
-    color:white;
-    border:1px solid white;
+background:#111;
+color:white;
+border:1px solid white;
 }
 .boton-ver-carrito{
-    background:white;
-    color:black;
-    border:none;
+background:white;
+color:black;
+border:none;
 }
 .boton-seguir:hover{
-    background:#222;
+background:#222;
 }
 .boton-ver-carrito:hover{
-    background:#ccc;
+background:#ccc;
 }
 @keyframes aparecerCarrito{
-    from{
-        transform:scale(.85);
-        opacity:0;
-    }
-    to{
-        transform:scale(1);
-        opacity:1;
-    }
+from{
+transform:scale(.85);
+opacity:0;
+}
+to{
+transform:scale(1);
+opacity:1;
+}
 }
 .ventana-compra{
-    background:#000;
-    color:white;
-    width:90%;
-    max-width:600px;
-    max-height:85vh;
-    overflow-y:auto;
-    padding:25px;
-    border-radius:20px;
-    border:2px solid white;
-    box-shadow:0 0 30px rgba(255,255,255,.25);
-    text-align:center;
+background:#000;
+color:white;
+width:90%;
+max-width:600px;
+max-height:85vh;
+overflow-y:auto;
+padding:25px;
+border-radius:20px;
+border:2px solid white;
+box-shadow:0 0 30px rgba(255,255,255,.25);
+text-align:center;
 }
 .cerrar-modal{
-    float:right;
-    background:white;
-    color:black;
-    border:none;
-    border-radius:50%;
-    width:35px;
-    height:35px;
-    font-size:22px;
-    cursor:pointer;
-    font-weight:bold;
+float:right;
+background:white;
+color:black;
+border:none;
+border-radius:50%;
+width:35px;
+height:35px;
+font-size:22px;
+cursor:pointer;
+font-weight:bold;
 }
 .producto-compra{
-    display:flex;
-    align-items:center;
-    gap:15px;
-    background:#111;
-    padding:12px;
-    margin:12px 0;
-    border-radius:12px;
-    text-align:left;
-    border:1px solid #555;
+display:flex;
+align-items:center;
+gap:15px;
+background:#111;
+padding:12px;
+margin:12px 0;
+border-radius:12px;
+text-align:left;
+border:1px solid #555;
 }
 .producto-compra img{
-    width:90px;
-    height:90px;
-    object-fit:contain;
-    border-radius:8px;
+width:90px;
+height:90px;
+object-fit:contain;
+border-radius:8px;
 }
 .producto-compra-info{
-    flex:1;
+flex:1;
 }
 .formulario-pedido{
-    text-align:left;
-    margin-top:25px;
-    padding-top:20px;
-    border-top:1px solid #555;
+text-align:left;
+margin-top:25px;
+padding-top:20px;
+border-top:1px solid #555;
 }
 .formulario-pedido label{
-    display:block;
-    margin-top:15px;
-    margin-bottom:5px;
-    font-weight:bold;
+display:block;
+margin-top:15px;
+margin-bottom:5px;
+font-weight:bold;
 }
 .formulario-pedido input,
 .formulario-pedido textarea,
 .formulario-pedido select{
-    width:100%;
-    box-sizing:border-box;
-    padding:10px;
-    border-radius:6px;
-    border:none;
-    background:white;
-    color:black;
-    font-size:15px;
+width:100%;
+box-sizing:border-box;
+padding:10px;
+border-radius:6px;
+border:none;
+background:white;
+color:black;
+font-size:15px;
 }
 .formulario-pedido textarea{
-    min-height:80px;
-    resize:vertical;
+min-height:80px;
+resize:vertical;
 }
 .boton-finalizar{
-    background:white;
-    color:black;
-    border:none;
-    padding:12px 30px;
-    border-radius:10px;
-    font-size:18px;
-    font-weight:bold;
-    cursor:pointer;
-    margin-top:20px;
-    width:100%;
+background:white;
+color:black;
+border:none;
+padding:12px 30px;
+border-radius:10px;
+font-size:18px;
+font-weight:bold;
+cursor:pointer;
+margin-top:20px;
+width:100%;
 }
 .boton-finalizar:hover{
-    background:#ccc;
+background:#ccc;
 }
 .boton-finalizar:disabled{
-    background:#555;
-    color:#aaa;
-    cursor:not-allowed;
+background:#555;
+color:#aaa;
+cursor:not-allowed;
 }
 .confirmacion{
-    width:90%;
-    max-width:500px;
-    background:#000;
-    border:2px solid white;
-    border-radius:22px;
-    padding:35px 25px;
-    text-align:center;
-    box-shadow:0 0 35px rgba(255,255,255,.25);
+width:90%;
+max-width:500px;
+background:#000;
+border:2px solid white;
+border-radius:22px;
+padding:35px 25px;
+text-align:center;
+box-shadow:0 0 35px rgba(255,255,255,.25);
 }
 .confirmacion .lion{
-    font-size:65px;
+font-size:65px;
 }
 .confirmacion h2{
-    font-size:28px;
+font-size:28px;
 }
 .confirmacion p{
-    color:#ddd;
-    line-height:1.6;
+color:#ddd;
+line-height:1.6;
 }
 .confirmacion-total{
-    background:#111;
-    border:1px solid #555;
-    border-radius:12px;
-    padding:15px;
-    margin:20px 0;
-    font-size:20px;
-    font-weight:bold;
+background:#111;
+border:1px solid #555;
+border-radius:12px;
+padding:15px;
+margin:20px 0;
+font-size:20px;
+font-weight:bold;
 }
 .boton-cerrar-confirmacion{
-    background:white;
-    color:black;
-    border:none;
-    padding:12px 28px;
-    border-radius:10px;
-    cursor:pointer;
-    font-size:16px;
-    font-weight:bold;
+background:white;
+color:black;
+border:none;
+padding:12px 28px;
+border-radius:10px;
+cursor:pointer;
+font-size:16px;
+font-weight:bold;
 }
 @media(max-width:800px){
-    .tienda{
-        grid-template-columns:1fr;
-    }
+.tienda{
+grid-template-columns:1fr;
+}
 }
 @media(max-width:600px){
-    .logo-xmxo{
-        gap:10px;
-    }
-    .leon-logo{
-        font-size:55px;
-    }
-    .nombre-tienda span{
-        font-size:13px;
-        letter-spacing:4px;
-    }
-    .nombre-tienda strong{
-        font-size:36px;
-        letter-spacing:5px;
-    }
-    .subtitulo-xmxo{
-        font-size:9px;
-        letter-spacing:1px;
-    }
-    .botones-aviso{
-        flex-direction:column;
-    }
-    .aviso-producto img{
-        width:80px;
-        height:80px;
-    }
+.logo-xmxo{
+gap:10px;
+}
+.leon-logo{
+font-size:55px;
+}
+.nombre-tienda span{
+font-size:13px;
+letter-spacing:4px;
+}
+.nombre-tienda strong{
+font-size:36px;
+letter-spacing:5px;
+}
+.subtitulo-xmxo{
+font-size:9px;
+letter-spacing:1px;
+}
+.botones-aviso{
+flex-direction:column;
+}
+.aviso-producto img{
+width:80px;
+height:80px;
+}
 }
 </style>
 </head>
 <body>
 <header>
 <div class="logo-xmxo">
-    <div class="leon-logo">🦁</div>
+<div class="leon-logo">🦁</div>
 <div class="nombre-tienda">
-    <span>TIENDA</span>
-    <strong>XMXO</strong>
+<span>TIENDA</span>
+<strong>XMXO</strong>
 </div>
 </div>
 <div class="linea-logo"></div>
 <p class="subtitulo-xmxo">
-    LOS MEJORES PRODUCTOS · BUENA CALIDAD · SOBRE TODO LA CONFIANZA
+LOS MEJORES PRODUCTOS · BUENA CALIDAD · SOBRE TODO LA CONFIANZA
 </p>
 </header>
 
@@ -553,242 +553,471 @@ header::before{
 
 <!-- PRODUCTO 1 -->
 <div class="producto">
-    <h2>CAMISETA DE NEYMAR SANTOS</h2>
-    <img src="ladera2.jpg" alt="Camiseta de Neymar Santos">
-    <div class="stock">
-        <div id="estadoStock2" class="stock-disponible">● Cargando stock...</div>
-        <div id="detalleStock2" class="stock-detalle">Cargando stock...</div>
-        <div id="stockSeleccion2" class="stock-seleccion">Selecciona una combinación</div>
-    </div>
-    <div class="opciones">
-        <label>Color:</label>
-        <select id="color2" onchange="actualizarStock('CAMISETA DE NEYMAR SANTOS','color2','talla2','estadoStock2','stockSeleccion2','boton2')">
-            <option>Negro</option>
-            <option>Blanco</option>
-        </select>
-        <label>Talla:</label>
-        <select id="talla2" onchange="actualizarStock('CAMISETA DE NEYMAR SANTOS','color2','talla2','estadoStock2','stockSeleccion2','boton2')">
-            <option>S</option>
-            <option>M</option>
-            <option>L</option>
-            <option>XL</option>
-        </select>
-    </div>
-    <p class="precio">15.99 €</p>
-    <button type="button" id="boton2" class="boton-carrito" onclick="agregarAlCarrito('CAMISETA DE NEYMAR SANTOS','color2','talla2',15.99,'boton2')">Añadir al carrito</button>
+<h2>CAMISETA DE NEYMAR SANTOS</h2>
+<img src="ladera2.jpg" alt="Camiseta de Neymar Santos">
+<div class="stock">
+<div id="estadoStock2" class="stock-disponible">● Cargando stock...</div>
+<div id="detalleStock2" class="stock-detalle">Cargando stock...</div>
+<div id="stockSeleccion2" class="stock-seleccion">Selecciona una combinación</div>
+</div>
+<div class="opciones">
+<label>Color:</label>
+<select id="color2" onchange="actualizarStock('CAMISETA DE NEYMAR SANTOS','color2','talla2','estadoStock2','stockSeleccion2','boton2')">
+<option>Negro</option>
+<option>Blanco</option>
+</select>
+<label>Talla:</label>
+<select id="talla2" onchange="actualizarStock('CAMISETA DE NEYMAR SANTOS','color2','talla2','estadoStock2','stockSeleccion2','boton2')">
+<option>S</option>
+<option>M</option>
+<option>L</option>
+<option>XL</option>
+</select>
+</div>
+<p class="precio">15.99 €</p>
+<button type="button" id="boton2" class="boton-carrito" onclick="agregarAlCarrito('CAMISETA DE NEYMAR SANTOS','color2','talla2',15.99,'boton2')">Añadir al carrito</button>
 </div>
 
 <!-- PRODUCTO 2 -->
 <div class="producto">
-    <h2>CAMISETA DE CASA BLANCA</h2>
-    <img src="ladera5.jpg" alt="Camiseta de Casa Blanca">
-    <div class="stock">
-        <div id="estadoStock5" class="stock-disponible">● Cargando stock...</div>
-        <div id="detalleStock5" class="stock-detalle">Cargando stock...</div>
-        <div id="stockSeleccion5" class="stock-seleccion">Selecciona una combinación</div>
-    </div>
-    <div class="opciones">
-        <label>Color:</label>
-        <select id="color5" onchange="actualizarStock('CAMISETA DE CASA BLANCA','color5','talla5','estadoStock5','stockSeleccion5','boton5')">
-            <option>Negro</option>
-            <option>Blanco</option>
-        </select>
-        <label>Talla:</label>
-        <select id="talla5" onchange="actualizarStock('CAMISETA DE CASA BLANCA','color5','talla5','estadoStock5','stockSeleccion5','boton5')">
-            <option>S</option>
-            <option>M</option>
-            <option>L</option>
-            <option>XL</option>
-        </select>
-    </div>
-    <p class="precio">15.99 €</p>
-    <button type="button" id="boton5" class="boton-carrito" onclick="agregarAlCarrito('CAMISETA DE CASA BLANCA','color5','talla5',15.99,'boton5')">Añadir al carrito</button>
+<h2>CAMISETA DE CASA BLANCA</h2>
+<img src="ladera5.jpg" alt="Camiseta de Casa Blanca">
+<div class="stock">
+<div id="estadoStock5" class="stock-disponible">● Cargando stock...</div>
+<div id="detalleStock5" class="stock-detalle">Cargando stock...</div>
+<div id="stockSeleccion5" class="stock-seleccion">Selecciona una combinación</div>
+</div>
+<div class="opciones">
+<label>Color:</label>
+<select id="color5" onchange="actualizarStock('CAMISETA DE CASA BLANCA','color5','talla5','estadoStock5','stockSeleccion5','boton5')">
+<option>Negro</option>
+<option>Blanco</option>
+</select>
+<label>Talla:</label>
+<select id="talla5" onchange="actualizarStock('CAMISETA DE CASA BLANCA','color5','talla5','estadoStock5','stockSeleccion5','boton5')">
+<option>S</option>
+<option>M</option>
+<option>L</option>
+<option>XL</option>
+</select>
+</div>
+<p class="precio">15.99 €</p>
+<button type="button" id="boton5" class="boton-carrito" onclick="agregarAlCarrito('CAMISETA DE CASA BLANCA','color5','talla5',15.99,'boton5')">Añadir al carrito</button>
 </div>
 
 <!-- PRODUCTO 3 -->
 <div class="producto">
-    <h2>FUNDA BAYB GANG</h2>
-    <img src="ladera8.jpeg" alt="Funda Bayb Gang">
-    <div class="stock">
-        <div id="estadoStock6" class="stock-disponible">● Cargando stock...</div>
-        <div id="detalleStock6" class="stock-detalle">Cargando stock...</div>
-        <div id="stockSeleccion6" class="stock-seleccion">Selecciona una combinación</div>
-    </div>
-    <div class="opciones">
-        <label>Color:</label>
-        <select id="color6" onchange="actualizarStockFunda()">
-            <option>Blanco</option>
-            <option>Negro</option>
-        </select>
-        <label>iPhone:</label>
-        <select id="talla6" onchange="actualizarStockFunda()">
-            <option>iPhone 13 Pro</option>
-            <option>iPhone 14 Pro</option>
-        </select>
-    </div>
-    <p class="precio">6.99 €</p>
-    <button type="button" id="boton6" class="boton-carrito" onclick="agregarAlCarrito('FUNDA BAYB GANG','color6','talla6',6.99,'boton6')">Añadir al carrito</button>
+<h2>FUNDA BAYB GANG</h2>
+<img src="ladera8.jpeg" alt="Funda Bayb Gang">
+<div class="stock">
+<div id="estadoStock6" class="stock-disponible">● Cargando stock...</div>
+<div id="detalleStock6" class="stock-detalle">Cargando stock...</div>
+<div id="stockSeleccion6" class="stock-seleccion">Selecciona una combinación</div>
+</div>
+<div class="opciones">
+<label>Color:</label>
+<select id="color6" onchange="actualizarStockFunda()">
+<option>Blanco</option>
+<option>Negro</option>
+</select>
+<label>iPhone:</label>
+<select id="talla6" onchange="actualizarStockFunda()">
+<option>iPhone 13 Pro</option>
+<option>iPhone 14 Pro</option>
+</select>
+</div>
+<p class="precio">6.99 €</p>
+<button type="button" id="boton6" class="boton-carrito" onclick="agregarAlCarrito('FUNDA BAYB GANG','color6','talla6',6.99,'boton6')">Añadir al carrito</button>
 </div>
 
 <!-- PRODUCTO 4 -->
 <div class="producto">
-    <h2>GORRA DE BÉISBOL UNISEX</h2>
-    <img src="ladera9.jpeg" alt="Gorra de béisbol">
-    <div class="stock">
-        <div id="estadoStock7" class="stock-disponible">● Cargando stock...</div>
-        <div id="detalleStock7" class="stock-detalle">Cargando stock...</div>
-        <div id="stockSeleccion7" class="stock-seleccion">Selecciona un color</div>
-    </div>
-    <div class="opciones">
-        <label>Color:</label>
-        <select id="color7" onchange="actualizarStockGorra()">
-            <option>Blanco</option>
-            <option>Rosa</option>
-            <option>Negro</option>
-        </select>
-        <select id="talla7" style="display:none;">
-            <option>Única</option>
-        </select>
-    </div>
-    <p class="precio">9.99 €</p>
-    <button type="button" id="boton7" class="boton-carrito" onclick="agregarAlCarrito('GORRA DE BÉISBOL','color7','talla7',9.99,'boton7')">Añadir al carrito</button>
+<h2>GORRA DE BÉISBOL UNISEX</h2>
+<img src="ladera9.jpeg" alt="Gorra de béisbol">
+<div class="stock">
+<div id="estadoStock7" class="stock-disponible">● Cargando stock...</div>
+<div id="detalleStock7" class="stock-detalle">Cargando stock...</div>
+<div id="stockSeleccion7" class="stock-seleccion">Selecciona un color</div>
+</div>
+<div class="opciones">
+<label>Color:</label>
+<select id="color7" onchange="actualizarStockGorra()">
+<option>Blanco</option>
+<option>Rosa</option>
+<option>Negro</option>
+</select>
+<select id="talla7" style="display:none;">
+<option>Única</option>
+</select>
+</div>
+<p class="precio">9.99 €</p>
+<button type="button" id="boton7" class="boton-carrito" onclick="agregarAlCarrito('GORRA DE BÉISBOL','color7','talla7',9.99,'boton7')">Añadir al carrito</button>
 </div>
 
 <!-- PRODUCTO 10 -->
 <div class="producto">
-    <h2>NIKE AIR FORCE 1</h2>
-    <img src="LADERA10.jpg" alt="Nike Air Force 1">
-    <div class="stock">
-        <div id="estadoStock10" class="stock-disponible">● Cargando stock...</div>
-        <div id="detalleStock10" class="stock-detalle">Cargando stock...</div>
-        <div id="stockSeleccion10" class="stock-seleccion">Selecciona una combinación</div>
-    </div>
-    <div class="opciones">
-        <label>Color:</label>
-        <select id="color10" onchange="actualizarStockNuevo('NIKE AIR FORCE 1','color10','talla10','estadoStock10','stockSeleccion10','boton10')">
-            <option>Blanco</option>
-        </select>
-        <label>Talla:</label>
-        <select id="talla10" onchange="actualizarStockNuevo('NIKE AIR FORCE 1','color10','talla10','estadoStock10','stockSeleccion10','boton10')">
-            <option>40</option>
-        </select>
-    </div>
-    <p class="precio">25.99 €</p>
-    <button type="button" id="boton10" class="boton-carrito" onclick="agregarAlCarrito('NIKE AIR FORCE 1','color10','talla10',25.99,'boton10')">Añadir al carrito</button>
+<h2>NIKE AIR FORCE 1</h2>
+<img src="LADERA10.jpg" alt="Nike Air Force 1">
+<div class="stock">
+<div id="estadoStock10" class="stock-disponible">● Cargando stock...</div>
+<div id="detalleStock10" class="stock-detalle">Cargando stock...</div>
+<div id="stockSeleccion10" class="stock-seleccion">Selecciona una combinación</div>
+</div>
+<div class="opciones">
+<label>Color:</label>
+<select id="color10" onchange="actualizarStockNuevo('NIKE AIR FORCE 1','color10','talla10','estadoStock10','stockSeleccion10','boton10')">
+<option>Blanco</option>
+</select>
+<label>Talla:</label>
+<select id="talla10" onchange="actualizarStockNuevo('NIKE AIR FORCE 1','color10','talla10','estadoStock10','stockSeleccion10','boton10')">
+<option>40</option>
+</select>
+</div>
+<p class="precio">25.99 €</p>
+<button type="button" id="boton10" class="boton-carrito" onclick="agregarAlCarrito('NIKE AIR FORCE 1','color10','talla10',25.99,'boton10')">Añadir al carrito</button>
 </div>
 
 <!-- PRODUCTO 11 -->
 <div class="producto">
-    <h2>GORRA DE GUCCI</h2>
-    <img src="LADERA11.jpg" alt="Gorra Gucci">
-    <div class="stock">
-        <div id="estadoStock11" class="stock-disponible">● Cargando stock...</div>
-        <div id="detalleStock11" class="stock-detalle">Cargando stock...</div>
-        <div id="stockSeleccion11" class="stock-seleccion">Selecciona un color</div>
-    </div>
-    <div class="opciones">
-        <label>Color:</label>
-        <select id="color11" onchange="actualizarStockNuevo('GORRA DE GUCCI','color11','talla11','estadoStock11','stockSeleccion11','boton11')">
-            <option>Negro</option>
-            <option>Rosa</option>
-        </select>
-        <select id="talla11" style="display:none;">
-            <option>Única</option>
-        </select>
-    </div>
-    <p class="precio">15.00 €</p>
-    <button type="button" id="boton11" class="boton-carrito" onclick="agregarAlCarrito('GORRA DE GUCCI','color11','talla11',9.99,'boton11')">Añadir al carrito</button>
+<h2>GORRA DE GUCCI</h2>
+<img src="LADERA11.jpg" alt="Gorra Gucci">
+<div class="stock">
+<div id="estadoStock11" class="stock-disponible">● Cargando stock...</div>
+<div id="detalleStock11" class="stock-detalle">Cargando stock...</div>
+<div id="stockSeleccion11" class="stock-seleccion">Selecciona un color</div>
+</div>
+<div class="opciones">
+<label>Color:</label>
+<select id="color11" onchange="actualizarStockNuevo('GORRA DE GUCCI','color11','talla11','estadoStock11','stockSeleccion11','boton11')">
+<option>Negro</option>
+<option>Rosa</option>
+</select>
+<select id="talla11" style="display:none;">
+<option>Única</option>
+</select>
+</div>
+<p class="precio">15.00 €</p>
+<button type="button" id="boton11" class="boton-carrito" onclick="agregarAlCarrito('GORRA DE GUCCI','color11','talla11',9.99,'boton11')">Añadir al carrito</button>
 </div>
 
 <!-- PRODUCTO 12 -->
 <div class="producto">
-    <h2>ZAPATILLA DE NIKE</h2>
-    <img src="LADERA12.jpg" alt="Zapatilla Nike">
-    <div class="stock">
-        <div id="estadoStock12" class="stock-disponible">● Cargando stock...</div>
-        <div id="detalleStock12" class="stock-detalle">Cargando stock...</div>
-        <div id="stockSeleccion12" class="stock-seleccion">Selecciona una combinación</div>
-    </div>
-    <div class="opciones">
-        <label>Color:</label>
-        <select id="color12" onchange="actualizarStockNuevo('ZAPATILLA DE NIKE','color12','talla12','estadoStock12','stockSeleccion12','boton12')">
-            <option>Blanco</option>
-        </select>
-        <label>Talla:</label>
-        <select id="talla12" onchange="actualizarStockNuevo('ZAPATILLA DE NIKE','color12','talla12','estadoStock12','stockSeleccion12','boton12')">
-            <option>40</option>
-        </select>
-    </div>
-    <p class="precio">35.99€</p>
-    <button type="button" id="boton12" class="boton-carrito" onclick="agregarAlCarrito('ZAPATILLA DE NIKE','color12','talla12',31.99,'boton12')">Añadir al carrito</button>
+<h2>ZAPATILLA DE NIKE</h2>
+<img src="LADERA12.jpg" alt="Zapatilla Nike">
+<div class="stock">
+<div id="estadoStock12" class="stock-disponible">● Cargando stock...</div>
+<div id="detalleStock12" class="stock-detalle">Cargando stock...</div>
+<div id="stockSeleccion12" class="stock-seleccion">Selecciona una combinación</div>
+</div>
+<div class="opciones">
+<label>Color:</label>
+<select id="color12" onchange="actualizarStockNuevo('ZAPATILLA DE NIKE','color12','talla12','estadoStock12','stockSeleccion12','boton12')">
+<option>Blanco</option>
+</select>
+<label>Talla:</label>
+<select id="talla12" onchange="actualizarStockNuevo('ZAPATILLA DE NIKE','color12','talla12','estadoStock12','stockSeleccion12','boton12')">
+<option>40</option>
+</select>
+</div>
+<p class="precio">35.99€</p>
+<button type="button" id="boton12" class="boton-carrito" onclick="agregarAlCarrito('ZAPATILLA DE NIKE','color12','talla12',31.99,'boton12')">Añadir al carrito</button>
 </div>
 
 <!-- PRODUCTO 13 -->
 <div class="producto">
-    <h2>BOLSILLO DE PRADA HOMBRE</h2>
-    <img src="LADERA13.jpg" alt="Bolsillo Prada hombre">
-    <div class="stock">
-        <div id="estadoStock13" class="stock-disponible">● Cargando stock...</div>
-        <div id="detalleStock13" class="stock-detalle">Cargando stock...</div>
-        <div id="stockSeleccion13" class="stock-seleccion">Selecciona un color</div>
-    </div>
-    <div class="opciones">
-        <label>Color:</label>
-        <select id="color13" onchange="actualizarStockNuevo('BOLSILLO DE PRADA HOMBRE','color13','talla13','estadoStock13','stockSeleccion13','boton13')">
-            <option>Negro</option>
-        </select>
-        <select id="talla13" style="display:none;">
-            <option>Única</option>
-        </select>
-    </div>
-    <p class="precio">19.99 €</p>
-    <button type="button" id="boton13" class="boton-carrito" onclick="agregarAlCarrito('BOLSILLO DE PRADA HOMBRE','color13','talla13',18.99,'boton13')">Añadir al carrito</button>
+<h2>BOLSILLO DE PRADA HOMBRE</h2>
+<img src="LADERA13.jpg" alt="Bolsillo Prada hombre">
+<div class="stock">
+<div id="estadoStock13" class="stock-disponible">● Cargando stock...</div>
+<div id="detalleStock13" class="stock-detalle">Cargando stock...</div>
+<div id="stockSeleccion13" class="stock-seleccion">Selecciona un color</div>
+</div>
+<div class="opciones">
+<label>Color:</label>
+<select id="color13" onchange="actualizarStockNuevo('BOLSILLO DE PRADA HOMBRE','color13','talla13','estadoStock13','stockSeleccion13','boton13')">
+<option>Negro</option>
+</select>
+<select id="talla13" style="display:none;">
+<option>Única</option>
+</select>
+</div>
+<p class="precio">19.99 €</p>
+<button type="button" id="boton13" class="boton-carrito" onclick="agregarAlCarrito('BOLSILLO DE PRADA HOMBRE','color13','talla13',18.99,'boton13')">Añadir al carrito</button>
 </div>
 
 <!-- PRODUCTO 14 -->
 <div class="producto">
-    <h2>RELOJ DE ROLEX</h2>
-    <img src="LADERA14.jpg" alt="Reloj Rolex">
-    <div class="stock">
-        <div id="estadoStock14" class="stock-disponible">● Cargando stock...</div>
-        <div id="detalleStock14" class="stock-detalle">Cargando stock...</div>
-        <div id="stockSeleccion14" class="stock-seleccion">Selecciona un color</div>
-    </div>
-    <div class="opciones">
-        <label>Color:</label>
-        <select id="color14" onchange="actualizarStockNuevo('RELOJ DE ROLEX','color14','talla14','estadoStock14','stockSeleccion14','boton14')">
-            <option>Azul</option>
-        </select>
-        <select id="talla14" style="display:none;">
-            <option>Única</option>
-        </select>
-    </div>
-    <p class="precio">19.99 €</p>
-    <button type="button" id="boton14" class="boton-carrito" onclick="agregarAlCarrito('RELOJ DE ROLEX','color14','talla14',15.99,'boton14')">Añadir al carrito</button>
+<h2>RELOJ DE ROLEX</h2>
+<img src="LADERA14.jpg" alt="Reloj Rolex">
+<div class="stock">
+<div id="estadoStock14" class="stock-disponible">● Cargando stock...</div>
+<div id="detalleStock14" class="stock-detalle">Cargando stock...</div>
+<div id="stockSeleccion14" class="stock-seleccion">Selecciona un color</div>
+</div>
+<div class="opciones">
+<label>Color:</label>
+<select id="color14" onchange="actualizarStockNuevo('RELOJ DE ROLEX','color14','talla14','estadoStock14','stockSeleccion14','boton14')">
+<option>Azul</option>
+</select>
+<select id="talla14" style="display:none;">
+<option>Única</option>
+</select>
+</div>
+<p class="precio">19.99 €</p>
+<button type="button" id="boton14" class="boton-carrito" onclick="agregarAlCarrito('RELOJ DE ROLEX','color14','talla14',15.99,'boton14')">Añadir al carrito</button>
 </div>
 
 <!-- PRODUCTO 15 -->
 <div class="producto">
-    <h2>CAMISETA STONE ISLAND</h2>
-    <img src="ladera15.png" alt="Camiseta Stone Island">
-    <div class="stock">
-        <div id="estadoStock15" class="stock-disponible">● Cargando stock...</div>
-        <div id="detalleStock15" class="stock-detalle">Cargando stock...</div>
-        <div id="stockSeleccion15" class="stock-seleccion">Selecciona un color</div>
-    </div>
-    <div class="opciones">
-        <label>Color:</label>
-        <select id="color15" onchange="actualizarStockNuevo('CAMISETA STONE ISLAND','color15','talla15','estadoStock15','stockSeleccion15','boton15')">
-            <option>Negro</option>
-            <option>Blanco</option>
-        </select>
-        <label>Talla:</label>
-        <select id="talla15" onchange="actualizarStockNuevo('CAMISETA STONE ISLAND','color15','talla15','estadoStock15','stockSeleccion15','boton15')">
-            <option>S</option>
-        </select>
-    </div>
-    <p class="precio">18.99 €</p>
-    <button type="button" id="boton15" class="boton-carrito" onclick="agregarAlCarrito('CAMISETA STONE ISLAND','color15','talla15',15.99,'boton15')">Añadir al carrito</button>
+<h2>CAMISETA STONE ISLAND</h2>
+<img src="ladera15.png" alt="Camiseta Stone Island">
+<div class="stock">
+<div id="estadoStock15" class="stock-disponible">● Cargando stock...</div>
+<div id="detalleStock15" class="stock-detalle">Cargando stock...</div>
+<div id="stockSeleccion15" class="stock-seleccion">Selecciona un color</div>
+</div>
+<div class="opciones">
+<label>Color:</label>
+<select id="color15" onchange="actualizarStockNuevo('CAMISETA STONE ISLAND','color15','talla15','estadoStock15','stockSeleccion15','boton15')">
+<option>Negro</option>
+<option>Blanco</option>
+</select>
+<label>Talla:</label>
+<select id="talla15" onchange="actualizarStockNuevo('CAMISETA STONE ISLAND','color15','talla15','estadoStock15','stockSeleccion15','boton15')">
+<option>S</option>
+</select>
+</div>
+<p class="precio">18.99 €</p>
+<button type="button" id="boton15" class="boton-carrito" onclick="agregarAlCarrito('CAMISETA STONE ISLAND','color15','talla15',15.99,'boton15')">Añadir al carrito</button>
+</div>
+
+<!-- PRODUCTO 16: SUDADERA DE POLO -->
+<div class="producto">
+<h2>SUDADERA DE POLO</h2>
+<img src="laderad25.jpg" alt="Sudadera de Polo">
+<div class="stock">
+<div id="estadoStock16" class="stock-disponible">● Cargando stock...</div>
+<div id="detalleStock16" class="stock-detalle">Cargando stock...</div>
+<div id="stockSeleccion16" class="stock-seleccion">Selecciona una combinación</div>
+</div>
+<div class="opciones">
+<label>Color:</label>
+<select id="color16" onchange="actualizarStockNuevo('SUDADERA DE POLO','color16','talla16','estadoStock16','stockSeleccion16','boton16')">
+<option>Negro</option>
+</select>
+<label>Talla:</label>
+<select id="talla16" onchange="actualizarStockNuevo('SUDADERA DE POLO','color16','talla16','estadoStock16','stockSeleccion16','boton16')">
+<option>S</option>
+</select>
+</div>
+<p class="precio">19.99 €</p>
+<button type="button" id="boton16" class="boton-carrito" onclick="agregarAlCarrito('SUDADERA DE POLO','color16','talla16',19.99,'boton16')">Añadir al carrito</button>
+</div>
+
+<!-- PRODUCTO 17: SUDADERA DE LOUIS VUITTON -->
+<div class="producto">
+<h2>SUDADERA DE LOUIS VUITTON</h2>
+<img src="laderad24.jpg" alt="Sudadera de Louis Vuitton">
+<div class="stock">
+<div id="estadoStock17" class="stock-disponible">● Cargando stock...</div>
+<div id="detalleStock17" class="stock-detalle">Cargando stock...</div>
+<div id="stockSeleccion17" class="stock-seleccion">Selecciona una combinación</div>
+</div>
+<div class="opciones">
+<label>Color:</label>
+<select id="color17" onchange="actualizarStockNuevo('SUDADERA DE LOUIS VUITTON','color17','talla17','estadoStock17','stockSeleccion17','boton17')">
+<option>Gris</option>
+</select>
+<label>Talla:</label>
+<select id="talla17" onchange="actualizarStockNuevo('SUDADERA DE LOUIS VUITTON','color17','talla17','estadoStock17','stockSeleccion17','boton17')">
+<option>S</option>
+</select>
+</div>
+<p class="precio">33.99 €</p>
+<button type="button" id="boton17" class="boton-carrito" onclick="agregarAlCarrito('SUDADERA DE LOUIS VUITTON','color17','talla17',33.99,'boton17')">Añadir al carrito</button>
+</div>
+
+<!-- PRODUCTO 18: PANTALÓN CORTO DE STONE ISLAND -->
+<div class="producto">
+<h2>PANTALÓN CORTO DE STONE ISLAND</h2>
+<img src="laderad23.jpg" alt="Pantalón corto de Stone Island">
+<div class="stock">
+<div id="estadoStock18" class="stock-disponible">● Cargando stock...</div>
+<div id="detalleStock18" class="stock-detalle">Cargando stock...</div>
+<div id="stockSeleccion18" class="stock-seleccion">Selecciona una combinación</div>
+</div>
+<div class="opciones">
+<label>Color:</label>
+<select id="color18" onchange="actualizarStockNuevo('PANTALÓN CORTO DE STONE ISLAND','color18','talla18','estadoStock18','stockSeleccion18','boton18')">
+<option>Blanco</option>
+<option>Negro</option>
+</select>
+<label>Talla:</label>
+<select id="talla18" onchange="actualizarStockNuevo('PANTALÓN CORTO DE STONE ISLAND','color18','talla18','estadoStock18','stockSeleccion18','boton18')">
+<option>S</option>
+</select>
+</div>
+<p class="precio">20.00 €</p>
+<button type="button" id="boton18" class="boton-carrito" onclick="agregarAlCarrito('PANTALÓN CORTO DE STONE ISLAND','color18','talla18',20.00,'boton18')">Añadir al carrito</button>
+</div>
+
+<!-- PRODUCTO 19: PULSERA DE LACOSTE -->
+<div class="producto">
+<h2>PULSERA DE LACOSTE</h2>
+<img src="laderad22.jpg" alt="Pulsera de Lacoste">
+<div class="stock">
+<div id="estadoStock19" class="stock-disponible">● Cargando stock...</div>
+<div id="detalleStock19" class="stock-detalle">Cargando stock...</div>
+<div id="stockSeleccion19" class="stock-seleccion">Selecciona una combinación</div>
+</div>
+<div class="opciones">
+<label>Color:</label>
+<select id="color19" onchange="actualizarStockNuevo('PULSERA DE LACOSTE','color19','talla19','estadoStock19','stockSeleccion19','boton19')">
+<option>Gris</option>
+</select>
+<select id="talla19" style="display:none;" onchange="actualizarStockNuevo('PULSERA DE LACOSTE','color19','talla19','estadoStock19','stockSeleccion19','boton19')">
+<option>Única</option>
+</select>
+</div>
+<p class="precio">19.99 €</p>
+<button type="button" id="boton19" class="boton-carrito" onclick="agregarAlCarrito('PULSERA DE LACOSTE','color19','talla19',19.99,'boton19')">Añadir al carrito</button>
+</div>
+
+<!-- PRODUCTO 20: CONJUNTO CORTO DE PSG -->
+<div class="producto">
+<h2>CONJUNTO CORTO DE PSG</h2>
+<img src="laderad21.jpg" alt="Conjunto corto de PSG">
+<div class="stock">
+<div id="estadoStock20" class="stock-disponible">● Cargando stock...</div>
+<div id="detalleStock20" class="stock-detalle">Cargando stock...</div>
+<div id="stockSeleccion20" class="stock-seleccion">Selecciona una combinación</div>
+</div>
+<div class="opciones">
+<label>Color:</label>
+<select id="color20" onchange="actualizarStockNuevo('CONJUNTO CORTO DE PSG','color20','talla20','estadoStock20','stockSeleccion20','boton20')">
+<option>Negro</option>
+</select>
+<label>Talla:</label>
+<select id="talla20" onchange="actualizarStockNuevo('CONJUNTO CORTO DE PSG','color20','talla20','estadoStock20','stockSeleccion20','boton20')">
+<option>S</option>
+</select>
+</div>
+<p class="precio">25.00 €</p>
+<button type="button" id="boton20" class="boton-carrito" onclick="agregarAlCarrito('CONJUNTO CORTO DE PSG','color20','talla20',25.00,'boton20')">Añadir al carrito</button>
+</div>
+
+<!-- PRODUCTO 21: CONJUNTO CORTO DE ESPAÑA -->
+<div class="producto">
+<h2>CONJUNTO CORTO DE ESPAÑA</h2>
+<img src="laderad20.jpg" alt="Conjunto corto de España">
+<div class="stock">
+<div id="estadoStock21" class="stock-disponible">● Cargando stock...</div>
+<div id="detalleStock21" class="stock-detalle">Cargando stock...</div>
+<div id="stockSeleccion21" class="stock-seleccion">Selecciona una combinación</div>
+</div>
+<div class="opciones">
+<label>Color:</label>
+<select id="color21" onchange="actualizarStockNuevo('CONJUNTO CORTO DE ESPAÑA','color21','talla21','estadoStock21','stockSeleccion21','boton21')">
+<option>Azul</option>
+</select>
+<label>Talla:</label>
+<select id="talla21" onchange="actualizarStockNuevo('CONJUNTO CORTO DE ESPAÑA','color21','talla21','estadoStock21','stockSeleccion21','boton21')">
+<option>S</option>
+</select>
+</div>
+<p class="precio">25.00 €</p>
+<button type="button" id="boton21" class="boton-carrito" onclick="agregarAlCarrito('CONJUNTO CORTO DE ESPAÑA','color21','talla21',25.00,'boton21')">Añadir al carrito</button>
+</div>
+
+<!-- PRODUCTO 22: CHAQUETA PARA MUJER -->
+<div class="producto">
+<h2>CHAQUETA PARA MUJER</h2>
+<img src="laderad19.jpg" alt="Chaqueta para mujer">
+<div class="stock">
+<div id="estadoStock22" class="stock-disponible">● Cargando stock...</div>
+<div id="detalleStock22" class="stock-detalle">Cargando stock...</div>
+<div id="stockSeleccion22" class="stock-seleccion">Selecciona una combinación</div>
+</div>
+<div class="opciones">
+<label>Color:</label>
+<select id="color22" onchange="actualizarStockNuevo('CHAQUETA PARA MUJER','color22','talla22','estadoStock22','stockSeleccion22','boton22')">
+<option>Negro</option>
+</select>
+<label>Talla:</label>
+<select id="talla22" onchange="actualizarStockNuevo('CHAQUETA PARA MUJER','color22','talla22','estadoStock22','stockSeleccion22','boton22')">
+<option>S</option>
+</select>
+</div>
+<p class="precio">30.00 €</p>
+<button type="button" id="boton22" class="boton-carrito" onclick="agregarAlCarrito('CHAQUETA PARA MUJER','color22','talla22',30.00,'boton22')">Añadir al carrito</button>
+</div>
+
+<!-- PRODUCTO 23: CHAQUETA NORTH FACE PARA MUJER -->
+<div class="producto">
+<h2>CHAQUETA DE NORTH FACE PARA MUJER</h2>
+<img src="laderad18.jpg" alt="Chaqueta de North Face para mujer">
+<div class="stock">
+<div id="estadoStock23" class="stock-disponible">● Cargando stock...</div>
+<div id="detalleStock23" class="stock-detalle">Cargando stock...</div>
+<div id="stockSeleccion23" class="stock-seleccion">Selecciona una combinación</div>
+</div>
+<div class="opciones">
+<label>Color:</label>
+<select id="color23" onchange="actualizarStockNuevo('CHAQUETA DE NORTH FACE PARA MUJER','color23','talla23','estadoStock23','stockSeleccion23','boton23')">
+<option>Negro</option>
+</select>
+<label>Talla:</label>
+<select id="talla23" onchange="actualizarStockNuevo('CHAQUETA DE NORTH FACE PARA MUJER','color23','talla23','estadoStock23','stockSeleccion23','boton23')">
+<option>S</option>
+</select>
+</div>
+<p class="precio">30.00 €</p>
+<button type="button" id="boton23" class="boton-carrito" onclick="agregarAlCarrito('CHAQUETA DE NORTH FACE PARA MUJER','color23','talla23',30.00,'boton23')">Añadir al carrito</button>
+</div>
+
+<!-- PRODUCTO 24: CAMISETA DE HOMERTA -->
+<div class="producto">
+<h2>CAMISETA DE HOMERTA</h2>
+<img src="laderad17.jpg" alt="Camiseta de Homerta">
+<div class="stock">
+<div id="estadoStock24" class="stock-disponible">● Cargando stock...</div>
+<div id="detalleStock24" class="stock-detalle">Cargando stock...</div>
+<div id="stockSeleccion24" class="stock-seleccion">Selecciona una combinación</div>
+</div>
+<div class="opciones">
+<label>Color:</label>
+<select id="color24" onchange="actualizarStockNuevo('CAMISETA DE HOMERTA','color24','talla24','estadoStock24','stockSeleccion24','boton24')">
+<option>Negro</option>
+</select>
+<label>Talla:</label>
+<select id="talla24" onchange="actualizarStockNuevo('CAMISETA DE HOMERTA','color24','talla24','estadoStock24','stockSeleccion24','boton24')">
+<option>S</option>
+</select>
+</div>
+<p class="precio">15.00 €</p>
+<button type="button" id="boton24" class="boton-carrito" onclick="agregarAlCarrito('CAMISETA DE HOMERTA','color24','talla24',15.00,'boton24')">Añadir al carrito</button>
+</div>
+
+<!-- PRODUCTO 25: BOLSO DE LOUIS VUITTON PARA MUJER -->
+<div class="producto">
+<h2>BOLSO DE LOUIS VUITTON PARA MUJER</h2>
+<img src="laderad16.jpg" alt="Bolso de Louis Vuitton para mujer">
+<div class="stock">
+<div id="estadoStock25" class="stock-disponible">● Cargando stock...</div>
+<div id="detalleStock25" class="stock-detalle">Cargando stock...</div>
+<div id="stockSeleccion25" class="stock-seleccion">Selecciona una combinación</div>
+</div>
+<div class="opciones">
+<label>Color:</label>
+<select id="color25" onchange="actualizarStockNuevo('BOLSO DE LOUIS VUITTON PARA MUJER','color25','talla25','estadoStock25','stockSeleccion25','boton25')">
+<option>Marrón</option>
+</select>
+<select id="talla25" style="display:none;" onchange="actualizarStockNuevo('BOLSO DE LOUIS VUITTON PARA MUJER','color25','talla25','estadoStock25','stockSeleccion25','boton25')">
+<option>Única</option>
+</select>
+</div>
+<p class="precio">30.00 €</p>
+<button type="button" id="boton25" class="boton-carrito" onclick="agregarAlCarrito('BOLSO DE LOUIS VUITTON PARA MUJER','color25','talla25',30.00,'boton25')">Añadir al carrito</button>
 </div>
 
 </main>
@@ -811,17 +1040,17 @@ header::before{
 <div class="aviso-linea"></div>
 <div class="aviso-exito">✓ PRODUCTO AÑADIDO AL CARRITO</div>
 <div class="aviso-producto">
-    <img id="imagenAviso" src="" alt="Producto añadido">
-    <div class="aviso-producto-info">
-        <h3 id="nombreAviso">Producto</h3>
-        <p>Color: <span id="colorAviso"></span></p>
-        <p>Talla: <span id="tallaAviso"></span></p>
-        <p class="aviso-precio"><span id="precioAviso">0.00</span> €</p>
-    </div>
+<img id="imagenAviso" src="" alt="Producto añadido">
+<div class="aviso-producto-info">
+<h3 id="nombreAviso">Producto</h3>
+<p>Color: <span id="colorAviso"></span></p>
+<p>Talla: <span id="tallaAviso"></span></p>
+<p class="aviso-precio"><span id="precioAviso">0.00</span> €</p>
+</div>
 </div>
 <div class="botones-aviso">
-    <button type="button" class="boton-seguir" onclick="seguirComprando()">Seguir comprando</button>
-    <button type="button" class="boton-ver-carrito" onclick="irAlCarrito()">🛒 Ver carrito</button>
+<button type="button" class="boton-seguir" onclick="seguirComprando()">Seguir comprando</button>
+<button type="button" class="boton-ver-carrito" onclick="irAlCarrito()">🛒 Ver carrito</button>
 </div>
 </div>
 </div>
@@ -834,18 +1063,18 @@ header::before{
 <div id="productos-compra"></div>
 <h3>Total: <span id="total-compra">0.00</span> €</h3>
 <div class="formulario-pedido">
-    <h3>📦 Datos del pedido</h3>
-    <label>Nombre:</label>
-    <input type="text" id="nombreCliente" placeholder="Tu nombre">
-    <label>Teléfono:</label>
-    <input type="tel" id="telefonoCliente" placeholder="Tu teléfono">
-    <label>Forma de entrega:</label>
-    <select id="entregaCliente">
-        <option>Entrega en persona</option>
-    </select>
-    <label>Lugar de entrega:</label>
-    <textarea id="direccionCliente" placeholder="Indica dónde quieres recibir el pedido"></textarea>
-    <button type="button" class="boton-finalizar" onclick="finalizarCompra()">FINALIZAR PEDIDO</button>
+<h3>📦 Datos del pedido</h3>
+<label>Nombre:</label>
+<input type="text" id="nombreCliente" placeholder="Tu nombre">
+<label>Teléfono:</label>
+<input type="tel" id="telefonoCliente" placeholder="Tu teléfono">
+<label>Forma de entrega:</label>
+<select id="entregaCliente">
+<option>Entrega en persona</option>
+</select>
+<label>Lugar de entrega:</label>
+<textarea id="direccionCliente" placeholder="Indica dónde quieres recibir el pedido"></textarea>
+<button type="button" class="boton-finalizar" onclick="finalizarCompra()">FINALIZAR PEDIDO</button>
 </div>
 </div>
 </div>
@@ -866,15 +1095,15 @@ header::before{
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>
 const SUPABASE_URL =
-    "https://ikyscrtrfxyldlfjfipd.supabase.co";
+"https://ikyscrtrfxyldlfjfipd.supabase.co";
 const SUPABASE_PUBLISHABLE_KEY =
-    "sb_publishable_70i0ND16ktralfkCpzjCBQ_1BIG5G9s";
+"sb_publishable_70i0ND16ktralfkCpzjCBQ_1BIG5G9s";
 
 const supabaseClient =
-    window.supabase.createClient(
-        SUPABASE_URL,
-        SUPABASE_PUBLISHABLE_KEY
-    );
+window.supabase.createClient(
+SUPABASE_URL,
+SUPABASE_PUBLISHABLE_KEY
+);
 
 let carrito = [];
 let stockCamisetas = {};
@@ -882,109 +1111,111 @@ let stockCargado = false;
 let enviandoPedido = false;
 
 const CORREO_PEDIDOS =
-    "boulahtoufyousseff15@gmail.com";
+"boulahtoufyousseff15@gmail.com";
 
 function normalizarNombreProducto(nombre){
-    if(nombre === null || nombre === undefined){
-        return "";
-    }
+if(nombre === null || nombre === undefined){
+return "";
+}
 
-    const texto = String(nombre).trim();
-    const minusculas = texto.toLowerCase();
+const texto = String(nombre).trim();
+const minusculas = texto.toLowerCase();
 
-    if(
-        minusculas === "camiseta neymar" ||
-        minusculas === "camiseta de neymar" ||
-        minusculas === "camiseta de neymer santos" ||
-        minusculas === "camiseta de neymar santos"
-    ){
-        return "CAMISETA DE NEYMAR SANTOS";
-    }
+if(
+minusculas === "camiseta neymar" ||
+minusculas === "camiseta de neymar" ||
+minusculas === "camiseta de neymer santos" ||
+minusculas === "camiseta de neymar santos"
+){
+return "CAMISETA DE NEYMAR SANTOS";
+}
 
-    if(
-        minusculas === "gorra gucci" ||
-        minusculas === "gorra de gucci"
-    ){
-        return "GORRA DE GUCCI";
-    }
+if(
+minusculas === "gorra gucci" ||
+minusculas === "gorra de gucci"
+){
+return "GORRA DE GUCCI";
+}
 
-    if(
-        minusculas === "zapatilla nike" ||
-        minusculas === "zapatilla de nike"
-    ){
-        return "ZAPATILLA DE NIKE";
-    }
+if(
+minusculas === "zapatilla nike" ||
+minusculas === "zapatilla de nike"
+){
+return "ZAPATILLA DE NIKE";
+}
 
-    if(
-        minusculas === "bolso prada hombre" ||
-        minusculas === "bolsillo de prada hombre"
-    ){
-        return "BOLSILLO DE PRADA HOMBRE";
-    }
+if(
+minusculas === "bolso prada hombre" ||
+minusculas === "bolsillo de prada hombre"
+){
+return "BOLSILLO DE PRADA HOMBRE";
+}
 
-    if(
-        minusculas === "reloj rolex" ||
-        minusculas === "reloj de rolex"
-    ){
-        return "RELOJ DE ROLEX";
-    }
+if(
+minusculas === "reloj rolex" ||
+minusculas === "reloj de rolex"
+){
+return "RELOJ DE ROLEX";
+}
 
-    if(
-        minusculas === "camiseta stone island" ||
-        minusculas === "stone island" ||
-        minusculas === "camiseta de stone island"
-    ){
-        return "CAMISETA STONE ISLAND";
-    }
+if(
+minusculas === "camiseta stone island" ||
+minusculas === "stone island" ||
+minusculas === "camiseta de stone island"
+){
+return "CAMISETA STONE ISLAND";
+}
 
-    return texto;
+return texto;
 }
 
 function normalizarColor(color){
-    if(color === null || color === undefined){
-        return "";
-    }
+if(color === null || color === undefined){
+return "";
+}
 
-    const texto = String(color).trim();
-    const minusculas = texto.toLowerCase();
+const texto = String(color).trim();
+const minusculas = texto.toLowerCase();
 
-    if(minusculas === "negro"){
-        return "Negro";
-    }
+if(minusculas === "negro"){
+return "Negro";
+}
 
-    if(minusculas === "blanco"){
-        return "Blanco";
-    }
+if(minusculas === "blanco"){
+return "Blanco";
+}
 
-    if(minusculas === "rosa"){
-        return "ROSA";
-    }
+if(minusculas === "rosa"){
+return "ROSA";
+}
 
-    if(minusculas === "azul"){
-        return "Azul";
-    }
+if(minusculas === "azul"){
+return "Azul";
+}
 
-    return texto;
+return texto;
 }
 
 function productoSinTalla(nombre){
-    const nombreNormalizado =
-        normalizarNombreProducto(nombre);
+const nombreNormalizado =
+normalizarNombreProducto(nombre);
 
-    return (
-        nombreNormalizado === "GORRA DE BÉISBOL" ||
-        nombreNormalizado === "GORRA DE GUCCI" ||
-        nombreNormalizado === "BOLSILLO DE PRADA HOMBRE" ||
-        nombreNormalizado === "RELOJ DE ROLEX"
-    );
+return (
+nombreNormalizado === "GORRA DE BÉISBOL" ||
+nombreNormalizado === "GORRA DE GUCCI" ||
+nombreNormalizado === "BOLSILLO DE PRADA HOMBRE" ||
+nombreNormalizado === "RELOJ DE ROLEX" ||
+nombreNormalizado === "PULSERA DE LACOSTE" ||
+nombreNormalizado === "BOLSO DE LOUIS VUITTON PARA MUJER"
+);
 }
 
 function textoTallaProducto(nombre,talla){
-    if(productoSinTalla(nombre)){
-        return "Sin talla";
-    }
+if(productoSinTalla(nombre)){
+return "Sin talla";
+}
 
-    return talla;
+return talla;
 }
 
 /*
@@ -993,813 +1224,937 @@ CARGAR STOCK GLOBAL
 ========================================
 */
 async function cargarStockGlobal(){
-    try{
-        const resultado =
-            await supabaseClient.rpc(
-                "obtener_stock_xmxo"
-            );
+try{
+const resultado =
+await supabaseClient.rpc(
+"obtener_stock_xmxo"
+);
 
-        if(resultado.error){
-            console.error(
-                "Error cargando stock global:",
-                resultado.error
-            );
+if(resultado.error){
+console.error(
+"Error cargando stock global:",
+resultado.error
+);
 
-            stockCargado = false;
-            return false;
-        }
+stockCargado = false;
+return false;
+}
 
-        stockCamisetas = {};
+stockCamisetas = {};
 
-        const datos =
-            Array.isArray(resultado.data)
-                ? resultado.data
-                : [];
+const datos =
+Array.isArray(resultado.data)
+? resultado.data
+: [];
 
-        datos.forEach(function(item){
-            const productoOriginal =
-                item.producto ??
-                item.product;
+datos.forEach(function(item){
+const productoOriginal =
+item.producto ??
+item.product;
 
-            const varianteOriginal =
-                item.variant ??
-                item.talla;
+const varianteOriginal =
+item.variant ??
+item.talla;
 
-            const colorOriginal =
-                item.color;
+const colorOriginal =
+item.color;
 
-            if(
-                productoOriginal === null ||
-                productoOriginal === undefined ||
-                colorOriginal === null ||
-                colorOriginal === undefined ||
-                varianteOriginal === null ||
-                varianteOriginal === undefined
-            ){
-                console.warn(
-                    "Fila de stock ignorada:",
-                    item
-                );
-                return;
-            }
+if(
+productoOriginal === null ||
+productoOriginal === undefined ||
+colorOriginal === null ||
+colorOriginal === undefined ||
+varianteOriginal === null ||
+varianteOriginal === undefined
+){
+console.warn(
+"Fila de stock ignorada:",
+item
+);
+return;
+}
 
-            const producto =
-                normalizarNombreProducto(
-                    productoOriginal
-                );
+const producto =
+normalizarNombreProducto(
+productoOriginal
+);
 
-            const color =
-                normalizarColor(
-                    colorOriginal
-                );
+const color =
+normalizarColor(
+colorOriginal
+);
 
-            const variante =
-                String(varianteOriginal).trim();
+const variante =
+String(varianteOriginal).trim();
 
-            const stock =
-                Number(item.stock);
+const stock =
+Number(item.stock);
 
-            if(!stockCamisetas[producto]){
-                stockCamisetas[producto] = {};
-            }
+if(!stockCamisetas[producto]){
+stockCamisetas[producto] = {};
+}
 
-            if(!stockCamisetas[producto][color]){
-                stockCamisetas[producto][color] = {};
-            }
+if(!stockCamisetas[producto][color]){
+stockCamisetas[producto][color] = {};
+}
 
-            stockCamisetas[producto][color][variante] =
-                Number.isFinite(stock)
-                    ? stock
-                    : 0;
-        });
+stockCamisetas[producto][color][variante] =
+Number.isFinite(stock)
+? stock
+: 0;
+});
 
-        console.log(
-            "Stock global cargado:",
-            stockCamisetas
-        );
+console.log(
+"Stock global cargado:",
+stockCamisetas
+);
 
-        stockCargado = true;
-        return true;
+stockCargado = true;
+return true;
 
-    }catch(error){
-        console.error(
-            "Error inesperado cargando stock global:",
-            error
-        );
+}catch(error){
+console.error(
+"Error inesperado cargando stock global:",
+error
+);
 
-        stockCargado = false;
-        return false;
-    }
+stockCargado = false;
+return false;
+}
 }
 
 function unidadesEnCarrito(nombre,color,talla){
-    let cantidad = 0;
+let cantidad = 0;
 
-    const nombreNormalizado =
-        normalizarNombreProducto(nombre);
+const nombreNormalizado =
+normalizarNombreProducto(nombre);
 
-    const colorNormalizado =
-        normalizarColor(color);
+const colorNormalizado =
+normalizarColor(color);
 
-    const tallaNormalizada =
-        String(talla).trim();
+const tallaNormalizada =
+String(talla).trim();
 
-    carrito.forEach(function(producto){
-        if(
-            normalizarNombreProducto(producto.nombre) === nombreNormalizado &&
-            normalizarColor(producto.color) === colorNormalizado &&
-            String(producto.talla).trim() === tallaNormalizada
-        ){
-            cantidad++;
-        }
-    });
+carrito.forEach(function(producto){
+if(
+normalizarNombreProducto(producto.nombre) === nombreNormalizado &&
+normalizarColor(producto.color) === colorNormalizado &&
+String(producto.talla).trim() === tallaNormalizada
+){
+cantidad++;
+}
+});
 
-    return cantidad;
+return cantidad;
 }
 
 function obtenerStock(nombre,color,talla){
-    if(!stockCargado){
-        return null;
-    }
+if(!stockCargado){
+return null;
+}
 
-    const nombreNormalizado =
-        normalizarNombreProducto(nombre);
+const nombreNormalizado =
+normalizarNombreProducto(nombre);
 
-    const colorNormalizado =
-        normalizarColor(color);
+const colorNormalizado =
+normalizarColor(color);
 
-    const tallaNormalizada =
-        String(talla).trim();
+const tallaNormalizada =
+String(talla).trim();
 
-    if(
-        !stockCamisetas[nombreNormalizado] ||
-        !stockCamisetas[nombreNormalizado][colorNormalizado] ||
-        stockCamisetas[nombreNormalizado][colorNormalizado][tallaNormalizada] === undefined
-    ){
-        return null;
-    }
+if(
+!stockCamisetas[nombreNormalizado] ||
+!stockCamisetas[nombreNormalizado][colorNormalizado] ||
+stockCamisetas[nombreNormalizado][colorNormalizado][tallaNormalizada] === undefined
+){
+return null;
+}
 
-    const stockActual =
-        Number(
-            stockCamisetas[nombreNormalizado][colorNormalizado][tallaNormalizada]
-        );
+const stockActual =
+Number(
+stockCamisetas[nombreNormalizado][colorNormalizado][tallaNormalizada]
+);
 
-    const cantidadCarrito =
-        unidadesEnCarrito(
-            nombreNormalizado,
-            colorNormalizado,
-            tallaNormalizada
-        );
+const cantidadCarrito =
+unidadesEnCarrito(
+nombreNormalizado,
+colorNormalizado,
+tallaNormalizada
+);
 
-    return stockActual - cantidadCarrito;
+return stockActual - cantidadCarrito;
 }
 
 function numeroStock(nombre,color,talla){
-    const nombreNormalizado =
-        normalizarNombreProducto(nombre);
+const nombreNormalizado =
+normalizarNombreProducto(nombre);
 
-    const colorNormalizado =
-        normalizarColor(color);
+const colorNormalizado =
+normalizarColor(color);
 
-    const tallaNormalizada =
-        String(talla).trim();
+const tallaNormalizada =
+String(talla).trim();
 
-    if(
-        !stockCamisetas[nombreNormalizado] ||
-        !stockCamisetas[nombreNormalizado][colorNormalizado] ||
-        stockCamisetas[nombreNormalizado][colorNormalizado][tallaNormalizada] === undefined
-    ){
-        return 0;
-    }
+if(
+!stockCamisetas[nombreNormalizado] ||
+!stockCamisetas[nombreNormalizado][colorNormalizado] ||
+stockCamisetas[nombreNormalizado][colorNormalizado][tallaNormalizada] === undefined
+){
+return 0;
+}
 
-    return Number(
-        stockCamisetas[nombreNormalizado][colorNormalizado][tallaNormalizada]
-    );
+return Number(
+stockCamisetas[nombreNormalizado][colorNormalizado][tallaNormalizada]
+);
 }
 
 function actualizarDetallesStock(){
-    const detalle2 = document.getElementById("detalleStock2");
-    const detalle5 = document.getElementById("detalleStock5");
-    const detalle6 = document.getElementById("detalleStock6");
-    const detalle7 = document.getElementById("detalleStock7");
-    const detalle10 = document.getElementById("detalleStock10");
-    const detalle11 = document.getElementById("detalleStock11");
-    const detalle12 = document.getElementById("detalleStock12");
-    const detalle13 = document.getElementById("detalleStock13");
-    const detalle14 = document.getElementById("detalleStock14");
-    const detalle15 = document.getElementById("detalleStock15");
+const detalle2 = document.getElementById("detalleStock2");
+const detalle5 = document.getElementById("detalleStock5");
+const detalle6 = document.getElementById("detalleStock6");
+const detalle7 = document.getElementById("detalleStock7");
+const detalle10 = document.getElementById("detalleStock10");
+const detalle11 = document.getElementById("detalleStock11");
+const detalle12 = document.getElementById("detalleStock12");
+const detalle13 = document.getElementById("detalleStock13");
+const detalle14 = document.getElementById("detalleStock14");
+const detalle15 = document.getElementById("detalleStock15");
 
-    const textoCamiseta = function(nombre){
-        return (
-            "⚫ Negro: S " +
-            numeroStock(nombre,"Negro","S") +
-            " · M " +
-            numeroStock(nombre,"Negro","M") +
-            " · L " +
-            numeroStock(nombre,"Negro","L") +
-            " · XL " +
-            numeroStock(nombre,"Negro","XL") +
-            "<br>" +
-            "⚪ Blanco: S " +
-            numeroStock(nombre,"Blanco","S") +
-            " · M " +
-            numeroStock(nombre,"Blanco","M") +
-            " · L " +
-            numeroStock(nombre,"Blanco","L") +
-            " · XL " +
-            numeroStock(nombre,"Blanco","XL")
-        );
-    };
+const textoCamiseta = function(nombre){
+return (
+"⚫ Negro: S " +
+numeroStock(nombre,"Negro","S") +
+" · M " +
+numeroStock(nombre,"Negro","M") +
+" · L " +
+numeroStock(nombre,"Negro","L") +
+" · XL " +
+numeroStock(nombre,"Negro","XL") +
+"<br>" +
+"⚪ Blanco: S " +
+numeroStock(nombre,"Blanco","S") +
+" · M " +
+numeroStock(nombre,"Blanco","M") +
+" · L " +
+numeroStock(nombre,"Blanco","L") +
+" · XL " +
+numeroStock(nombre,"Blanco","XL")
+);
+};
 
-    if(detalle2){
-        detalle2.innerHTML =
-            textoCamiseta("CAMISETA DE NEYMAR SANTOS");
-    }
+if(detalle2){
+detalle2.innerHTML =
+textoCamiseta("CAMISETA DE NEYMAR SANTOS");
+}
 
-    if(detalle5){
-        detalle5.innerHTML =
-            textoCamiseta("CAMISETA DE CASA BLANCA");
-    }
+if(detalle5){
+detalle5.innerHTML =
+textoCamiseta("CAMISETA DE CASA BLANCA");
+}
 
-    if(detalle6){
-        detalle6.innerHTML =
-            "⚪ Blanco · iPhone 13 Pro: " +
-            numeroStock("FUNDA BAYB GANG","Blanco","iPhone 13 Pro") +
-            "<br>" +
-            "⚪ Blanco · iPhone 14 Pro: " +
-            numeroStock("FUNDA BAYB GANG","Blanco","iPhone 14 Pro") +
-            "<br>" +
-            "⚫ Negro · iPhone 13 Pro: " +
-            numeroStock("FUNDA BAYB GANG","Negro","iPhone 13 Pro") +
-            "<br>" +
-            "⚫ Negro · iPhone 14 Pro: " +
-            numeroStock("FUNDA BAYB GANG","Negro","iPhone 14 Pro");
-    }
+if(detalle6){
+detalle6.innerHTML =
+"⚪ Blanco · iPhone 13 Pro: " +
+numeroStock("FUNDA BAYB GANG","Blanco","iPhone 13 Pro") +
+"<br>" +
+"⚪ Blanco · iPhone 14 Pro: " +
+numeroStock("FUNDA BAYB GANG","Blanco","iPhone 14 Pro") +
+"<br>" +
+"⚫ Negro · iPhone 13 Pro: " +
+numeroStock("FUNDA BAYB GANG","Negro","iPhone 13 Pro") +
+"<br>" +
+"⚫ Negro · iPhone 14 Pro: " +
+numeroStock("FUNDA BAYB GANG","Negro","iPhone 14 Pro");
+}
 
-    if(detalle7){
-        detalle7.innerHTML =
-            "⚪ Blanco: " +
-            numeroStock("GORRA DE BÉISBOL","Blanco","Única") +
-            "<br>" +
-            "🌸 Rosa: " +
-            numeroStock("GORRA DE BÉISBOL","ROSA","Única") +
-            "<br>" +
-            "⚫ Negro: " +
-            numeroStock("GORRA DE BÉISBOL","Negro","Única");
-    }
+if(detalle7){
+detalle7.innerHTML =
+"⚪ Blanco: " +
+numeroStock("GORRA DE BÉISBOL","Blanco","Única") +
+"<br>" +
+"🌸 Rosa: " +
+numeroStock("GORRA DE BÉISBOL","ROSA","Única") +
+"<br>" +
+"⚫ Negro: " +
+numeroStock("GORRA DE BÉISBOL","Negro","Única");
+}
 
-    if(detalle10){
-        detalle10.innerHTML =
-            "⚪ Blanco · Talla 40: " +
-            numeroStock("NIKE AIR FORCE 1","Blanco","40");
-    }
+if(detalle10){
+detalle10.innerHTML =
+"⚪ Blanco · Talla 40: " +
+numeroStock("NIKE AIR FORCE 1","Blanco","40");
+}
 
-    if(detalle11){
-        detalle11.innerHTML =
-            "⚫ Negro: " +
-            numeroStock("GORRA DE GUCCI","Negro","Única") +
-            "<br>" +
-            "🌸 Rosa: " +
-            numeroStock("GORRA DE GUCCI","ROSA","Única");
-    }
+if(detalle11){
+detalle11.innerHTML =
+"⚫ Negro: " +
+numeroStock("GORRA DE GUCCI","Negro","Única") +
+"<br>" +
+"🌸 Rosa: " +
+numeroStock("GORRA DE GUCCI","ROSA","Única");
+}
 
-    if(detalle12){
-        detalle12.innerHTML =
-            "⚪ Blanco · Talla 40: " +
-            numeroStock("ZAPATILLA DE NIKE","Blanco","40");
-    }
+if(detalle12){
+detalle12.innerHTML =
+"⚪ Blanco · Talla 40: " +
+numeroStock("ZAPATILLA DE NIKE","Blanco","40");
+}
 
-    if(detalle13){
-        detalle13.innerHTML =
-            "⚫ Negro: " +
-            numeroStock("BOLSILLO DE PRADA HOMBRE","Negro","Única");
-    }
+if(detalle13){
+detalle13.innerHTML =
+"⚫ Negro: " +
+numeroStock("BOLSILLO DE PRADA HOMBRE","Negro","Única");
+}
 
-    if(detalle14){
-        detalle14.innerHTML =
-            "🔵 Azul: " +
-            numeroStock("RELOJ DE ROLEX","Azul","Única");
-    }
+if(detalle14){
+detalle14.innerHTML =
+"🔵 Azul: " +
+numeroStock("RELOJ DE ROLEX","Azul","Única");
+}
 
-    if(detalle15){
-        detalle15.innerHTML =
-            "⚫ Negro · Talla S: " +
-            numeroStock("CAMISETA STONE ISLAND","Negro","S") +
-            "<br>" +
-            "⚪ Blanco · Talla S: " +
-            numeroStock("CAMISETA STONE ISLAND","Blanco","S");
-    }
+if(detalle15){
+detalle15.innerHTML =
+"⚫ Negro · Talla S: " +
+numeroStock("CAMISETA STONE ISLAND","Negro","S") +
+"<br>" +
+"⚪ Blanco · Talla S: " +
+numeroStock("CAMISETA STONE ISLAND","Blanco","S");
+}
+
+const nuevosDetalles = [
+{
+id:"detalleStock16",
+html:"⚫ Negro · Talla S: " +
+numeroStock("SUDADERA DE POLO","Negro","S")
+},
+{
+id:"detalleStock17",
+html:"⚪ Gris · Talla S: " +
+numeroStock("SUDADERA DE LOUIS VUITTON","Gris","S")
+},
+{
+id:"detalleStock18",
+html:"⚪ Blanco · Talla S: " +
+numeroStock("PANTALÓN CORTO DE STONE ISLAND","Blanco","S") +
+"<br>⚫ Negro · Talla S: " +
+numeroStock("PANTALÓN CORTO DE STONE ISLAND","Negro","S")
+},
+{
+id:"detalleStock19",
+html:"⚪ Gris: " +
+numeroStock("PULSERA DE LACOSTE","Gris","Única")
+},
+{
+id:"detalleStock20",
+html:"⚫ Negro · Talla S: " +
+numeroStock("CONJUNTO CORTO DE PSG","Negro","S")
+},
+{
+id:"detalleStock21",
+html:"🔵 Azul · Talla S: " +
+numeroStock("CONJUNTO CORTO DE ESPAÑA","Azul","S")
+},
+{
+id:"detalleStock22",
+html:"⚫ Negro · Talla S: " +
+numeroStock("CHAQUETA PARA MUJER","Negro","S")
+},
+{
+id:"detalleStock23",
+html:"⚫ Negro · Talla S: " +
+numeroStock("CHAQUETA DE NORTH FACE PARA MUJER","Negro","S")
+},
+{
+id:"detalleStock24",
+html:"⚫ Negro · Talla S: " +
+numeroStock("CAMISETA DE HOMERTA","Negro","S")
+},
+{
+id:"detalleStock25",
+html:"🟤 Marrón: " +
+numeroStock("BOLSO DE LOUIS VUITTON PARA MUJER","Marrón","Única")
+}
+];
+
+nuevosDetalles.forEach(function(detalle){
+const elemento = document.getElementById(detalle.id);
+
+if(elemento){
+elemento.innerHTML = detalle.html;
+}
+});
 }
 
 function actualizarStock(
-    nombre,
-    idColor,
-    idTalla,
-    idEstado,
-    idSeleccion,
-    idBoton
+nombre,
+idColor,
+idTalla,
+idEstado,
+idSeleccion,
+idBoton
 ){
-    const colorElement = document.getElementById(idColor);
-    const tallaElement = document.getElementById(idTalla);
-    const estado = document.getElementById(idEstado);
-    const seleccion = document.getElementById(idSeleccion);
-    const boton = document.getElementById(idBoton);
+const colorElement = document.getElementById(idColor);
+const tallaElement = document.getElementById(idTalla);
+const estado = document.getElementById(idEstado);
+const seleccion = document.getElementById(idSeleccion);
+const boton = document.getElementById(idBoton);
 
-    if(!colorElement || !tallaElement || !estado || !seleccion || !boton){
-        return;
-    }
+if(!colorElement || !tallaElement || !estado || !seleccion || !boton){
+return;
+}
 
-    if(!stockCargado){
-        estado.textContent = "● CARGANDO STOCK...";
-        estado.className = "stock-disponible";
-        seleccion.textContent = "Esperando stock...";
-        boton.disabled = true;
-        boton.textContent = "Cargando...";
-        return;
-    }
+if(!stockCargado){
+estado.textContent = "● CARGANDO STOCK...";
+estado.className = "stock-disponible";
+seleccion.textContent = "Esperando stock...";
+boton.disabled = true;
+boton.textContent = "Cargando...";
+return;
+}
 
-    const color = colorElement.value;
-    const talla = tallaElement.value;
+const color = colorElement.value;
+const talla = tallaElement.value;
 
-    const stock = obtenerStock(nombre,color,talla);
+const stock = obtenerStock(nombre,color,talla);
 
-    if(stock === null){
-        estado.textContent = "● NO DISPONIBLE";
-        estado.className = "stock-agotado";
-        seleccion.textContent = "✕ Combinación no disponible";
-        boton.disabled = true;
-        boton.textContent = "No disponible";
-        return;
-    }
+if(stock === null){
+estado.textContent = "● NO DISPONIBLE";
+estado.className = "stock-agotado";
+seleccion.textContent = "✕ Combinación no disponible";
+boton.disabled = true;
+boton.textContent = "No disponible";
+return;
+}
 
-    if(stock > 0){
-        estado.textContent = "● DISPONIBLE";
-        estado.className = "stock-disponible";
-        seleccion.textContent =
-            "✓ " + color + " · Quedan " + stock +
-            " unidad" + (stock === 1 ? "" : "es");
-        boton.disabled = false;
-        boton.textContent = "Añadir al carrito";
-    }else{
-        estado.textContent = "● AGOTADO";
-        estado.className = "stock-agotado";
-        seleccion.textContent = "✕ " + color + " · Sin unidades disponibles";
-        boton.disabled = true;
-        boton.textContent = "Agotado";
-    }
+if(stock > 0){
+estado.textContent = "● DISPONIBLE";
+estado.className = "stock-disponible";
+seleccion.textContent =
+"✓ " + color + " · Quedan " + stock +
+" unidad" + (stock === 1 ? "" : "es");
+boton.disabled = false;
+boton.textContent = "Añadir al carrito";
+}else{
+estado.textContent = "● AGOTADO";
+estado.className = "stock-agotado";
+seleccion.textContent = "✕ " + color + " · Sin unidades disponibles";
+boton.disabled = true;
+boton.textContent = "Agotado";
+}
 }
 
 function actualizarStockNuevo(
-    nombre,
-    idColor,
-    idTalla,
-    idEstado,
-    idSeleccion,
-    idBoton
+nombre,
+idColor,
+idTalla,
+idEstado,
+idSeleccion,
+idBoton
 ){
-    actualizarStock(
-        nombre,
-        idColor,
-        idTalla,
-        idEstado,
-        idSeleccion,
-        idBoton
-    );
+actualizarStock(
+nombre,
+idColor,
+idTalla,
+idEstado,
+idSeleccion,
+idBoton
+);
 }
 
 function actualizarStockFunda(){
-    actualizarStock(
-        "FUNDA BAYB GANG",
-        "color6",
-        "talla6",
-        "estadoStock6",
-        "stockSeleccion6",
-        "boton6"
-    );
+actualizarStock(
+"FUNDA BAYB GANG",
+"color6",
+"talla6",
+"estadoStock6",
+"stockSeleccion6",
+"boton6"
+);
 }
 
 function actualizarStockGorra(){
-    actualizarStock(
-        "GORRA DE BÉISBOL",
-        "color7",
-        "talla7",
-        "estadoStock7",
-        "stockSeleccion7",
-        "boton7"
-    );
+actualizarStock(
+"GORRA DE BÉISBOL",
+"color7",
+"talla7",
+"estadoStock7",
+"stockSeleccion7",
+"boton7"
+);
 }
 
 const imagenes = {
-    "CAMISETA DE NEYMAR SANTOS": "ladera2.jpg",
-    "CAMISETA DE PELASTINA": "ladera3.jpg",
-    "CAMISETA DE VENUM UFC": "ladera4.jpg",
-    "CAMISETA DE CASA BLANCA": "ladera5.jpg",
-    "FUNDA BAYB GANG": "ladera8.jpeg",
-    "GORRA DE BÉISBOL": "ladera9.jpeg",
-    "NIKE AIR FORCE 1": "LADERA10.jpg",
-    "GORRA DE GUCCI": "LADERA11.jpg",
-    "ZAPATILLA DE NIKE": "LADERA12.jpg",
-    "BOLSILLO DE PRADA HOMBRE": "LADERA13.jpg",
-    "RELOJ DE ROLEX": "LADERA14.jpg",
-    "CAMISETA STONE ISLAND": "ladera15.png"
+"CAMISETA DE NEYMAR SANTOS": "ladera2.jpg",
+"CAMISETA DE PELASTINA": "ladera3.jpg",
+"CAMISETA DE VENUM UFC": "ladera4.jpg",
+"CAMISETA DE CASA BLANCA": "ladera5.jpg",
+"FUNDA BAYB GANG": "ladera8.jpeg",
+"GORRA DE BÉISBOL": "ladera9.jpeg",
+"NIKE AIR FORCE 1": "LADERA10.jpg",
+"GORRA DE GUCCI": "LADERA11.jpg",
+"ZAPATILLA DE NIKE": "LADERA12.jpg",
+"BOLSILLO DE PRADA HOMBRE": "LADERA13.jpg",
+"RELOJ DE ROLEX": "LADERA14.jpg",
+"CAMISETA STONE ISLAND": "ladera15.png",
+
+"SUDADERA DE POLO": "laderad25.jpg",
+"SUDADERA DE LOUIS VUITTON": "laderad24.jpg",
+"PANTALÓN CORTO DE STONE ISLAND": "laderad23.jpg",
+"PULSERA DE LACOSTE": "laderad22.jpg",
+"CONJUNTO CORTO DE PSG": "laderad21.jpg",
+"CONJUNTO CORTO DE ESPAÑA": "laderad20.jpg",
+"CHAQUETA PARA MUJER": "laderad19.jpg",
+"CHAQUETA DE NORTH FACE PARA MUJER": "laderad18.jpg",
+"CAMISETA DE HOMERTA": "laderad17.jpg",
+"BOLSO DE LOUIS VUITTON PARA MUJER": "laderad16.jpg"
 };
 
 async function agregarAlCarrito(
-    nombre,
-    idColor,
-    idTalla,
-    precio,
-    idBoton
+nombre,
+idColor,
+idTalla,
+precio,
+idBoton
 ){
-    const boton = document.getElementById(idBoton);
+const boton = document.getElementById(idBoton);
 
-    if(boton){
-        boton.disabled = true;
-    }
+if(boton){
+boton.disabled = true;
+}
 
-    const cargado = await cargarStockGlobal();
+const cargado = await cargarStockGlobal();
 
-    if(!cargado){
-        if(boton){
-            boton.disabled = false;
-        }
+if(!cargado){
+if(boton){
+boton.disabled = false;
+}
 
-        alert("No se pudo comprobar el stock. Recarga la página e inténtalo de nuevo.");
-        return;
-    }
+alert("No se pudo comprobar el stock. Recarga la página e inténtalo de nuevo.");
+return;
+}
 
-    actualizarDetallesStock();
-    actualizarTodosLosStocks();
+actualizarDetallesStock();
+actualizarTodosLosStocks();
 
-    const colorElement = document.getElementById(idColor);
-    const tallaElement = document.getElementById(idTalla);
+const colorElement = document.getElementById(idColor);
+const tallaElement = document.getElementById(idTalla);
 
-    if(!colorElement || !tallaElement){
-        actualizarTodosLosStocks();
-        return;
-    }
+if(!colorElement || !tallaElement){
+actualizarTodosLosStocks();
+return;
+}
 
-    const color = normalizarColor(colorElement.value);
-    const talla = String(tallaElement.value).trim();
-    const nombreNormalizado = normalizarNombreProducto(nombre);
+const color = normalizarColor(colorElement.value);
+const talla = String(tallaElement.value).trim();
+const nombreNormalizado = normalizarNombreProducto(nombre);
 
-    const stock = obtenerStock(nombreNormalizado,color,talla);
+const stock = obtenerStock(nombreNormalizado,color,talla);
 
-    if(stock === null){
-        alert("Esta combinación no está disponible.");
-        actualizarTodosLosStocks();
-        return;
-    }
+if(stock === null){
+alert("Esta combinación no está disponible.");
+actualizarTodosLosStocks();
+return;
+}
 
-    if(stock <= 0){
-        alert("Esta combinación de color y talla está agotada.");
-        actualizarTodosLosStocks();
-        return;
-    }
+if(stock <= 0){
+alert("Esta combinación de color y talla está agotada.");
+actualizarTodosLosStocks();
+return;
+}
 
-    const producto = {
-        nombre: nombreNormalizado,
-        color: color,
-        talla: talla,
-        precio: Number(precio)
-    };
+const producto = {
+nombre: nombreNormalizado,
+color: color,
+talla: talla,
+precio: Number(precio)
+};
 
-    carrito.push(producto);
-    mostrarCarrito();
+carrito.push(producto);
+mostrarCarrito();
 
-    const imagenAviso = document.getElementById("imagenAviso");
-    const nombreAviso = document.getElementById("nombreAviso");
-    const colorAviso = document.getElementById("colorAviso");
-    const tallaAviso = document.getElementById("tallaAviso");
-    const precioAviso = document.getElementById("precioAviso");
-    const modalCarrito = document.getElementById("modalCarrito");
+const imagenAviso = document.getElementById("imagenAviso");
+const nombreAviso = document.getElementById("nombreAviso");
+const colorAviso = document.getElementById("colorAviso");
+const tallaAviso = document.getElementById("tallaAviso");
+const precioAviso = document.getElementById("precioAviso");
+const modalCarrito = document.getElementById("modalCarrito");
 
-    if(imagenAviso){
-        imagenAviso.src = imagenes[nombreNormalizado];
-    }
+if(imagenAviso){
+imagenAviso.src = imagenes[nombreNormalizado];
+}
 
-    if(nombreAviso){
-        nombreAviso.textContent = nombreNormalizado;
-    }
+if(nombreAviso){
+nombreAviso.textContent = nombreNormalizado;
+}
 
-    if(colorAviso){
-        colorAviso.textContent = color;
-    }
+if(colorAviso){
+colorAviso.textContent = color;
+}
 
-    if(tallaAviso){
-        tallaAviso.textContent =
-            textoTallaProducto(nombreNormalizado,talla);
-    }
+if(tallaAviso){
+tallaAviso.textContent =
+textoTallaProducto(nombreNormalizado,talla);
+}
 
-    if(precioAviso){
-        precioAviso.textContent = Number(precio).toFixed(2);
-    }
+if(precioAviso){
+precioAviso.textContent = Number(precio).toFixed(2);
+}
 
-    if(modalCarrito){
-        modalCarrito.style.display = "flex";
-    }
+if(modalCarrito){
+modalCarrito.style.display = "flex";
+}
 
-    actualizarTodosLosStocks();
+actualizarTodosLosStocks();
 }
 
 function actualizarTodosLosStocks(){
-    actualizarStock(
-        "CAMISETA DE NEYMAR SANTOS",
-        "color2","talla2","estadoStock2","stockSeleccion2","boton2"
-    );
+actualizarStock(
+"CAMISETA DE NEYMAR SANTOS",
+"color2","talla2","estadoStock2","stockSeleccion2","boton2"
+);
 
-    actualizarStock(
-        "CAMISETA DE CASA BLANCA",
-        "color5","talla5","estadoStock5","stockSeleccion5","boton5"
-    );
+actualizarStock(
+"CAMISETA DE CASA BLANCA",
+"color5","talla5","estadoStock5","stockSeleccion5","boton5"
+);
 
-    actualizarStockFunda();
-    actualizarStockGorra();
+actualizarStockFunda();
+actualizarStockGorra();
 
-    actualizarStockNuevo(
-        "NIKE AIR FORCE 1",
-        "color10","talla10","estadoStock10","stockSeleccion10","boton10"
-    );
+actualizarStockNuevo(
+"NIKE AIR FORCE 1",
+"color10","talla10","estadoStock10","stockSeleccion10","boton10"
+);
 
-    actualizarStockNuevo(
-        "GORRA DE GUCCI",
-        "color11","talla11","estadoStock11","stockSeleccion11","boton11"
-    );
+actualizarStockNuevo(
+"GORRA DE GUCCI",
+"color11","talla11","estadoStock11","stockSeleccion11","boton11"
+);
 
-    actualizarStockNuevo(
-        "ZAPATILLA DE NIKE",
-        "color12","talla12","estadoStock12","stockSeleccion12","boton12"
-    );
+actualizarStockNuevo(
+"ZAPATILLA DE NIKE",
+"color12","talla12","estadoStock12","stockSeleccion12","boton12"
+);
 
-    actualizarStockNuevo(
-        "BOLSILLO DE PRADA HOMBRE",
-        "color13","talla13","estadoStock13","stockSeleccion13","boton13"
-    );
+actualizarStockNuevo(
+"BOLSILLO DE PRADA HOMBRE",
+"color13","talla13","estadoStock13","stockSeleccion13","boton13"
+);
 
-    actualizarStockNuevo(
-        "RELOJ DE ROLEX",
-        "color14","talla14","estadoStock14","stockSeleccion14","boton14"
-    );
+actualizarStockNuevo(
+"RELOJ DE ROLEX",
+"color14","talla14","estadoStock14","stockSeleccion14","boton14"
+);
 
-    actualizarStockNuevo(
-        "CAMISETA STONE ISLAND",
-        "color15","talla15","estadoStock15","stockSeleccion15","boton15"
-    );
+actualizarStockNuevo(
+"CAMISETA STONE ISLAND",
+"color15","talla15","estadoStock15","stockSeleccion15","boton15"
+);
+
+actualizarStockNuevo(
+"SUDADERA DE POLO",
+"color16","talla16","estadoStock16","stockSeleccion16","boton16"
+);
+
+actualizarStockNuevo(
+"SUDADERA DE LOUIS VUITTON",
+"color17","talla17","estadoStock17","stockSeleccion17","boton17"
+);
+
+actualizarStockNuevo(
+"PANTALÓN CORTO DE STONE ISLAND",
+"color18","talla18","estadoStock18","stockSeleccion18","boton18"
+);
+
+actualizarStockNuevo(
+"PULSERA DE LACOSTE",
+"color19","talla19","estadoStock19","stockSeleccion19","boton19"
+);
+
+actualizarStockNuevo(
+"CONJUNTO CORTO DE PSG",
+"color20","talla20","estadoStock20","stockSeleccion20","boton20"
+);
+
+actualizarStockNuevo(
+"CONJUNTO CORTO DE ESPAÑA",
+"color21","talla21","estadoStock21","stockSeleccion21","boton21"
+);
+
+actualizarStockNuevo(
+"CHAQUETA PARA MUJER",
+"color22","talla22","estadoStock22","stockSeleccion22","boton22"
+);
+
+actualizarStockNuevo(
+"CHAQUETA DE NORTH FACE PARA MUJER",
+"color23","talla23","estadoStock23","stockSeleccion23","boton23"
+);
+
+actualizarStockNuevo(
+"CAMISETA DE HOMERTA",
+"color24","talla24","estadoStock24","stockSeleccion24","boton24"
+);
+
+actualizarStockNuevo(
+"BOLSO DE LOUIS VUITTON PARA MUJER",
+"color25","talla25","estadoStock25","stockSeleccion25","boton25"
+);
 }
 
 function seguirComprando(){
-    const modal = document.getElementById("modalCarrito");
+const modal = document.getElementById("modalCarrito");
 
-    if(modal){
-        modal.style.display = "none";
-    }
+if(modal){
+modal.style.display = "none";
+}
 }
 
 function irAlCarrito(){
-    const modal = document.getElementById("modalCarrito");
+const modal = document.getElementById("modalCarrito");
 
-    if(modal){
-        modal.style.display = "none";
-    }
+if(modal){
+modal.style.display = "none";
+}
 
-    const carritoElemento = document.getElementById("carrito");
+const carritoElemento = document.getElementById("carrito");
 
-    if(carritoElemento){
-        carritoElemento.scrollIntoView({
-            behavior: "smooth"
-        });
-    }
+if(carritoElemento){
+carritoElemento.scrollIntoView({
+behavior: "smooth"
+});
+}
 }
 
 function mostrarCarrito(){
-    const lista = document.getElementById("lista-carrito");
+const lista = document.getElementById("lista-carrito");
 
-    if(!lista){
-        return;
-    }
+if(!lista){
+return;
+}
 
-    lista.innerHTML = "";
+lista.innerHTML = "";
 
-    let total = 0;
+let total = 0;
 
-    if(carrito.length === 0){
-        const vacio = document.createElement("li");
-        vacio.textContent = "El carrito está vacío.";
-        vacio.style.color = "#aaa";
-        lista.appendChild(vacio);
-    }
+if(carrito.length === 0){
+const vacio = document.createElement("li");
+vacio.textContent = "El carrito está vacío.";
+vacio.style.color = "#aaa";
+lista.appendChild(vacio);
+}
 
-    carrito.forEach(function(producto,indice){
-        const li = document.createElement("li");
+carrito.forEach(function(producto,indice){
+const li = document.createElement("li");
 
-        const tallaTexto =
-            textoTallaProducto(producto.nombre,producto.talla);
+const tallaTexto =
+textoTallaProducto(producto.nombre,producto.talla);
 
-        li.innerHTML =
-            producto.nombre +
-            " — Color: " +
-            producto.color +
-            " — Talla: " +
-            tallaTexto +
-            " — " +
-            Number(producto.precio).toFixed(2) +
-            " € " +
-            '<button type="button" class="eliminar" onclick="eliminarProducto(' +
-            indice +
-            ')">Eliminar</button>';
+li.innerHTML =
+producto.nombre +
+" — Color: " +
+producto.color +
+" — Talla: " +
+tallaTexto +
+" — " +
+Number(producto.precio).toFixed(2) +
+" € " +
+'<button type="button" class="eliminar" onclick="eliminarProducto(' +
+indice +
+')">Eliminar</button>';
 
-        lista.appendChild(li);
-        total += Number(producto.precio);
-    });
+lista.appendChild(li);
+total += Number(producto.precio);
+});
 
-    const totalElemento = document.getElementById("total");
+const totalElemento = document.getElementById("total");
 
-    if(totalElemento){
-        totalElemento.textContent = total.toFixed(2);
-    }
+if(totalElemento){
+totalElemento.textContent = total.toFixed(2);
+}
 
-    actualizarTodosLosStocks();
+actualizarTodosLosStocks();
 }
 
 function eliminarProducto(indice){
-    if(indice < 0 || indice >= carrito.length){
-        return;
-    }
+if(indice < 0 || indice >= carrito.length){
+return;
+}
 
-    carrito.splice(indice,1);
-    mostrarCarrito();
+carrito.splice(indice,1);
+mostrarCarrito();
 }
 
 function comprarCarrito(){
-    if(!Array.isArray(carrito)){
-        carrito = [];
-    }
+if(!Array.isArray(carrito)){
+carrito = [];
+}
 
-    if(carrito.length === 0){
-        alert("El carrito está vacío.");
-        return;
-    }
+if(carrito.length === 0){
+alert("El carrito está vacío.");
+return;
+}
 
-    const contenedor = document.getElementById("productos-compra");
+const contenedor = document.getElementById("productos-compra");
 
-    if(!contenedor){
-        alert("No se pudo abrir la ventana de compra.");
-        return;
-    }
+if(!contenedor){
+alert("No se pudo abrir la ventana de compra.");
+return;
+}
 
-    contenedor.innerHTML = "";
+contenedor.innerHTML = "";
 
-    let total = 0;
+let total = 0;
 
-    carrito.forEach(function(producto){
-        const productoDiv = document.createElement("div");
-        productoDiv.className = "producto-compra";
+carrito.forEach(function(producto){
+const productoDiv = document.createElement("div");
+productoDiv.className = "producto-compra";
 
-        const tallaTexto =
-            textoTallaProducto(producto.nombre,producto.talla);
+const tallaTexto =
+textoTallaProducto(producto.nombre,producto.talla);
 
-        productoDiv.innerHTML = `
-            <img
-                src="${imagenes[producto.nombre]}"
-                alt="${producto.nombre}"
-            >
-            <div class="producto-compra-info">
-                <h3>${producto.nombre}</h3>
-                <p>Color: ${producto.color}</p>
-                <p>Talla: ${tallaTexto}</p>
-                <p>Precio: ${Number(producto.precio).toFixed(2)} €</p>
-            </div>
-        `;
+productoDiv.innerHTML = `
+<img
+src="${imagenes[producto.nombre]}"
+alt="${producto.nombre}"
+>
+<div class="producto-compra-info">
+<h3>${producto.nombre}</h3>
+<p>Color: ${producto.color}</p>
+<p>Talla: ${tallaTexto}</p>
+<p>Precio: ${Number(producto.precio).toFixed(2)} €</p>
+</div>
+`;
 
-        contenedor.appendChild(productoDiv);
-        total += Number(producto.precio);
-    });
+contenedor.appendChild(productoDiv);
+total += Number(producto.precio);
+});
 
-    const totalCompra = document.getElementById("total-compra");
+const totalCompra = document.getElementById("total-compra");
 
-    if(totalCompra){
-        totalCompra.textContent = total.toFixed(2);
-    }
+if(totalCompra){
+totalCompra.textContent = total.toFixed(2);
+}
 
-    const modalCompra = document.getElementById("modalCompra");
+const modalCompra = document.getElementById("modalCompra");
 
-    if(modalCompra){
-        modalCompra.style.display = "flex";
-    }
+if(modalCompra){
+modalCompra.style.display = "flex";
+}
 }
 
 function cerrarCompra(){
-    const modal = document.getElementById("modalCompra");
+const modal = document.getElementById("modalCompra");
 
-    if(modal){
-        modal.style.display = "none";
-    }
+if(modal){
+modal.style.display = "none";
+}
 }
 
 function comprobarStockPedido(){
-    if(!stockCargado){
-        return false;
-    }
+if(!stockCargado){
+return false;
+}
 
-    const cantidades = {};
+const cantidades = {};
 
-    for(const producto of carrito){
-        const nombre =
-            normalizarNombreProducto(producto.nombre);
+for(const producto of carrito){
+const nombre =
+normalizarNombreProducto(producto.nombre);
 
-        const color =
-            normalizarColor(producto.color);
+const color =
+normalizarColor(producto.color);
 
-        const talla =
-            String(producto.talla).trim();
+const talla =
+String(producto.talla).trim();
 
-        const clave = nombre + "|" + color + "|" + talla;
+const clave = nombre + "|" + color + "|" + talla;
 
-        if(!cantidades[clave]){
-            cantidades[clave] = 0;
-        }
+if(!cantidades[clave]){
+cantidades[clave] = 0;
+}
 
-        cantidades[clave]++;
+cantidades[clave]++;
 
-        const stockDisponible =
-            obtenerStock(nombre,color,talla);
+const stockDisponible =
+obtenerStock(nombre,color,talla);
 
-        if(stockDisponible === null || stockDisponible < 0){
-            return false;
-        }
-    }
+if(stockDisponible === null || stockDisponible < 0){
+return false;
+}
+}
 
-    return true;
+return true;
 }
 
 async function descontarStockPedido(){
-    try{
-        const cantidades = {};
+try{
+const cantidades = {};
 
-        carrito.forEach(function(producto){
-            const nombre =
-                normalizarNombreProducto(producto.nombre);
+carrito.forEach(function(producto){
+const nombre =
+normalizarNombreProducto(producto.nombre);
 
-            const color =
-                normalizarColor(producto.color);
+const color =
+normalizarColor(producto.color);
 
-            const talla =
-                String(producto.talla).trim();
+const talla =
+String(producto.talla).trim();
 
-            const clave = nombre + "|" + color + "|" + talla;
+const clave = nombre + "|" + color + "|" + talla;
 
-            if(!cantidades[clave]){
-                cantidades[clave] = {
-                    product: nombre,
-                    color: color,
-                    variant: talla,
-                    quantity: 0
-                };
-            }
+if(!cantidades[clave]){
+cantidades[clave] = {
+product: nombre,
+color: color,
+variant: talla,
+quantity: 0
+};
+}
 
-            cantidades[clave].quantity++;
-        });
+cantidades[clave].quantity++;
+});
 
-        const resultado =
-            await supabaseClient.rpc(
-                "descontar_pedido_xmxo",
-                {
-                    p_items: Object.values(cantidades)
-                }
-            );
+const resultado =
+await supabaseClient.rpc(
+"descontar_pedido_xmxo",
+{
+p_items: Object.values(cantidades)
+}
+);
 
-        if(resultado.error){
-            console.error(
-                "Error descontando stock global:",
-                resultado.error
-            );
+if(resultado.error){
+console.error(
+"Error descontando stock global:",
+resultado.error
+);
 
-            return false;
-        }
+return false;
+}
 
-        if(resultado.data !== true){
-            console.error(
-                "La función de Supabase no confirmó el descuento:",
-                resultado.data
-            );
+if(resultado.data !== true){
+console.error(
+"La función de Supabase no confirmó el descuento:",
+resultado.data
+);
 
-            return false;
-        }
+return false;
+}
 
-        await cargarStockGlobal();
-        actualizarDetallesStock();
-        actualizarTodosLosStocks();
+await cargarStockGlobal();
+actualizarDetallesStock();
+actualizarTodosLosStocks();
 
-        return true;
+return true;
 
-    }catch(error){
-        console.error(
-            "Error inesperado descontando stock:",
-            error
-        );
+}catch(error){
+console.error(
+"Error inesperado descontando stock:",
+error
+);
 
-        return false;
-    }
+return false;
+}
 }
 
 /*
@@ -1808,94 +2163,94 @@ ENVIAR PEDIDO POR FORMSUBMIT
 ========================================
 */
 async function enviarPedidoPorCorreo(datos){
-    const url =
-        "https://formsubmit.co/ajax/" +
-        encodeURIComponent(CORREO_PEDIDOS);
+const url =
+"https://formsubmit.co/ajax/" +
+encodeURIComponent(CORREO_PEDIDOS);
 
-    const controlador = new AbortController();
+const controlador = new AbortController();
 
-    const temporizador = setTimeout(function(){
-        controlador.abort();
-    },20000);
+const temporizador = setTimeout(function(){
+controlador.abort();
+},20000);
 
-    try{
-        console.log("Enviando pedido a FormSubmit...");
+try{
+console.log("Enviando pedido a FormSubmit...");
 
-        const respuesta = await fetch(url,{
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-                "Accept": "application/json"
-            },
-            body: JSON.stringify(datos),
-            signal: controlador.signal
-        });
+const respuesta = await fetch(url,{
+method: "POST",
+headers: {
+"Content-Type": "application/json",
+"Accept": "application/json"
+},
+body: JSON.stringify(datos),
+signal: controlador.signal
+});
 
-        const textoRespuesta = await respuesta.text();
+const textoRespuesta = await respuesta.text();
 
-        let resultado = null;
+let resultado = null;
 
-        try{
-            resultado = JSON.parse(textoRespuesta);
-        }catch(error){
-            console.error(
-                "FormSubmit no devolvió una respuesta JSON válida:",
-                textoRespuesta
-            );
-        }
+try{
+resultado = JSON.parse(textoRespuesta);
+}catch(error){
+console.error(
+"FormSubmit no devolvió una respuesta JSON válida:",
+textoRespuesta
+);
+}
 
-        console.log(
-            "Código HTTP de FormSubmit:",
-            respuesta.status
-        );
+console.log(
+"Código HTTP de FormSubmit:",
+respuesta.status
+);
 
-        console.log(
-            "Respuesta completa de FormSubmit:",
-            resultado || textoRespuesta
-        );
+console.log(
+"Respuesta completa de FormSubmit:",
+resultado || textoRespuesta
+);
 
-        if(!respuesta.ok){
-            console.error(
-                "FormSubmit rechazó la petición.",
-                respuesta.status,
-                resultado || textoRespuesta
-            );
+if(!respuesta.ok){
+console.error(
+"FormSubmit rechazó la petición.",
+respuesta.status,
+resultado || textoRespuesta
+);
 
-            return false;
-        }
+return false;
+}
 
-        if(
-            resultado &&
-            (
-                resultado.success === true ||
-                resultado.success === "true"
-            )
-        ){
-            console.log(
-                "FormSubmit ha confirmado la aceptación del pedido."
-            );
+if(
+resultado &&
+(
+resultado.success === true ||
+resultado.success === "true"
+)
+){
+console.log(
+"FormSubmit ha confirmado la aceptación del pedido."
+);
 
-            return true;
-        }
+return true;
+}
 
-        console.error(
-            "No se ha recibido una confirmación válida de FormSubmit.",
-            resultado || textoRespuesta
-        );
+console.error(
+"No se ha recibido una confirmación válida de FormSubmit.",
+resultado || textoRespuesta
+);
 
-        return false;
+return false;
 
-    }catch(error){
-        console.error(
-            "Error enviando el pedido por correo:",
-            error
-        );
+}catch(error){
+console.error(
+"Error enviando el pedido por correo:",
+error
+);
 
-        return false;
+return false;
 
-    }finally{
-        clearTimeout(temporizador);
-    }
+}finally{
+clearTimeout(temporizador);
+}
 }
 
 /*
@@ -1904,232 +2259,232 @@ FINALIZAR PEDIDO
 ========================================
 */
 async function finalizarCompra(){
-    if(enviandoPedido){
-        return;
-    }
+if(enviandoPedido){
+return;
+}
 
-    const nombre =
-        document.getElementById("nombreCliente").value.trim();
+const nombre =
+document.getElementById("nombreCliente").value.trim();
 
-    const telefono =
-        document.getElementById("telefonoCliente").value.trim();
+const telefono =
+document.getElementById("telefonoCliente").value.trim();
 
-    const entrega =
-        document.getElementById("entregaCliente").value;
+const entrega =
+document.getElementById("entregaCliente").value;
 
-    const direccion =
-        document.getElementById("direccionCliente").value.trim();
+const direccion =
+document.getElementById("direccionCliente").value.trim();
 
-    const boton =
-        document.querySelector(".boton-finalizar");
+const boton =
+document.querySelector(".boton-finalizar");
 
-    if(nombre === "" || telefono === "" || direccion === ""){
-        alert("Por favor, completa todos los datos del pedido.");
-        return;
-    }
+if(nombre === "" || telefono === "" || direccion === ""){
+alert("Por favor, completa todos los datos del pedido.");
+return;
+}
 
-    if(carrito.length === 0){
-        alert("El carrito está vacío.");
-        cerrarCompra();
-        return;
-    }
+if(carrito.length === 0){
+alert("El carrito está vacío.");
+cerrarCompra();
+return;
+}
 
-    if(
-        !CORREO_PEDIDOS ||
-        CORREO_PEDIDOS === "TU_CORREO_AQUI@ejemplo.com"
-    ){
-        alert("Primero configura tu correo de pedidos.");
-        return;
-    }
+if(
+!CORREO_PEDIDOS ||
+CORREO_PEDIDOS === "TU_CORREO_AQUI@ejemplo.com"
+){
+alert("Primero configura tu correo de pedidos.");
+return;
+}
 
-    enviandoPedido = true;
+enviandoPedido = true;
 
-    if(boton){
-        boton.disabled = true;
-        boton.textContent = "ENVIANDO PEDIDO...";
-    }
+if(boton){
+boton.disabled = true;
+boton.textContent = "ENVIANDO PEDIDO...";
+}
 
-    try{
-        const stockActualizado = await cargarStockGlobal();
+try{
+const stockActualizado = await cargarStockGlobal();
 
-        if(!stockActualizado){
-            throw new Error("No se pudo comprobar el stock.");
-        }
+if(!stockActualizado){
+throw new Error("No se pudo comprobar el stock.");
+}
 
-        actualizarDetallesStock();
-        actualizarTodosLosStocks();
+actualizarDetallesStock();
+actualizarTodosLosStocks();
 
-        if(!comprobarStockPedido()){
-            alert(
-                "Lo sentimos. Uno de los productos seleccionados ya no tiene suficiente stock."
-            );
+if(!comprobarStockPedido()){
+alert(
+"Lo sentimos. Uno de los productos seleccionados ya no tiene suficiente stock."
+);
 
-            return;
-        }
+return;
+}
 
-        const ahora = new Date();
+const ahora = new Date();
 
-        const parteFecha =
-            ahora.getFullYear() +
-            String(ahora.getMonth() + 1).padStart(2,"0") +
-            String(ahora.getDate()).padStart(2,"0");
+const parteFecha =
+ahora.getFullYear() +
+String(ahora.getMonth() + 1).padStart(2,"0") +
+String(ahora.getDate()).padStart(2,"0");
 
-        const parteHora =
-            String(ahora.getHours()).padStart(2,"0") +
-            String(ahora.getMinutes()).padStart(2,"0") +
-            String(ahora.getSeconds()).padStart(2,"0");
+const parteHora =
+String(ahora.getHours()).padStart(2,"0") +
+String(ahora.getMinutes()).padStart(2,"0") +
+String(ahora.getSeconds()).padStart(2,"0");
 
-        const codigoAleatorio =
-            Math.random().toString(36).substring(2,8).toUpperCase();
+const codigoAleatorio =
+Math.random().toString(36).substring(2,8).toUpperCase();
 
-        const idPedido =
-            "XMXO-" +
-            parteFecha +
-            "-" +
-            parteHora +
-            "-" +
-            codigoAleatorio;
+const idPedido =
+"XMXO-" +
+parteFecha +
+"-" +
+parteHora +
+"-" +
+codigoAleatorio;
 
-        const fechaPedido =
-            ahora.toLocaleString("es-ES",{
-                dateStyle: "short",
-                timeStyle: "medium"
-            });
+const fechaPedido =
+ahora.toLocaleString("es-ES",{
+dateStyle: "short",
+timeStyle: "medium"
+});
 
-        let productosTexto = "";
-        let total = 0;
+let productosTexto = "";
+let total = 0;
 
-        carrito.forEach(function(producto,indice){
-            const tallaTexto =
-                textoTallaProducto(producto.nombre,producto.talla);
+carrito.forEach(function(producto,indice){
+const tallaTexto =
+textoTallaProducto(producto.nombre,producto.talla);
 
-            productosTexto +=
-                (indice + 1) +
-                ". " +
-                producto.nombre +
-                " | Color: " +
-                producto.color +
-                " | Talla: " +
-                tallaTexto +
-                " | Precio: " +
-                Number(producto.precio).toFixed(2) +
-                " €\n";
+productosTexto +=
+(indice + 1) +
+". " +
+producto.nombre +
+" | Color: " +
+producto.color +
+" | Talla: " +
+tallaTexto +
+" | Precio: " +
+Number(producto.precio).toFixed(2) +
+" €\n";
 
-            total += Number(producto.precio);
-        });
+total += Number(producto.precio);
+});
 
-        const datosPedido = {
-            _subject:
-                "🦁 NUEVO PEDIDO - " +
-                idPedido +
-                " - TIENDA XMXO",
+const datosPedido = {
+_subject:
+"🦁 NUEVO PEDIDO - " +
+idPedido +
+" - TIENDA XMXO",
 
-            _template: "table",
+_template: "table",
 
-            "ID DEL PEDIDO": idPedido,
-            "FECHA DEL PEDIDO": fechaPedido,
-            "NOMBRE DEL CLIENTE": nombre,
-            "TELÉFONO": telefono,
-            "FORMA DE ENTREGA": entrega,
-            "LUGAR DE ENTREGA": direccion,
-            "PRODUCTOS DEL PEDIDO": productosTexto,
-            "TOTAL DEL PEDIDO": total.toFixed(2) + " €"
-        };
+"ID DEL PEDIDO": idPedido,
+"FECHA DEL PEDIDO": fechaPedido,
+"NOMBRE DEL CLIENTE": nombre,
+"TELÉFONO": telefono,
+"FORMA DE ENTREGA": entrega,
+"LUGAR DE ENTREGA": direccion,
+"PRODUCTOS DEL PEDIDO": productosTexto,
+"TOTAL DEL PEDIDO": total.toFixed(2) + " €"
+};
 
-        const enviado =
-            await enviarPedidoPorCorreo(datosPedido);
+const enviado =
+await enviarPedidoPorCorreo(datosPedido);
 
-        if(!enviado){
-            throw new Error(
-                "FormSubmit no confirmó el envío."
-            );
-        }
+if(!enviado){
+throw new Error(
+"FormSubmit no confirmó el envío."
+);
+}
 
-        const stockDescontado =
-            await descontarStockPedido();
+const stockDescontado =
+await descontarStockPedido();
 
-        if(!stockDescontado){
-            alert(
-                "El pedido fue enviado correctamente, pero el stock no pudo descontarse. NO vuelvas a realizar el pedido."
-            );
+if(!stockDescontado){
+alert(
+"El pedido fue enviado correctamente, pero el stock no pudo descontarse. NO vuelvas a realizar el pedido."
+);
 
-            await cargarStockGlobal();
-            actualizarDetallesStock();
-            actualizarTodosLosStocks();
+await cargarStockGlobal();
+actualizarDetallesStock();
+actualizarTodosLosStocks();
 
-            return;
-        }
+return;
+}
 
-        const nombreConfirmacion =
-            document.getElementById("nombreConfirmacion");
+const nombreConfirmacion =
+document.getElementById("nombreConfirmacion");
 
-        const totalConfirmacion =
-            document.getElementById("totalConfirmacion");
+const totalConfirmacion =
+document.getElementById("totalConfirmacion");
 
-        if(nombreConfirmacion){
-            nombreConfirmacion.textContent = nombre;
-        }
+if(nombreConfirmacion){
+nombreConfirmacion.textContent = nombre;
+}
 
-        if(totalConfirmacion){
-            totalConfirmacion.textContent = total.toFixed(2);
-        }
+if(totalConfirmacion){
+totalConfirmacion.textContent = total.toFixed(2);
+}
 
-        const modalCompra =
-            document.getElementById("modalCompra");
+const modalCompra =
+document.getElementById("modalCompra");
 
-        const modalConfirmacion =
-            document.getElementById("modalConfirmacion");
+const modalConfirmacion =
+document.getElementById("modalConfirmacion");
 
-        if(modalCompra){
-            modalCompra.style.display = "none";
-        }
+if(modalCompra){
+modalCompra.style.display = "none";
+}
 
-        if(modalConfirmacion){
-            modalConfirmacion.style.display = "flex";
-        }
+if(modalConfirmacion){
+modalConfirmacion.style.display = "flex";
+}
 
-        carrito = [];
-        mostrarCarrito();
+carrito = [];
+mostrarCarrito();
 
-        document.getElementById("nombreCliente").value = "";
-        document.getElementById("telefonoCliente").value = "";
-        document.getElementById("direccionCliente").value = "";
+document.getElementById("nombreCliente").value = "";
+document.getElementById("telefonoCliente").value = "";
+document.getElementById("direccionCliente").value = "";
 
-        actualizarDetallesStock();
-        actualizarTodosLosStocks();
+actualizarDetallesStock();
+actualizarTodosLosStocks();
 
-        console.log(
-            "PEDIDO ENVIADO CORRECTAMENTE:",
-            idPedido
-        );
+console.log(
+"PEDIDO ENVIADO CORRECTAMENTE:",
+idPedido
+);
 
-    }catch(error){
-        console.error(
-            "Error al enviar pedido:",
-            error
-        );
+}catch(error){
+console.error(
+"Error al enviar pedido:",
+error
+);
 
-        alert(
-            "No se ha podido enviar el pedido. El stock NO se ha descontado."
-        );
+alert(
+"No se ha podido enviar el pedido. El stock NO se ha descontado."
+);
 
-    }finally{
-        enviandoPedido = false;
+}finally{
+enviandoPedido = false;
 
-        if(boton){
-            boton.disabled = false;
-            boton.textContent = "FINALIZAR PEDIDO";
-        }
-    }
+if(boton){
+boton.disabled = false;
+boton.textContent = "FINALIZAR PEDIDO";
+}
+}
 }
 
 function cerrarConfirmacion(){
-    const modal =
-        document.getElementById("modalConfirmacion");
+const modal =
+document.getElementById("modalConfirmacion");
 
-    if(modal){
-        modal.style.display = "none";
-    }
+if(modal){
+modal.style.display = "none";
+}
 }
 
 /*
@@ -2138,54 +2493,64 @@ ACTIVAR STOCK AL CARGAR
 ========================================
 */
 document.addEventListener("DOMContentLoaded",async function(){
-    mostrarCarrito();
+mostrarCarrito();
 
-    const cargado = await cargarStockGlobal();
+const cargado = await cargarStockGlobal();
 
-    if(cargado){
-        actualizarDetallesStock();
-        actualizarTodosLosStocks();
-    }else{
-        console.error("No se pudo cargar el stock global.");
+if(cargado){
+actualizarDetallesStock();
+actualizarTodosLosStocks();
+}else{
+console.error("No se pudo cargar el stock global.");
 
-        const estados = [
-            "estadoStock2",
-            "estadoStock5",
-            "estadoStock6",
-            "estadoStock7",
-            "estadoStock10",
-            "estadoStock11",
-            "estadoStock12",
-            "estadoStock13",
-            "estadoStock14",
-            "estadoStock15"
-        ];
+const estados = [
+"estadoStock2",
+"estadoStock5",
+"estadoStock6",
+"estadoStock7",
+"estadoStock10",
+"estadoStock11",
+"estadoStock12",
+"estadoStock13",
+"estadoStock14",
+"estadoStock15",
+"estadoStock16",
+"estadoStock17",
+"estadoStock18",
+"estadoStock19",
+"estadoStock20",
+"estadoStock21",
+"estadoStock22",
+"estadoStock23",
+"estadoStock24",
+"estadoStock25"
+];
 
-        estados.forEach(function(id){
-            const elemento = document.getElementById(id);
+estados.forEach(function(id){
+const elemento = document.getElementById(id);
 
-            if(elemento){
-                elemento.textContent = "● ERROR CARGANDO STOCK";
-                elemento.className = "stock-agotado";
-            }
-        });
-    }
+if(elemento){
+elemento.textContent = "● ERROR CARGANDO STOCK";
+elemento.className = "stock-agotado";
+}
+});
+}
 
-    /*
-    ACTUALIZAR STOCK AUTOMÁTICAMENTE CADA 10 SEGUNDOS
-    */
-    setInterval(async function(){
-        if(enviandoPedido){
-            return;
-        }
+/*
+ACTUALIZAR STOCK AUTOMÁTICAMENTE CADA 10 SEGUNDOS
+*/
+setInterval(async function(){
+if(enviandoPedido){
+return;
+}
 
-        const actualizado = await cargarStockGlobal();
+const actualizado = await cargarStockGlobal();
 
-        if(actualizado){
-            actualizarDetallesStock();
-            actualizarTodosLosStocks();
-        }
-    },10000);
+if(actualizado){
+actualizarDetallesStock();
+actualizarTodosLosStocks();
+}
+},10000);
 });
 </script>
 </body>
