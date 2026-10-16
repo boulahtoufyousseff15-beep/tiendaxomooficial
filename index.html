@@ -151,10 +151,10 @@ margin-top:7px;
 line-height:1.6;
 }
 .stock-seleccion{
-margin-top:7px;
 color:#d4af37;
 font-weight:bold;
 font-size:13px;
+margin-top:7px;
 }
 .opciones{
 text-align:left;
@@ -1473,6 +1473,7 @@ actualizarStock(
 );
 }
 
+/* IMÁGENES CORREGIDAS */
 const imagenes = {
 "CAMISETA DE NEYMAR SANTOS": "ladera2.jpg",
 "CAMISETA DE PELASTINA": "ladera3.jpg",
@@ -1487,16 +1488,16 @@ const imagenes = {
 "RELOJ DE ROLEX": "LADERA14.jpg",
 "CAMISETA STONE ISLAND": "ladera15.png",
 
-"SUDADERA DE POLO": "laderad25.jpg",
-"SUDADERA DE LOUIS VUITTON": "laderad24.jpg",
-"PANTALÓN CORTO DE STONE ISLAND": "laderad23.jpg",
-"PULSERA DE LACOSTE": "laderad22.jpg",
-"CONJUNTO CORTO DE PSG": "laderad21.jpg",
-"CONJUNTO CORTO DE ESPAÑA": "laderad20.jpg",
-"CHAQUETA PARA MUJER": "laderad19.jpg",
-"CHAQUETA DE NORTH FACE PARA MUJER": "laderad18.jpg",
-"CAMISETA DE HOMERTA": "laderad17.jpg",
-"BOLSO DE LOUIS VUITTON PARA MUJER": "laderad16.jpg"
+"SUDADERA DE POLO": "ladera25.jpg",
+"SUDADERA DE LOUIS VUITTON": "ladera24.jpg",
+"PANTALÓN CORTO DE STONE ISLAND": "ladera23.jpg",
+"PULSERA DE LACOSTE": "ladera22.jpg",
+"CONJUNTO CORTO DE PSG": "ladera21.jpg",
+"CONJUNTO CORTO DE ESPAÑA": "ladera20.jpg",
+"CHAQUETA PARA MUJER": "ladera19.jpg",
+"CHAQUETA DE NORTH FACE PARA MUJER": "ladera18.jpg",
+"CAMISETA DE HOMERTA": "ladera17.jpg",
+"BOLSO DE LOUIS VUITTON PARA MUJER": "ladera16.jpg"
 };
 
 async function agregarAlCarrito(
@@ -1570,7 +1571,7 @@ const precioAviso = document.getElementById("precioAviso");
 const modalCarrito = document.getElementById("modalCarrito");
 
 if(imagenAviso){
-imagenAviso.src = imagenes[nombreNormalizado];
+imagenAviso.src = imagenes[nombreNormalizado] || "";
 }
 
 if(nombreAviso){
@@ -1803,9 +1804,11 @@ productoDiv.className = "producto-compra";
 const tallaTexto =
 textoTallaProducto(producto.nombre,producto.talla);
 
+const rutaImagen = imagenes[producto.nombre] || "";
+
 productoDiv.innerHTML = `
 <img
-src="${imagenes[producto.nombre]}"
+src="${rutaImagen}"
 alt="${producto.nombre}"
 >
 <div class="producto-compra-info">
